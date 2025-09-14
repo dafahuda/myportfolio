@@ -1,0 +1,15 @@
+@import 'animate.css';
+@import 'remixicon/fonts/remixicon.css';
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+@layer components {
+  .lightbox-image {
+    max-height: 80vh;
+  }
+}
