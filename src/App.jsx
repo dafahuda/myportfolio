@@ -88,8 +88,9 @@ function App() {
 
       {/* Tentang */}
       <div
-        className="about mt-32 py-10 scroll-mt-20 md:scroll-mt-0"
+        className="about mt-32 py-10"
         id="tentang"
+        style={{ scrollMarginTop: "100px" }}
       >
         <div
           className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg"
@@ -177,8 +178,9 @@ function App() {
 
       {/* Proyek */}
       <div
-        className="proyek mt-32 py-10 scroll-mt-20 md:scroll-mt-0"
+        className="proyek mt-32 py-10"
         id="proyek"
+        style={{ scrollMarginTop: "100px" }}
       >
         <h1
           className="text-center text-3xl md:text-4xl font-bold mb-2"
@@ -407,8 +409,9 @@ function App() {
 
       {/* Kontak */}
       <div
-        className="kontak mt-32 sm:p-10 p-0 scroll-mt-28 md:scroll-mt-0"
+        className="kontak mt-32 sm:p-10 p-0"
         id="kontak"
+        style={{ scrollMarginTop: "100px" }}
       >
         <h1
           className="text-center text-3xl md:text-4xl font-bold mb-2"

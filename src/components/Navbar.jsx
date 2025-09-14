@@ -34,27 +34,9 @@ const Navbar = () => {
   }, []);
 
   // Fungsi untuk menangani klik pada link navigasi
-  const handleNavClick = (href) => {
-    if (href.startsWith('#')) {
-      // Tutup mobile menu
-      setMobileMenuOpen(false);
-      
-      // Scroll ke section dengan offset
-      setTimeout(() => {
-        const targetId = href.substring(1);
-        const targetElement = document.getElementById(targetId);
-        
-        if (targetElement) {
-          const navbarHeight = document.querySelector('.navbar').offsetHeight;
-          const targetPosition = targetElement.offsetTop - navbarHeight - 20; // 20px extra space
-          
-          window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-          });
-        }
-      }, 100);
-    }
+  // Menutup mobile menu saat link di klik
+  const handleNavClick = () => {
+    setMobileMenuOpen(false);
   };
 
   const navLinks = [
@@ -83,10 +65,6 @@ const Navbar = () => {
                 <a 
                   href={link.href} 
                   className="text-base md:text-lg font-medium hover:text-violet-400 transition-colors"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavClick(link.href);
-                  }}
                 >
                   {link.label}
                 </a>
@@ -117,13 +95,8 @@ const Navbar = () => {
                 <a 
                   href={link.href} 
                   className="block py-2 text-base font-medium hover:text-violet-400 transition-colors"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavClick(link.href);
-                  }}
+                  onClick={handleNavClick}
                 >
-                  {link.label}
-                </a>
               </li>
             ))}
           </ul>
