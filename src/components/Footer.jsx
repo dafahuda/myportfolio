@@ -1,4 +1,5 @@
 const Footer = () => {
+  const year = new Date().getFullYear();
   return (
     <div className="mt-32 py-4 flex md:flex-row flex-col gap-6 md:gap-0 justify-between items-center">
       <h1 className="text-2xl font-bold">Portofolio</h1>
@@ -7,17 +8,7 @@ const Footer = () => {
         <a href="#tentang">Tentang</a>
         <a href="#proyek">Proyek</a>
       </div>
-      <div className="flex items-center gap-3">
-        <a href="#">
-          <i className="ri-github-fill ri-2x"></i>
-        </a>
-        <a href="#">
-          <i className="ri-linkedin-box-fill ri-2x"></i>
-        </a>
-        <a href="#">
-          <i className="ri-instagram-line ri-2x"></i>
-        </a>
-      </div>
+      <span>© {year}</span>
     </div>
   );
 };
