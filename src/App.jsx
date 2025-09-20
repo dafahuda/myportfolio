@@ -37,10 +37,10 @@ function App() {
         <img
           src={DataImage.HeroImage}
           alt="Hero Image"
-          className="w-full max-w-md md:order-2 md:ml-auto animate__animated animate__fadeInDown animate__delay-5s"
+          className="w-full max-w-md md:order-2 md:ml-auto animate__animated animate__fadeInDown animate__delay-1s"
           loading="lazy"
         />
-        <div className="animate__animated animate__fadeInUp animate__delay-4s md:order-1">
+        <div className="animate__animated animate__fadeInUp animate__delay-1s md:order-1">
           <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-4 rounded-2xl">
             <img
               src={DataImage.HeroImage}
@@ -258,8 +258,9 @@ function App() {
                         className="w-full h-full object-cover"
                       />
                     ) : (
-                      <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-full flex items-center justify-center">
+                      <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-full flex flex-col items-center justify-center">
                         <i className="ri-image-2-line text-5xl text-gray-400"></i>
+                        <p className="text-1xl text-gray-500">No Image</p>
                       </div>
                     )}
                   </div>
@@ -302,8 +303,9 @@ function App() {
                         className="w-full h-full object-cover"
                       />
                     ) : (
-                      <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-full flex items-center justify-center">
+                      <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-full flex flex-col items-center justify-center">
                         <i className="ri-file-text-line text-5xl text-gray-400"></i>
+                        <p className="text-1xl text-gray-500">No Sertifikat</p>
                       </div>
                     )}
                   </div>
@@ -481,19 +483,25 @@ function App() {
                   <h3 className="font-semibold text-lg">Media Sosial</h3>
                   <div className="flex gap-4 mt-2">
                     <a
-                      href="#"
+                      href="https://github.com/dafahuda"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="bg-zinc-700 p-3 rounded-lg hover:bg-violet-600 transition-colors"
                     >
                       <i className="ri-github-line ri-lg"></i>
                     </a>
                     <a
-                      href="#"
+                      href="https://linkedin.com/in/dafa-huda-rifa-i"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="bg-zinc-700 p-3 rounded-lg hover:bg-violet-600 transition-colors"
                     >
                       <i className="ri-linkedin-line ri-lg"></i>
                     </a>
                     <a
-                      href="#"
+                      href="https://instagram.com/dafa.h.r"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="bg-zinc-700 p-3 rounded-lg hover:bg-violet-600 transition-colors"
                     >
                       <i className="ri-instagram-line ri-lg"></i>
