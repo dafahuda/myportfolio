@@ -30,37 +30,48 @@ function App() {
 
   return (
     <>
-      <div className="hero grid md:grid-cols-2 item-center pt-10 xl:gap-0 gap-6 grid-cols-1">
-        <div className="animate__animated animate__fadeInUp animate__delay-4s">
+      <div
+        id="beranda"
+        className="hero grid md:grid-cols-2 item-center xl:gap-0 gap-6 grid-cols-1"
+      >
+        <img
+          src={DataImage.HeroImage}
+          alt="Hero Image"
+          className="w-full max-w-md md:order-2 md:ml-auto animate__animated animate__fadeInDown animate__delay-5s"
+          loading="lazy"
+        />
+        <div className="animate__animated animate__fadeInUp animate__delay-4s md:order-1">
           <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-4 rounded-2xl">
             <img
               src={DataImage.HeroImage}
               alt="Hero Image"
-              className="w-10 rounded-md"
+              className="w-10 rounded-md sm:hidden"
               loading="lazy"
             />
             <q>Kode Yang Indah, Lahir Dari Ketakunan.😊</q>
           </div>
           <h1 className="text-4xl md:text-5xl/tight font-bold mb-6">
             Hi I'm{" "}
-            <TypeAnimation
-              sequence={[
-                "Dafa Huda Rifa'i",
-                1000,
-                "UI/UX Designer",
-                1000,
-                "Front-end Developer",
-                1000,
-                "Back-end Developer",
-                1000,
-              ]}
-              wrapper="span"
-              speed={{ type: "keyStrokeDelayInMs", value: 250 }}
-              deletionSpeed={40}
-              repeat={Infinity}
-            />
+            <p className="text-violet-500 inline-block">
+              <TypeAnimation
+                sequence={[
+                  "Dafa Huda Rifa'i",
+                  1000,
+                  "UI/UX Designer",
+                  1000,
+                  "Front-end Developer",
+                  1000,
+                  "Back-end Developer",
+                  1000,
+                ]}
+                wrapper="span"
+                speed={{ type: "keyStrokeDelayInMs", value: 250 }}
+                deletionSpeed={40}
+                repeat={Infinity}
+              />
+            </p>
           </h1>
-          <p className="text-base/loose mb-6 opacity-50">
+          <p className="text-base/loose mb-6 opacity-90">
             {heroParagraph.text}
           </p>
           <div className="flex items-center sm:gap-4 gap-2">
@@ -78,31 +89,24 @@ function App() {
             </a>
           </div>
         </div>
-        <img
-          src={DataImage.HeroImage}
-          alt="Hero Image"
-          className="w-full max-w-md md:ml-auto animate__animated animate__fadeInDown animate__delay-5s"
-          loading="lazy"
-        />
       </div>
 
       {/* Tentang */}
-      <div
-        className="about mt-32 py-10"
-        id="tentang"
-        style={{ scrollMarginTop: "100px" }}
-      >
+      <div className="about my-40 py-30" id="tentang">
         <div
           className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-once="true"
         >
-          <img
+          {/* <img
             src={DataImage.HeroImage}
             alt="Image"
             className="w-12 rounded-md mb-10 sm:hidden"
-          />
+          /> */}
+          <p className="text-4xl md:text-5xl/tight font-bold mb-2">
+            Tentang Saya
+          </p>
           <p className="text-base/loose mb-10">{aboutParagraph.text}</p>
           <div className="flex items-center justify-between">
             <img
@@ -129,59 +133,57 @@ function App() {
             </div>
           </div>
         </div>
+      </div>
+      {/*  Tentang */}
 
-        <div className="tools mt-32">
-          <h1
-            className="text-3xl md:text-4xl/snug font-bold mb-4"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-once="true"
-          >
-            Tools yang dipakai
-          </h1>
-          <p
-            className="xl:w-2/5 lg:w-2/4 md:w-2/3 sm:w-3/4 w-full text-base/loose opacity-50"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-once="true"
-          >
-            Berikut ini beberapa tools yang saya pakai untuk pembuatan website
-            ataupun desain
-          </p>
-          <div className="tools-box mt-14 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
-            {listTools.map((tool) => (
-              <div
-                className="flex items-center gap-2 p-3 border border-zinc-600 rounded-md hover:bg-zinc-800 group"
-                key={tool.id}
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay={tool.dad}
-                data-aos-once="true"
-              >
-                <img
-                  src={tool.gambar}
-                  alt="Tools Image"
-                  className="w-14 bg-zinc-800 p-1
+      {/* Tools */}
+      <div className="tools my-40 py-30" id="tools">
+        <h1
+          className="text-center text-3xl md:text-4xl/snug font-bold mb-4"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
+          Tools yang dipakai
+        </h1>
+        <p
+          className="text-center mx-auto xl:w-2/5 lg:w-2/4 md:w-2/3 sm:w-3/4 w-full text-base/loose opacity-50"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
+          Berikut ini beberapa tools yang saya pakai untuk pembuatan website
+          ataupun desain
+        </p>
+        <div className="tools-box mt-14 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+          {listTools.map((tool) => (
+            <div
+              className="flex items-center gap-2 p-3 border border-zinc-600 rounded-md hover:bg-zinc-800 group"
+              key={tool.id}
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay={tool.dad}
+              data-aos-once="true"
+            >
+              <img
+                src={tool.gambar}
+                alt="Tools Image"
+                className="w-14 bg-zinc-800 p-1
                 group-hover:bg-zinc-900"
-                  loading="lazy"
-                />
-                <div>
-                  <h4 className="font-bold">{tool.nama}</h4>
-                  <p className="opacity-50">{tool.ket}</p>
-                </div>
+                loading="lazy"
+              />
+              <div>
+                <h4 className="font-bold">{tool.nama}</h4>
+                <p className="opacity-50">{tool.ket}</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
-      {/* Tentang */}
+      {/* Tols */}
 
       {/* Proyek */}
-      <div
-        className="proyek mt-32 py-10"
-        id="proyek"
-        style={{ scrollMarginTop: "100px" }}
-      >
+      <div className="proyek my-40 py-30" id="proyek">
         <h1
           className="text-center text-3xl md:text-4xl font-bold mb-2"
           data-aos="fade-up"
@@ -213,7 +215,7 @@ function App() {
               setActiveTab("projects");
               setVisibleProjects(6);
             }}
-            className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
+            className={`px-6 py-3 rounded-lg font-semibold transition-colors cursor-pointer ${
               activeTab === "projects"
                 ? "bg-violet-700 text-white"
                 : "bg-zinc-800 text-gray-300 hover:bg-zinc-700"
@@ -226,7 +228,7 @@ function App() {
               setActiveTab("certificates");
               setVisibleProjects(6);
             }}
-            className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
+            className={`px-6 py-3 rounded-lg font-semibold transition-colors cursor-pointer ${
               activeTab === "certificates"
                 ? "bg-violet-700 text-white"
                 : "bg-zinc-800 text-gray-300 hover:bg-zinc-700"
@@ -249,11 +251,17 @@ function App() {
                   data-aos-once="true"
                 >
                   <div className="overflow-hidden rounded-lg h-48 mb-4">
-                    <img
-                      src={proyek.gambar}
-                      alt="Proyek Image"
-                      className="w-full h-full object-cover"
-                    />
+                    {proyek.gambar ? (
+                      <img
+                        src={proyek.gambar}
+                        alt="Proyek Image"
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-full flex items-center justify-center">
+                        <i className="ri-image-2-line text-5xl text-gray-400"></i>
+                      </div>
+                    )}
                   </div>
                   <h1 className="text-2xl font-bold my-4">{proyek.nama}</h1>
                   <p className="text-base/loose mb-4">{proyek.desk}</p>
@@ -334,7 +342,7 @@ function App() {
                     onClick={() =>
                       setVisibleProjects((prevCount) => prevCount + 3)
                     }
-                    className="flex items-center justify-center gap-2 text-violet-800 hover:text-white cursor-pointer mx-auto group"
+                    className="flex items-center justify-center gap-2 text-white hover:text-violet-800 cursor-pointer mx-auto group"
                   >
                     Lihat Lebih Banyak
                     <span className="animate__animated animate__heartBeat animate__infinite">
@@ -345,7 +353,13 @@ function App() {
               )}
               {visibleProjects >= listProyek.length &&
                 listProyek.length > 6 && (
-                  <div className="text-center mt-8">
+                  <div
+                    className="text-center mt-8"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="300"
+                    data-aos-once="true"
+                  >
                     <button
                       onClick={() => {
                         setVisibleProjects(6);
@@ -353,7 +367,7 @@ function App() {
                           .getElementById("proyek")
                           .scrollIntoView({ behavior: "smooth" });
                       }}
-                      className="text-white-800 hover:text-violet-800 cursor-pointer gap-2"
+                      className="text-white hover:text-violet-800 cursor-pointer gap-2"
                     >
                       Tampilkan Lebih Sedikit
                       <i className="ri-arrow-up-double-line ri-xl"></i>
@@ -375,7 +389,7 @@ function App() {
                     onClick={() =>
                       setVisibleProjects((prevCount) => prevCount + 3)
                     }
-                    className="flex items-center justify-center gap-2 text-violet-800 hover:text-white cursor-pointer mx-auto group"
+                    className="flex items-center justify-center gap-2 text-white hover:text-violet-800 cursor-pointer mx-auto group"
                   >
                     Lihat Lebih Banyak
                     <span className="animate__animated animate__heartBeat animate__infinite">
@@ -386,7 +400,13 @@ function App() {
               )}
               {visibleProjects >= listSertifikat.length &&
                 listSertifikat.length > 6 && (
-                  <div className="text-center mt-8">
+                  <div
+                    className="text-center mt-8"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="300"
+                    data-aos-once="true"
+                  >
                     <button
                       onClick={() => {
                         setVisibleProjects(6);
@@ -394,7 +414,7 @@ function App() {
                           .getElementById("proyek")
                           .scrollIntoView({ behavior: "smooth" });
                       }}
-                      className="text-white-800 hover:text-violet-800 cursor-pointer gap-2"
+                      className="text-white hover:text-violet-800 cursor-pointer gap-2"
                     >
                       Tampilkan Lebih Sedikit
                       <i className="ri-arrow-up-double-line ri-xl"></i>
@@ -408,11 +428,7 @@ function App() {
       {/* Proyek */}
 
       {/* Kontak */}
-      <div
-        className="kontak mt-32 sm:p-10 p-0"
-        id="kontak"
-        style={{ scrollMarginTop: "100px" }}
-      >
+      <div className="kontak my-40 py-30" id="kontak">
         <h1
           className="text-center text-3xl md:text-4xl font-bold mb-2"
           data-aos="fade-up"
@@ -550,7 +566,7 @@ function App() {
 
                 <button
                   type="submit"
-                  className="w-full bg-violet-700 p-3 rounded-lg font-semibold hover:bg-violet-600 transition-colors"
+                  className="w-full bg-violet-700 p-3 rounded-lg font-semibold hover:bg-violet-600 transition-colors cursor-pointer"
                 >
                   Kirim Pesan
                 </button>

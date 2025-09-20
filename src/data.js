@@ -108,7 +108,6 @@ import Proyek6 from "/assets/proyek/proyek6.webp";
 export const listProyek = [
   {
     id: 1,
-    gambar: Proyek1,
     nama: "Website Sekolah",
     desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
     tools: ["HTML", "CSS", "Javascript", "AOS"],

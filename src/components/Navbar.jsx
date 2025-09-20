@@ -1,108 +1,102 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  // Menutup mobile menu saat window diresize ke ukuran desktop
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 768) { // md breakpoint
-        setMobileMenuOpen(false);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  // Fungsi untuk menangani klik pada link navigasi
-  // Menutup mobile menu saat link di klik
-  const handleNavClick = () => {
-    setMobileMenuOpen(false);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
-  const navLinks = [
-    { href: "#beranda", label: "Beranda" },
-    { href: "#tentang", label: "Tentang" },
-    { href: "#proyek", label: "Proyek" },
-    { href: "#kontak", label: "Kontak" },
-  ];
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
-    <div className={`navbar py-4 md:py-7 fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-      scrolled ? "bg-zinc-900 bg-opacity-90 backdrop-blur-sm py-3 shadow-lg" : ""
-    } ${
-      mobileMenuOpen ? "bg-zinc-900" : ""
-    }`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between">
-          <div className="logo">
-            <h1 className="text-2xl md:text-3xl font-bold text-white">Portfolio</h1>
-          </div>
-          
-          {/* Desktop Menu */}
-          <ul className="menu md:flex hidden items-center justify-center gap-4 md:gap-10">
-            {navLinks.map((link, index) => (
-              <li key={index}>
-                <a 
-                  href={link.href} 
-                  className="text-base md:text-lg font-medium hover:text-violet-400 transition-colors"
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-          
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button 
-              className="text-white text-2xl focus:outline-none"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-zinc-900 bg-opacity-90 backdrop-blur-sm">
+      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div className="text-xl font-bold">My Portfolio</div>
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex space-x-8">
+          <a
+            href="#beranda"
+            className="hover:text-violet-500 transition-colors"
+          >
+            Beranda
+          </a>
+          <a
+            href="#tentang"
+            className="hover:text-violet-500 transition-colors"
+          >
+            Tentang
+          </a>
+          <a href="#tools" className="hover:text-violet-500 transition-colors">
+            Tools
+          </a>
+          <a href="#proyek" className="hover:text-violet-500 transition-colors">
+            Proyek
+          </a>
+          <a href="#kontak" className="hover:text-violet-500 transition-colors">
+            Kontak
+          </a>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-2xl focus:outline-none"
+          onClick={toggleMenu}
+        >
+          {isMenuOpen ? (
+            <i className="ri-close-line"></i>
+          ) : (
+            <i className="ri-menu-line"></i>
+          )}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-zinc-800 py-4 px-4">
+          <div className="flex flex-col space-y-4">
+            <a
+              href="#beranda"
+              className="hover:text-violet-500 transition-colors py-2"
+              onClick={closeMenu}
             >
-              {mobileMenuOpen ? (
-                <i className="ri-close-line"></i>
-              ) : (
-                <i className="ri-menu-line"></i>
-              )}
-            </button>
+              Beranda
+            </a>
+            <a
+              href="#tentang"
+              className="hover:text-violet-500 transition-colors py-2"
+              onClick={closeMenu}
+            >
+              Tentang
+            </a>
+            <a
+              href="#tools"
+              className="hover:text-violet-500 transition-colors py-2"
+              onClick={closeMenu}
+            >
+              Tools
+            </a>
+            <a
+              href="#proyek"
+              className="hover:text-violet-500 transition-colors py-2"
+              onClick={closeMenu}
+            >
+              Proyek
+            </a>
+            <a
+              href="#kontak"
+              className="hover:text-violet-500 transition-colors py-2"
+              onClick={closeMenu}
+            >
+              Kontak
+            </a>
           </div>
         </div>
-        
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <ul className="md:hidden mt-4 pb-4 space-y-3 bg-zinc-900 rounded-lg px-4">
-            {navLinks.map((link, index) => (
-              <li key={index}>
-                <a 
-                  href={link.href} 
-                  className="block py-2 text-base font-medium hover:text-violet-400 transition-colors"
-                  onClick={handleNavClick}
-                >
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-    </div>
+      )}
+    </nav>
   );
 };
 
