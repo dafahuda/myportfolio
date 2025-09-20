@@ -57,19 +57,25 @@ const ContactSection = () => {
                 <h3 className="font-semibold text-lg">Media Sosial</h3>
                 <div className="flex gap-4 mt-2">
                   <a
-                    href="#"
+                    href="https://github.com/dafahuda"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-zinc-700 p-3 rounded-lg hover:bg-violet-600 transition-colors"
                   >
                     <i className="ri-github-line ri-lg"></i>
                   </a>
                   <a
-                    href="#"
+                    href="www.linkedin.com/in/dafa-huda-rifa-i"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-zinc-700 p-3 rounded-lg hover:bg-violet-600 transition-colors"
                   >
                     <i className="ri-linkedin-line ri-lg"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/dafa.h.r"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-zinc-700 p-3 rounded-lg hover:bg-violet-600 transition-colors"
                   >
                     <i className="ri-instagram-line ri-lg"></i>
@@ -90,9 +96,7 @@ const ContactSection = () => {
           >
             <div className="space-y-6">
               <div>
-                <label className="font-semibold block mb-2">
-                  Nama Lengkap
-                </label>
+                <label className="font-semibold block mb-2">Nama Lengkap</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-zinc-400">
                     <i className="ri-user-line"></i>
