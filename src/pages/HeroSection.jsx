@@ -25,7 +25,7 @@ const HeroSection = () => {
           <q>Kode Yang Indah, Lahir Dari Ketakunan.😊</q>
         </div>
         <h1 className="text-4xl md:text-5xl/tight font-bold mb-6">
-          Hi I'm{" "}
+          Hi I'm <br />
           <p className="text-violet-500 inline-block">
             <TypeAnimation
               sequence={[

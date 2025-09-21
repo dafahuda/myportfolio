@@ -59,47 +59,48 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-zinc-800 py-4 px-4">
-          <div className="flex flex-col space-y-4">
-            <a
-              href="#beranda"
-              className="hover:text-violet-500 transition-colors py-2"
-              onClick={closeMenu}
-            >
-              Beranda
-            </a>
-            <a
-              href="#tentang"
-              className="hover:text-violet-500 transition-colors py-2"
-              onClick={closeMenu}
-            >
-              Tentang
-            </a>
-            <a
-              href="#tools"
-              className="hover:text-violet-500 transition-colors py-2"
-              onClick={closeMenu}
-            >
-              Tools
-            </a>
-            <a
-              href="#proyek"
-              className="hover:text-violet-500 transition-colors py-2"
-              onClick={closeMenu}
-            >
-              Proyek
-            </a>
-            <a
-              href="#kontak"
-              className="hover:text-violet-500 transition-colors py-2"
-              onClick={closeMenu}
-            >
-              Kontak
-            </a>
-          </div>
+      <div
+        className={`absolute w-full left-0 bg-zinc-900/90 backdrop-blur-sm transition-all duration-300 ease-in-out md:hidden ${
+          isMenuOpen ? "top-16" : "-top-96"
+        }`}>
+        <div className="flex flex-col space-y-4 p-5">
+          <a
+            href="#beranda"
+            className="hover:text-violet-500 transition-colors py-2"
+            onClick={closeMenu}
+          >
+            Beranda
+          </a>
+          <a
+            href="#tentang"
+            className="hover:text-violet-500 transition-colors py-2"
+            onClick={closeMenu}
+          >
+            Tentang
+          </a>
+          <a
+            href="#tools"
+            className="hover:text-violet-500 transition-colors py-2"
+            onClick={closeMenu}
+          >
+            Tools
+          </a>
+          <a
+            href="#proyek"
+            className="hover:text-violet-500 transition-colors py-2"
+            onClick={closeMenu}
+          >
+            Proyek
+          </a>
+          <a
+            href="#kontak"
+            className="hover:text-violet-500 transition-colors py-2"
+            onClick={closeMenu}
+          >
+            Kontak
+          </a>
         </div>
-      )}
+      </div>
     </nav>
   );
 };

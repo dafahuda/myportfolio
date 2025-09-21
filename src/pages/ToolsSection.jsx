@@ -1,6 +1,8 @@
 import { listTools } from "../data";
 
 const ToolsSection = () => {
+  const extendedTools = [...listTools, ...listTools];
+
   return (
     <div className="tools mt-32 py-25" id="tools">
       <h1
@@ -20,29 +22,30 @@ const ToolsSection = () => {
         Berikut ini beberapa tools yang saya pakai untuk pembuatan website
         ataupun desain
       </p>
-      <div className="tools-box mt-14 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
-        {listTools.map((tool) => (
-          <div
-            className="flex items-center gap-2 p-3 border border-zinc-600 rounded-md hover:bg-zinc-800 group"
-            key={tool.id}
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay={tool.dad}
-            data-aos-once="true"
-          >
-            <img
-              src={tool.gambar}
-              alt="Tools Image"
-              className="w-14 bg-zinc-800 p-1
-                group-hover:bg-zinc-900"
-              loading="lazy"
-            />
-            <div>
-              <h4 className="font-bold">{tool.nama}</h4>
-              <p className="opacity-50">{tool.ket}</p>
+      <div
+        className="relative w-full overflow-hidden mt-14 group"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-once="true"
+      >
+        <div className="flex w-max animate-infinite-scroll">
+          {extendedTools.map((tool, index) => (
+            <div
+              key={index}
+              className="flex items-center gap-2 p-3 border border-zinc-600 rounded-md bg-zinc-900 hover:bg-zinc-800 w-52 mx-4 flex-shrink-0 force-3d"
+            >
+              <img
+                src={tool.gambar}
+                alt={tool.nama}
+                className="w-14 bg-zinc-800 p-1 rounded-md"
+              />
+              <div>
+                <h4 className="font-bold">{tool.nama}</h4>
+                <p className="opacity-50 text-sm">{tool.ket}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
