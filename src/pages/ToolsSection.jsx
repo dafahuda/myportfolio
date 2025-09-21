@@ -2,7 +2,7 @@ import { listTools } from "../data";
 
 const ToolsSection = () => {
   return (
-    <div className="tools mt-32">
+    <div className="tools mt-32 py-25" id="tools">
       <h1
         className="text-center text-3xl md:text-4xl/snug font-bold mb-4"
         data-aos="fade-up"

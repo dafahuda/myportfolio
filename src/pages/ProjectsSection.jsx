@@ -22,11 +22,7 @@ const ProjectsSection = () => {
 
   return (
     <>
-      <div
-        className="proyek mt-32 py-10"
-        id="proyek"
-        style={{ scrollMarginTop: "100px" }}
-      >
+      <div className="proyek mt-32 py-25" id="proyek">
         <h1
           className="text-center text-3xl md:text-4xl font-bold mb-2"
           data-aos="fade-up"

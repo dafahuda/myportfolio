@@ -3,11 +3,7 @@ import { aboutParagraph, listProyek } from "../data";
 
 const AboutSection = () => {
   return (
-    <div
-      className="about mt-32 py-10"
-      id="tentang"
-      style={{ scrollMarginTop: "100px" }}
-    >
+    <div className="about mt-32 py-30" id="tentang">
       <div
         className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg"
         data-aos="fade-up"

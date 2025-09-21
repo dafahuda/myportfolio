@@ -8,7 +8,7 @@ import ContactSection from "./pages/ContactSection";
 function App() {
   return (
     <>
-      <div className="pt-16">
+      <div className="pt-4 md:pt-8">
         <HeroSection />
         <AboutSection />
         <ToolsSection />

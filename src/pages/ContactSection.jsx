@@ -1,10 +1,6 @@
 const ContactSection = () => {
   return (
-    <div
-      className="kontak mt-32 sm:p-10 p-0"
-      id="kontak"
-      style={{ scrollMarginTop: "100px" }}
-    >
+    <div className="kontak mt-32 py-25" id="kontak">
       <h1
         className="text-center text-3xl md:text-4xl font-bold mb-2"
         data-aos="fade-up"
@@ -57,7 +53,7 @@ const ContactSection = () => {
                 <h3 className="font-semibold text-lg">Media Sosial</h3>
                 <div className="flex gap-4 mt-2">
                   <a
-                    href="https://github.com/dafahuda"
+                    href="https://www.github.com/dafahuda"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-zinc-700 p-3 rounded-lg hover:bg-violet-600 transition-colors"
@@ -65,7 +61,7 @@ const ContactSection = () => {
                     <i className="ri-github-line ri-lg"></i>
                   </a>
                   <a
-                    href="www.linkedin.com/in/dafa-huda-rifa-i"
+                    href="https://www.linkedin.com/in/dafa-huda-rifa-i"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-zinc-700 p-3 rounded-lg hover:bg-violet-600 transition-colors"

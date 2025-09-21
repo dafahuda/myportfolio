@@ -6,15 +6,15 @@ const HeroSection = () => {
   return (
     <div
       id="beranda"
-      className="hero grid md:grid-cols-2 item-center xl:gap-0 gap-6 grid-cols-1"
+      className="hero grid md:grid-cols-2 item-center xl:gap-0 gap-6 grid-cols-1 pt-4 md:pt-0"
     >
       <img
         src={DataImage.HeroImage}
         alt="Hero Image"
-        className="w-full max-w-md md:order-2 md:ml-auto animate__animated animate__fadeInDown animate__delay-5s"
+        className="w-full max-w-md md:order-2 md:ml-auto animate__animated animate__fadeInDown animate__delay-1s"
         loading="lazy"
       />
-      <div className="animate__animated animate__fadeInUp animate__delay-4s md:order-1">
+      <div className="animate__animated animate__fadeInUp animate__delay-1s md:order-1">
         <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-4 rounded-2xl">
           <img
             src={DataImage.HeroImage}
@@ -45,9 +45,7 @@ const HeroSection = () => {
             />
           </p>
         </h1>
-        <p className="text-base/loose mb-6 opacity-90">
-          {heroParagraph.text}
-        </p>
+        <p className="text-base/loose mb-6 opacity-90">{heroParagraph.text}</p>
         <div className="flex items-center sm:gap-4 gap-2">
           <a
             href="#"
