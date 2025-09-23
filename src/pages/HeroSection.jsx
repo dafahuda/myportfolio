@@ -1,6 +1,6 @@
 import DataImage from "../data";
 import { heroParagraph } from "../data";
-
+import TextType from "../components/TextType";
 
 const HeroSection = () => {
   return (
@@ -27,7 +27,19 @@ const HeroSection = () => {
         <h1 className="text-4xl md:text-5xl/tight font-bold mb-6">
           Hi I'm <br />
           <p className="text-violet-500 inline-block">
-                        Dafa Huda Rifa'i
+            <TextType
+              text={[
+                "Dafa Huda Rifa'i",
+                "Front-end Developer",
+                "Back-end Developer",
+                "Website Developer",
+              ]}
+              textColors={["text-violet-500"]}
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor={true}
+              cursorCharacter="|"
+            />
           </p>
         </h1>
         <p className="text-base/loose mb-6 opacity-90">{heroParagraph.text}</p>
