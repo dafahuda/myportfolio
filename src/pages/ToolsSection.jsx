@@ -1,7 +1,11 @@
 import { listTools } from "../data";
+import LogoLoop from "../components/LogoLoop";
 
 const ToolsSection = () => {
-  const extendedTools = [...listTools, ...listTools];
+  const logos = listTools.map((tool) => ({
+    src: tool.gambar,
+    alt: tool.nama,
+  }));
 
   return (
     <div className="tools mt-32 py-25" id="tools">
@@ -23,29 +27,21 @@ const ToolsSection = () => {
         ataupun desain
       </p>
       <div
-        className="relative w-full overflow-hidden mt-14 group"
+        className="w-full overflow-hidden mt-14"
         data-aos="fade-up"
         data-aos-duration="1000"
         data-aos-once="true"
       >
-        <div className="flex w-max animate-infinite-scroll">
-          {extendedTools.map((tool, index) => (
-            <div
-              key={index}
-              className="flex items-center gap-2 p-3 border border-zinc-600 rounded-md bg-zinc-900 hover:bg-zinc-800 w-52 mx-4 flex-shrink-0 force-3d"
-            >
-              <img
-                src={tool.gambar}
-                alt={tool.nama}
-                className="w-14 bg-zinc-800 p-1 rounded-md"
-              />
-              <div>
-                <h4 className="font-bold">{tool.nama}</h4>
-                <p className="opacity-50 text-sm">{tool.ket}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <LogoLoop
+          logos={logos}
+          speed={100}
+          direction="left"
+          logoHeight={80}
+          gap={40}
+          pauseOnHover
+          scaleOnHover
+          ariaLabel="Tools I use"
+        />
       </div>
     </div>
   );

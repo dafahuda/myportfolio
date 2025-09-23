@@ -1,6 +1,6 @@
 import DataImage from "../data";
 import { heroParagraph } from "../data";
-import { TypeAnimation } from "react-type-animation";
+
 
 const HeroSection = () => {
   return (
@@ -27,22 +27,7 @@ const HeroSection = () => {
         <h1 className="text-4xl md:text-5xl/tight font-bold mb-6">
           Hi I'm <br />
           <p className="text-violet-500 inline-block">
-            <TypeAnimation
-              sequence={[
-                "Dafa Huda Rifa'i",
-                1000,
-                "UI/UX Designer",
-                1000,
-                "Front-end Developer",
-                1000,
-                "Back-end Developer",
-                1000,
-              ]}
-              wrapper="span"
-              speed={{ type: "keyStrokeDelayInMs", value: 250 }}
-              deletionSpeed={40}
-              repeat={Infinity}
-            />
+                        Dafa Huda Rifa'i
           </p>
         </h1>
         <p className="text-base/loose mb-6 opacity-90">{heroParagraph.text}</p>

@@ -16,25 +16,3 @@
     max-height: 80vh;
   }
 }
-
-@keyframes infinite-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-infinite-scroll {
-  animation: infinite-scroll 20s linear infinite;
-}
-
-.group:hover .animate-infinite-scroll {
-  animation-play-state: paused;
-}
-
-.force-3d {
-  transform: translateZ(0);
-  backface-visibility: hidden;
-}
