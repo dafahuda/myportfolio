@@ -1,6 +1,21 @@
 import DataImage from "../data";
 import { heroParagraph } from "../data";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
 import TextType from "../components/TextType";
+
+const goToSection = (e) => {
+  e.preventDefault();
+  const smoother = ScrollSmoother.get();
+  const target = e.currentTarget.getAttribute("href");
+  try {
+    smoother.scrollTo(target, true);
+  } catch (error) {
+    console.error(
+      `GSAP ScrollSmoother not found or target "${target}" does not exist.`,
+      error
+    );
+  }
+};
 
 const HeroSection = () => {
   return (
@@ -53,6 +68,7 @@ const HeroSection = () => {
           <a
             href="#proyek"
             className="bg-zinc-700 p-4 rounded-2xl hover:bg-zinc-600"
+            onClick={goToSection}
           >
             Lihat Proyek <i className="ri-arrow-down-line ri-lg"></i>
           </a>

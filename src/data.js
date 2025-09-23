@@ -6,20 +6,20 @@ const Image = {
 
 export default Image;
 
-import Tools1 from "/assets/tools/html.png";
-import Tools2 from "/assets/tools/css.png";
-import Tools3 from "/assets/tools/javascript.png";
-import Tools4 from "/assets/tools/php.png";
-import Tools5 from "/assets/tools/reactjs.png";
-import Tools6 from "/assets/tools/nextjs.png";
-import Tools7 from "/assets/tools/nodejs.png";
-import Tools8 from "/assets/tools/codeigniter.png";
-import Tools9 from "/assets/tools/tailwind.png";
-import Tools10 from "/assets/tools/bootstrap.png";
-import Tools11 from "/assets/tools/mysql.png";
-import Tools12 from "/assets/tools/figma.png";
-import Tools13 from "/assets/tools/canva.png";
-import Tools14 from "/assets/tools/github.png";
+import Tools1 from "/assets/tools/html.webp";
+import Tools2 from "/assets/tools/css.webp";
+import Tools3 from "/assets/tools/javascript.webp";
+import Tools4 from "/assets/tools/php.webp";
+import Tools5 from "/assets/tools/reactjs.webp";
+import Tools6 from "/assets/tools/nextjs.webp";
+import Tools7 from "/assets/tools/nodejs.webp";
+import Tools8 from "/assets/tools/codeigniter.webp";
+import Tools9 from "/assets/tools/tailwind.webp";
+import Tools10 from "/assets/tools/bootstrap.webp";
+import Tools11 from "/assets/tools/mysql.webp";
+import Tools12 from "/assets/tools/figma.webp";
+import Tools13 from "/assets/tools/canva.webp";
+import Tools14 from "/assets/tools/github.webp";
 
 export const listTools = [
   {
