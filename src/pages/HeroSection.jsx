@@ -31,14 +31,14 @@ const HeroSection = () => {
               text={[
                 "Dafa Huda Rifa'i",
                 "Front-end Developer",
-                "Back-end Developer",
+                "UI/UX Designer",
                 "Website Developer",
               ]}
               textColors={["text-violet-500"]}
               typingSpeed={75}
               pauseDuration={1500}
               showCursor={true}
-              cursorCharacter="|"
+              cursorCharacter="▎"
             />
           </p>
         </h1>
