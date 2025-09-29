@@ -60,17 +60,14 @@ const HeroSection = () => {
         <p className="text-base/loose mb-6 opacity-90">{heroParagraph.text}</p>
         <div className="flex items-center sm:gap-4 gap-2">
           <a
-            href="#"
+            href="#proyek"
+            onClick={goToSection}
             className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-600"
           >
-            Download CV <i className="ri-file-download-line ri-lg"></i>
+            Lihat Proyek <i className="ri-arrow-down-line ri-lg ml-1"></i>
           </a>
-          <a
-            href="#proyek"
-            className="bg-zinc-700 p-4 rounded-2xl hover:bg-zinc-600"
-            onClick={goToSection}
-          >
-            Lihat Proyek <i className="ri-arrow-down-line ri-lg"></i>
+          <a href="#" className="bg-zinc-800 p-4 rounded-2xl hover:bg-zinc-700">
+            Download CV <i className="ri-file-download-line ri-lg ml-1"></i>
           </a>
         </div>
       </div>

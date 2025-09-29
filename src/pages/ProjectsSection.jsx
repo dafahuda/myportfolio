@@ -54,26 +54,36 @@ const ProjectsSection = () => {
               setActiveTab("projects");
               setVisibleProjects(6);
             }}
-            className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
+            className={`px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2 font-medium ${
               activeTab === "projects"
                 ? "bg-violet-700 text-white"
                 : "bg-zinc-800 text-gray-300 hover:bg-zinc-700"
             }`}
           >
-            Proyek
+            {activeTab === "projects" ? (
+              <i className="ri-gallery-view ri-lg"></i>
+            ) : (
+              <i className="ri-gallery-view-2 ri-lg"></i>
+            )}
+            <span>Proyek</span>
           </button>
           <button
             onClick={() => {
               setActiveTab("certificates");
               setVisibleProjects(6);
             }}
-            className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
+            className={`px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2 font-medium ${
               activeTab === "certificates"
                 ? "bg-violet-700 text-white"
                 : "bg-zinc-800 text-gray-300 hover:bg-zinc-700"
             }`}
           >
-            Sertifikat
+            {activeTab === "certificates" ? (
+              <i className="ri-verified-badge-fill ri-lg"></i>
+            ) : (
+              <i className="ri-verified-badge-line ri-lg"></i>
+            )}
+            <span>Sertifikat</span>
           </button>
         </div>
 
