@@ -1,24 +1,16 @@
 import { useState } from "react";
-import { listProyek, listSertifikat } from "../data";
+import { listProyek, certificateList } from "../data";
+import { CertificateCard } from "../components/CertificateCard";
+import { ProjectCard } from "../components/ProjectCard";
 
 const ProjectsSection = () => {
   const [visibleProjects, setVisibleProjects] = useState(6);
-  const [activeTab, setActiveTab] = useState("projects"); // 'projects' atau 'certificates'
-  const [lightboxVisible, setLightboxVisible] = useState(false);
-  const [selectedCertificate, setSelectedCertificate] = useState(null);
+  const [activeTab, setActiveTab] = useState("projects"); // 'projects' or 'certificates'
+
+  console.log("activeTab:", activeTab);
 
   const projectsToShow = listProyek.slice(0, visibleProjects);
-  const certificatesToShow = listSertifikat.slice(0, visibleProjects);
-
-  const openLightbox = (sertifikat) => {
-    setSelectedCertificate(sertifikat);
-    setLightboxVisible(true);
-  };
-
-  const closeLightbox = () => {
-    setLightboxVisible(false);
-    setSelectedCertificate(null);
-  };
+  const certificatesToShow = certificateList.slice(0, visibleProjects);
 
   return (
     <>
@@ -88,91 +80,40 @@ const ProjectsSection = () => {
         </div>
 
         {/* Tab Content */}
-        <div className="proyek-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+        <div className="proyek-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
           {activeTab === "projects"
-            ? projectsToShow.map((proyek) => (
+            ? projectsToShow.map((project) => (
                 <div
-                  key={proyek.id}
-                  className="p-4 bg-zinc-800 rounded-lg flex flex-col h-full"
+                  key={project.id}
                   data-aos="fade-up"
                   data-aos-duration="1000"
-                  data-aos-delay={proyek.dad}
+                  data-aos-delay={project.animationDelay}
                   data-aos-once="true"
                 >
-                  <div className="overflow-hidden rounded-lg h-48 mb-4">
-                    {proyek.gambar ? (
-                      <img
-                        src={proyek.gambar}
-                        alt="Proyek Image"
-                        className="w-full h-full object-cover"
-                      />
-                    ) : (
-                      <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-full flex flex-col items-center justify-center">
-                        <i className="ri-image-2-line text-5xl text-gray-400"></i>
-                        <p className="text-1xl text-gray-500">No Image</p>
-                      </div>
-                    )}
-                  </div>
-                  <h1 className="text-2xl font-bold my-4">{proyek.nama}</h1>
-                  <p className="text-base/loose mb-4">{proyek.desk}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {proyek.tools.map((tool, index) => (
-                      <p
-                        className="py-1 px-3 border border-zinc-600 bg-zinc-600 rounded-md font-semibold"
-                        key={index}
-                      >
-                        {tool}
-                      </p>
-                    ))}
-                  </div>
-                  <div className="mt-auto text-center">
-                    <a
-                      href="#"
-                      className="bg-violet-700 p-3 rounded-lg block border border-zinc-600 hover:bg-violet-600"
-                    >
-                      Lihat Website
-                    </a>
-                  </div>
+                  <ProjectCard
+                    title={project.title}
+                    description={project.description}
+                    thumbnail={project.thumbnail}
+                    tools={project.tools}
+                  />
                 </div>
               ))
             : certificatesToShow.map((sertifikat) => (
                 <div
                   key={sertifikat.id}
-                  className="p-4 bg-zinc-800 rounded-lg flex flex-col h-full"
                   data-aos="fade-up"
                   data-aos-duration="1000"
-                  data-aos-delay={sertifikat.dad}
+                  data-aos-delay={sertifikat.animationDelay}
                   data-aos-once="true"
                 >
-                  <div className="overflow-hidden rounded-lg h-48 mb-4">
-                    {sertifikat.gambar ? (
-                      <img
-                        src={sertifikat.gambar}
-                        alt="Sertifikat Image"
-                        className="w-full h-full object-cover"
-                      />
-                    ) : (
-                      <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-full flex flex-col items-center justify-center">
-                        <i className="ri-file-text-line text-5xl text-gray-400"></i>
-                        <p className="text-1xl text-gray-500">No Sertifikat</p>
-                      </div>
-                    )}
-                  </div>
-                  <h1 className="text-2xl font-bold my-4">{sertifikat.nama}</h1>
-                  <p className="text-base/loose mb-4">{sertifikat.desk}</p>
-                  <div className="mt-auto">
-                    <p className="text-sm opacity-75 mb-4">
-                      Diterbitkan: {sertifikat.tanggal}
-                    </p>
-                    <div className="text-center">
-                      <button
-                        onClick={() => openLightbox(sertifikat)}
-                        className="bg-violet-700 p-3 rounded-lg block border border-zinc-600 hover:bg-violet-600 w-full"
-                      >
-                        Lihat Sertifikat
-                      </button>
-                    </div>
-                  </div>
+                  <CertificateCard
+                    title={sertifikat.name}
+                    description={sertifikat.description}
+                    issuer={sertifikat.issuer} // Correct the prop name to issuer
+                    certificates={sertifikat.imageList}
+                    onButtonClick={() => {}}
+                    maxVisible={2}
+                  />
                 </div>
               ))}
         </div>
@@ -222,7 +163,7 @@ const ProjectsSection = () => {
             </>
           ) : (
             <>
-              {visibleProjects < listSertifikat.length && (
+              {visibleProjects < certificateList.length && (
                 <div
                   className="text-center mt-8"
                   data-aos="fade-up"
@@ -243,8 +184,8 @@ const ProjectsSection = () => {
                   </button>
                 </div>
               )}
-              {visibleProjects >= listSertifikat.length &&
-                listSertifikat.length > 6 && (
+              {visibleProjects >= certificateList.length &&
+                certificateList.length > 6 && (
                   <div className="text-center mt-8">
                     <button
                       onClick={() => {
@@ -264,30 +205,6 @@ const ProjectsSection = () => {
           )}
         </div>
       </div>
-
-      {lightboxVisible && selectedCertificate && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
-          onClick={closeLightbox}
-        >
-          <div
-            className="relative bg-white p-4 rounded-lg max-w-4xl max-h-[90vh]"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <img
-              src={selectedCertificate.gambar}
-              alt={selectedCertificate.nama}
-              className="w-full h-full object-contain lightbox-image"
-            />
-            <button
-              onClick={closeLightbox}
-              className="absolute top-2 right-2 text-white bg-zinc-800 rounded-full p-2 leading-none"
-            >
-              <i className="ri-close-line ri-xl"></i>
-            </button>
-          </div>
-        </div>
-      )}
     </>
   );
 };
