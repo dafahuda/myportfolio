@@ -2,6 +2,7 @@ import DataImage from "../data";
 import { heroParagraph } from "../data";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import TextType from "../components/TextType";
+import { Icon } from "@iconify/react";
 
 const goToSection = (e) => {
   e.preventDefault();
@@ -59,16 +60,17 @@ const HeroSection = () => {
         </h1>
         <p className="text-base/loose mb-6 opacity-90">{heroParagraph.text}</p>
         <div className="flex items-center sm:gap-4 gap-2">
-          <a
-            href="#proyek"
+          <button
             onClick={goToSection}
-            className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-600"
+            className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-600 flex items-center gap-2"
           >
-            Lihat Proyek <i className="ri-arrow-down-line ri-lg ml-1"></i>
-          </a>
-          <a href="#" className="bg-zinc-800 p-4 rounded-2xl hover:bg-zinc-700">
-            Download CV <i className="ri-file-download-line ri-lg ml-1"></i>
-          </a>
+            <span>Lihat Proyek</span>
+            <Icon icon="lucide:arrow-down" />
+          </button>
+          <button className="bg-zinc-800 p-4 rounded-2xl hover:bg-zinc-700 flex items-center gap-2">
+            <span>Download CV</span>
+            <Icon icon="lucide:download" />
+          </button>
         </div>
       </div>
     </div>

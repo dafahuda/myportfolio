@@ -1,12 +1,6 @@
-import "remixicon/fonts/remixicon.css";
+import { Icon } from "@iconify/react";
 
-export function ProjectCard({
-  title,
-  description,
-  thumbnail,
-  tools,
-  animationDelay,
-}) {
+export function ProjectCard({ title, description, thumbnail, tools }) {
   const mainImage = thumbnail;
 
   return (
@@ -20,18 +14,22 @@ export function ProjectCard({
           />
         ) : (
           <div className="bg-gray-700/20 h-full w-full flex flex-col items-center justify-center">
-            <i className="ri-image-2-line text-5xl text-gray-400"></i>
+            <Icon icon="lucide:image-off" className="text-5xl text-gray-400" />
             <p className="text-1xl text-gray-500">No Image</p>
           </div>
         )}
       </div>
-      <div className="flex-grow flex flex-col space-y-4 p-6">
-        <h1 className="text-2xl font-bold text-white">{title}</h1>
-        <p className="text-base/loose text-gray-300">{description}</p>
+      <div className="flex-grow flex flex-col space-y-4 p-6 transition-all duration-300 group-hover:pt-8">
+        <h1 className="text-2xl font-bold text-white transition-colors duration-300 group-hover:text-violet-400">
+          {title}
+        </h1>
+        <p className="text-base/loose text-gray-300 transition-colors duration-300">
+          {description}
+        </p>
         <div className="flex flex-wrap gap-2">
           {tools.map((tool, index) => (
             <p
-              className="py-1 px-3 border border-zinc-600 bg-zinc-600 rounded-md font-semibold text-white text-sm"
+              className="py-1 px-3 border border-zinc-600 bg-zinc-600 rounded-md font-semibold text-white text-sm transition-colors duration-300"
               key={index}
             >
               {tool}
@@ -44,7 +42,7 @@ export function ProjectCard({
             className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-violet-700 px-4 text-sm font-medium text-slate-50 shadow transition-colors hover:bg-violet-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-slate-950 disabled:pointer-events-none disabled:opacity-50 group-hover:gap-4"
           >
             Lihat Website
-            <i className="ri-arrow-right-line h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            <Icon icon="lucide:arrow-right" className="h-4 w-4 flex items-center transition-transform duration-300 group-hover:translate-x-1" />
           </button>
         </div>
       </div>

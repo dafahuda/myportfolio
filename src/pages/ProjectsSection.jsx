@@ -2,12 +2,11 @@ import { useState } from "react";
 import { listProyek, certificateList } from "../data";
 import { CertificateCard } from "../components/CertificateCard";
 import { ProjectCard } from "../components/ProjectCard";
+import { Icon } from "@iconify/react";
 
 const ProjectsSection = () => {
   const [visibleProjects, setVisibleProjects] = useState(6);
   const [activeTab, setActiveTab] = useState("projects"); // 'projects' or 'certificates'
-
-  console.log("activeTab:", activeTab);
 
   const projectsToShow = listProyek.slice(0, visibleProjects);
   const certificatesToShow = certificateList.slice(0, visibleProjects);
@@ -46,16 +45,16 @@ const ProjectsSection = () => {
               setActiveTab("projects");
               setVisibleProjects(6);
             }}
-            className={`px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2 font-medium ${
+            className={`px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2 font-medium cursor-pointer ${
               activeTab === "projects"
                 ? "bg-violet-700 text-white"
                 : "bg-zinc-800 text-gray-300 hover:bg-zinc-700"
             }`}
           >
             {activeTab === "projects" ? (
-              <i className="ri-gallery-view ri-lg"></i>
+              <Icon icon="lucide:layout-grid" className="ri-lg" />
             ) : (
-              <i className="ri-gallery-view-2 ri-lg"></i>
+              <Icon icon="lucide:layout-list" className="ri-lg" />
             )}
             <span>Proyek</span>
           </button>
@@ -64,16 +63,16 @@ const ProjectsSection = () => {
               setActiveTab("certificates");
               setVisibleProjects(6);
             }}
-            className={`px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2 font-medium ${
+            className={`px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2 font-medium cursor-pointer ${
               activeTab === "certificates"
                 ? "bg-violet-700 text-white"
                 : "bg-zinc-800 text-gray-300 hover:bg-zinc-700"
             }`}
           >
             {activeTab === "certificates" ? (
-              <i className="ri-verified-badge-fill ri-lg"></i>
+              <Icon icon="bi:award-fill" className="ri-lg" />
             ) : (
-              <i className="ri-verified-badge-line ri-lg"></i>
+              <Icon icon="bi:award" className="ri-lg" />
             )}
             <span>Sertifikat</span>
           </button>
@@ -109,7 +108,7 @@ const ProjectsSection = () => {
                   <CertificateCard
                     title={sertifikat.name}
                     description={sertifikat.description}
-                    issuer={sertifikat.issuer} // Correct the prop name to issuer
+                    issuer={sertifikat.issuer}
                     certificates={sertifikat.imageList}
                     onButtonClick={() => {}}
                     maxVisible={2}
@@ -138,7 +137,7 @@ const ProjectsSection = () => {
                   >
                     Lihat Lebih Banyak
                     <span className="animate__animated animate__heartBeat animate__infinite">
-                      <i className="ri-arrow-down-double-line ri-2x group-hover:text-white"></i>
+                      <Icon icon="lucide:chevrons-down" className="ri-2x group-hover:text-white" />
                     </span>
                   </button>
                 </div>
@@ -156,7 +155,7 @@ const ProjectsSection = () => {
                       className="text-white-800 hover:text-violet-800 cursor-pointer gap-2"
                     >
                       Tampilkan Lebih Sedikit
-                      <i className="ri-arrow-up-double-line ri-xl"></i>
+                      <Icon icon="lucide:chevrons-up" className="ri-xl" />
                     </button>
                   </div>
                 )}
@@ -179,7 +178,7 @@ const ProjectsSection = () => {
                   >
                     Lihat Lebih Banyak
                     <span className="animate__animated animate__heartBeat animate__infinite">
-                      <i className="ri-arrow-down-double-line ri-2x group-hover:text-white"></i>
+                      <Icon icon="lucide:chevrons-down" className="ri-2x group-hover:text-white" />
                     </span>
                   </button>
                 </div>
@@ -197,7 +196,7 @@ const ProjectsSection = () => {
                       className="text-white-800 hover:text-violet-800 cursor-pointer gap-2"
                     >
                       Tampilkan Lebih Sedikit
-                      <i className="ri-arrow-up-double-line ri-xl"></i>
+                      <Icon icon="lucide:chevrons-up" className="ri-xl" />
                     </button>
                   </div>
                 )}

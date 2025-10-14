@@ -1,3 +1,5 @@
+import { Icon } from "@iconify/react";
+
 const ContactSection = () => {
   return (
     <div className="kontak mt-32 py-25" id="kontak">
@@ -32,7 +34,7 @@ const ContactSection = () => {
 
           <div className="space-y-6">
             <div className="flex items-start gap-4">
-              <i className="ri-mail-line ri-xl text-violet-500 mt-1"></i>
+              <Icon icon="lucide:mail" className="ri-xl text-violet-500 mt-1" />
               <div>
                 <h3 className="font-semibold text-lg">Email</h3>
                 <p className="opacity-75">dafahudarifai147@gmail.com</p>
@@ -40,7 +42,10 @@ const ContactSection = () => {
             </div>
 
             <div className="flex items-start gap-4">
-              <i className="ri-map-pin-line ri-xl text-violet-500 mt-1"></i>
+              <Icon
+                icon="lucide:map-pin"
+                className="ri-xl text-violet-500 mt-1"
+              />
               <div>
                 <h3 className="font-semibold text-lg">Lokasi</h3>
                 <p className="opacity-75">Indonesia</p>
@@ -48,7 +53,7 @@ const ContactSection = () => {
             </div>
 
             <div className="flex items-start gap-4">
-              <i className="ri-links-line ri-xl text-violet-500 mt-1"></i>
+              <Icon icon="lucide:link" className="ri-xl text-violet-500 mt-1" />
               <div>
                 <h3 className="font-semibold text-lg">Media Sosial</h3>
                 <div className="flex gap-4 mt-2">
@@ -58,7 +63,7 @@ const ContactSection = () => {
                     rel="noopener noreferrer"
                     className="bg-zinc-700 p-3 rounded-lg hover:bg-violet-600 transition-colors"
                   >
-                    <i className="ri-github-line ri-lg"></i>
+                    <Icon icon="lucide:github" className="ri-lg" />
                   </a>
                   <a
                     href="https://www.linkedin.com/in/dafa-huda-rifa-i"
@@ -66,7 +71,7 @@ const ContactSection = () => {
                     rel="noopener noreferrer"
                     className="bg-zinc-700 p-3 rounded-lg hover:bg-violet-600 transition-colors"
                   >
-                    <i className="ri-linkedin-line ri-lg"></i>
+                    <Icon icon="uil:linkedin" className="ri-lg" />
                   </a>
                   <a
                     href="https://www.instagram.com/dafa.h.r"
@@ -74,7 +79,7 @@ const ContactSection = () => {
                     rel="noopener noreferrer"
                     className="bg-zinc-700 p-3 rounded-lg hover:bg-violet-600 transition-colors"
                   >
-                    <i className="ri-instagram-line ri-lg"></i>
+                    <Icon icon="lucide:instagram" className="ri-lg" />
                   </a>
                 </div>
               </div>
@@ -95,7 +100,7 @@ const ContactSection = () => {
                 <label className="font-semibold block mb-2">Nama Lengkap</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-zinc-400">
-                    <i className="ri-user-line"></i>
+                    <Icon icon="lucide:user" />
                   </div>
                   <input
                     type="text"
@@ -111,7 +116,7 @@ const ContactSection = () => {
                 <label className="font-semibold block mb-2">E-mail</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-zinc-400">
-                    <i className="ri-mail-line"></i>
+                    <Icon icon="lucide:mail" />
                   </div>
                   <input
                     type="email"
@@ -127,7 +132,7 @@ const ContactSection = () => {
                 <label className="font-semibold block mb-2">Pesan</label>
                 <div className="relative">
                   <div className="absolute top-3 left-3 text-zinc-400">
-                    <i className="ri-edit-line"></i>
+                    <Icon icon="lucide:edit" />
                   </div>
                   <textarea
                     name="pesan"

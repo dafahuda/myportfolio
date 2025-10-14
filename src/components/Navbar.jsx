@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
+import { Icon } from "@iconify/react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -87,9 +88,9 @@ const Navbar = () => {
           onClick={toggleMenu}
         >
           {isMenuOpen ? (
-            <i className="ri-close-line"></i>
+            <Icon icon="lucide:x" />
           ) : (
-            <i className="ri-menu-line"></i>
+            <Icon icon="lucide:menu" />
           )}
         </button>
       </div>
