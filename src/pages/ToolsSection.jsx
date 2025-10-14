@@ -1,5 +1,6 @@
 import { listTools } from "../data";
 import LogoLoop from "../components/LogoLoop";
+import { Icon } from "@iconify/react";
 
 const ToolsSection = () => {
   const logos = listTools.map((tool) => ({

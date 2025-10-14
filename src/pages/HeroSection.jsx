@@ -62,6 +62,7 @@ const HeroSection = () => {
         <div className="flex items-center sm:gap-4 gap-2">
           <button
             onClick={goToSection}
+            href="#proyek"
             className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-600 flex items-center gap-2"
           >
             <span>Lihat Proyek</span>
