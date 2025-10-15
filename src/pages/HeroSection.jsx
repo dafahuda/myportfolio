@@ -27,10 +27,10 @@ const HeroSection = () => {
       <img
         src={DataImage.HeroImage}
         alt="Hero Image"
-        className="w-full max-w-md md:order-2 md:ml-auto animate__animated animate__fadeInDown animate__delay-1s"
+        className="w-full max-w-md md:order-2 md:ml-auto fade-in"
         loading="lazy"
       />
-      <div className="animate__animated animate__fadeInUp animate__delay-1s md:order-1">
+      <div className="fade-in md:order-1">
         <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-4 rounded-2xl">
           <img
             src={DataImage.HeroImage}

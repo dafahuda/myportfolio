@@ -15,30 +15,19 @@ const ProjectsSection = () => {
     <>
       <div className="proyek mt-32 py-25" id="proyek">
         <h1
-          className="text-center text-3xl md:text-4xl font-bold mb-2"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
+          className="text-center text-3xl md:text-4xl font-bold mb-2 fade-in"
         >
           Proyek & Sertifikat
         </h1>
         <p
-          className="text-base/loose text-center opacity-50"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-delay="300"
-          data-aos-once="true"
+          className="text-base/loose text-center opacity-50 fade-in"
         >
           Berikut ini beberapa proyek dan sertifikat yang sudah saya dapatkan
         </p>
 
         {/* Tab Navigation */}
         <div
-          className="flex justify-center mt-8 gap-4"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-delay="300"
-          data-aos-once="true"
+          className="flex justify-center mt-8 gap-4 fade-in"
         >
           <button
             onClick={() => {
@@ -84,10 +73,7 @@ const ProjectsSection = () => {
             ? projectsToShow.map((project) => (
                 <div
                   key={project.id}
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-delay={project.animationDelay}
-                  data-aos-once="true"
+                  className="fade-in"
                 >
                   <ProjectCard
                     title={project.title}
@@ -100,10 +86,7 @@ const ProjectsSection = () => {
             : certificatesToShow.map((sertifikat) => (
                 <div
                   key={sertifikat.id}
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-delay={sertifikat.animationDelay}
-                  data-aos-once="true"
+                  className="fade-in"
                 >
                   <CertificateCard
                     title={sertifikat.name}
@@ -123,11 +106,7 @@ const ProjectsSection = () => {
             <>
               {visibleProjects < listProyek.length && (
                 <div
-                  className="text-center mt-8"
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-delay="300"
-                  data-aos-once="true"
+                  className="text-center mt-8 fade-in"
                 >
                   <button
                     onClick={() =>
@@ -164,11 +143,7 @@ const ProjectsSection = () => {
             <>
               {visibleProjects < certificateList.length && (
                 <div
-                  className="text-center mt-8"
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-delay="300"
-                  data-aos-once="true"
+                  className="text-center mt-8 fade-in"
                 >
                   <button
                     onClick={() =>

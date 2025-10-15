@@ -5,10 +5,7 @@ const AboutSection = () => {
   return (
     <div className="about mt-32 py-30" id="tentang">
       <div
-        className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-once="true"
+        className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg fade-in"
       >
         <p className="text-4xl md:text-5xl/tight font-bold mb-2">
           Tentang Saya

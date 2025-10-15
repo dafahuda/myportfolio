@@ -10,12 +10,23 @@ import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import PreLoader from "./components/PreLoader.jsx";
 
-import "animate.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
-AOS.init();
+
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
+
+// CSS untuk animasi pulse
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  .pulse-animation {
+    animation: pulse 1s infinite;
+  }
+`;
+document.head.appendChild(style);
 
 // Komponen utama aplikasi
 const MainApp = () => {
@@ -30,6 +41,28 @@ const MainApp = () => {
         content: "#smooth-content",
         smooth: 1,
         effects: true,
+      });
+
+      // GSAP ScrollTrigger untuk animasi fade-in
+      gsap.utils.toArray(".fade-in").forEach((element) => {
+        gsap.fromTo(
+          element,
+          {
+            opacity: 0,
+            y: 50,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            scrollTrigger: {
+              trigger: element,
+              start: "top 80%",
+              end: "bottom 20%",
+              toggleActions: "play none none reverse",
+            },
+          }
+        );
       });
 
       return () => {

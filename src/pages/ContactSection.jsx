@@ -4,30 +4,17 @@ const ContactSection = () => {
   return (
     <div className="kontak mt-32 py-25" id="kontak">
       <h1
-        className="text-center text-3xl md:text-4xl font-bold mb-2"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-once="true"
+        className="text-center text-3xl md:text-4xl font-bold mb-2 fade-in"
       >
         Kontak
       </h1>
       <p
-        className="text-base/loose text-center mb-10 opacity-50"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-delay="300"
-        data-aos-once="true"
+        className="text-base/loose text-center mb-10 opacity-50 fade-in"
       >
         Mari Terhubung dengan saya.
       </p>
 
-      <div
-        className="grid lg:grid-cols-2 gap-10 mt-14"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-delay="500"
-        data-aos-once="true"
-      >
+      <div className="grid lg:grid-cols-2 gap-10 mt-14 fade-in">
         {/* Informasi Kontak */}
         <div className="bg-zinc-800 p-8 rounded-lg">
           <h2 className="text-2xl font-bold mb-6">Informasi Kontak</h2>
