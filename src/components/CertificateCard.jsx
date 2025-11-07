@@ -48,6 +48,8 @@ export function CertificateCard({
               <img
                 src={cert.image || "/placeholder.svg"}
                 alt={`${title} - ${cert.text}`}
+                loading="lazy"
+                decoding="async"
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute top-4 right-4 rounded-full bg-zinc-700 px-3 py-1 text-sm font-semibold text-gray-200 shadow-md">

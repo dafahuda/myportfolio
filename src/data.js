@@ -125,6 +125,7 @@ export const listProyek = [
     tools: ["HTML", "CSS", "Javascript", "AOS"],
     animationDelay: "200",
     imageList: [],
+    link: "#",
   },
   {
     id: 2,
@@ -139,6 +140,7 @@ export const listProyek = [
       { image: Proyek1, text: "Halaman Login" },
       { image: Proyek3, text: "Galeri" },
     ],
+    link: "https://dafahuda.github.io/bogor-landslide-risk",
   },
   {
     id: 3,
@@ -149,6 +151,7 @@ export const listProyek = [
     tools: ["Vite", "ReactJS", "TailwindCSS", "AOS"],
     animationDelay: "400",
     imageList: [{ image: Proyek3, text: "Desain Baru" }],
+    link: "#",
   },
   {
     id: 4,
@@ -170,6 +173,7 @@ export const listProyek = [
       { image: Proyek4, text: "Halaman Kursus" },
       { image: Proyek5, text: "Detail Materi" },
     ],
+    link: "https://fintrack-ten.vercel.app",
   },
   {
     id: 5,
@@ -180,6 +184,7 @@ export const listProyek = [
     tools: ["HTML", "CSS", "ReactJS", "TailwindCSS"],
     animationDelay: "600",
     imageList: [{ image: Proyek5, text: "Tampilan Dummy 1" }],
+    link: "#",
   },
   {
     id: 6,
@@ -190,6 +195,7 @@ export const listProyek = [
     tools: ["HTML", "CSS", "JavaScript", "Figma"],
     animationDelay: "700",
     imageList: [{ image: Proyek6, text: "Tampilan Dummy 2" }],
+    link: "#",
   },
 ];
 

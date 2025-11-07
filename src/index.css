@@ -12,4 +12,7 @@
   .lightbox-image {
     max-height: 80vh;
   }
+  .fade-in {
+    will-change: transform, opacity;
+  }
 }

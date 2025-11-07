@@ -1,7 +1,8 @@
 import { Icon } from "@iconify/react";
 
-export function ProjectCard({ title, description, thumbnail, tools }) {
+export function ProjectCard({ title, description, thumbnail, tools, link }) {
   const mainImage = thumbnail;
+  const isDisabled = !link || link === "#";
 
   return (
     <div className="group w-full h-full rounded-2xl bg-zinc-800 shadow-lg transition-all duration-300 hover:shadow-2xl flex flex-col">
@@ -10,6 +11,8 @@ export function ProjectCard({ title, description, thumbnail, tools }) {
           <img
             src={mainImage}
             alt={`Gambar untuk proyek ${title}`}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         ) : (
@@ -37,13 +40,20 @@ export function ProjectCard({ title, description, thumbnail, tools }) {
           ))}
         </div>
         <div className="mt-auto text-center pt-4">
-          <button
-            onClick={() => window.open("#", "_blank")}
-            className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-violet-700 px-4 text-sm font-medium text-slate-50 shadow transition-colors hover:bg-violet-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-slate-950 disabled:pointer-events-none disabled:opacity-50 group-hover:gap-4"
+          <a
+            href={isDisabled ? undefined : link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-violet-700 px-4 text-sm font-medium text-slate-50 shadow transition-colors hover:bg-violet-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-slate-950 group-hover:gap-4 ${
+              isDisabled && "opacity-50 pointer-events-none"
+            }`}
           >
             Lihat Website
-            <Icon icon="lucide:arrow-right" className="h-4 w-4 flex items-center transition-transform duration-300 group-hover:translate-x-1" />
-          </button>
+            <Icon
+              icon="lucide:arrow-right"
+              className="h-4 w-4 flex items-center transition-transform duration-300 group-hover:translate-x-1"
+            />
+          </a>
         </div>
       </div>
     </div>

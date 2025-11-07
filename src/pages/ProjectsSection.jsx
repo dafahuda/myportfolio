@@ -80,6 +80,7 @@ const ProjectsSection = () => {
                     description={project.description}
                     thumbnail={project.thumbnail}
                     tools={project.tools}
+                    link={project.link}
                   />
                 </div>
               ))
