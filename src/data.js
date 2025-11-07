@@ -129,20 +129,10 @@ export const listProyek = [
   {
     id: 2,
     thumbnail: Proyek2,
-    title: "Company Profile",
+    title: "Bogor Landslide Risk",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: [
-      "HTML",
-      "CSS",
-      "Javascript",
-      "AOS",
-      "Swiper",
-      "Lightbox Gallery",
-      "Framermotion",
-      "Bootstrap",
-      "jQuery",
-    ],
+      "Aplikasi web interaktif untuk menampilkan peta batas wilayah Kota Bogor dan perhitungan risiko longsor menggunakan metode Fuzzy Logic.",
+    tools: ["HTML", "CSS", "Javascript", "LeafletJS", "ChartJS"],
     animationDelay: "300",
     imageList: [
       { image: Proyek2, text: "Tampilan Utama" },
@@ -163,17 +153,17 @@ export const listProyek = [
   {
     id: 4,
     thumbnail: Proyek4,
-    title: "Website Course",
+    title: "Fintrack",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
+      "sebuah permasalahan yang sering dilakukan oleh masyarakat umun yang tidak menggetahui financial dan juga informasi terbaru menggenai dunia perekonomian",
     tools: [
-      "Vite",
+      "HTML",
+      "CSS",
+      "MongoDB",
+      "ExpressJS",
       "ReactJS",
-      "Bootstrap",
-      "AOS",
-      "swiper",
-      "Lightbox Gallery",
-      "Framermotion",
+      "NodeJS",
+      "TaildwindCSS",
     ],
     animationDelay: "500",
     imageList: [
@@ -184,26 +174,22 @@ export const listProyek = [
   {
     id: 5,
     thumbnail: Proyek5,
-    title: "Proyek Dummy 5",
+    title: "Freedom",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["ReactJS", "TailwindCSS"],
+      "sebuah ide untuk meminimalisir tindakan rasis atau kejadian yang terjadi bertentangan dengan sosial seperti konflik SARA dengan mengembangkan website yang berfungsi untuk menumbuhkan sebuah rasa empati",
+    tools: ["HTML", "CSS", "ReactJS", "TailwindCSS"],
     animationDelay: "600",
-    imageList: [
-      { image: Proyek5, text: "Tampilan Dummy 1" },
-    ],
+    imageList: [{ image: Proyek5, text: "Tampilan Dummy 1" }],
   },
   {
     id: 6,
     thumbnail: Proyek6,
-    title: "Proyek Dummy 6",
+    title: "Gabungin",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["Vite", "JavaScript"],
+      "Gabungin.com hadir dengan website  yang memungkinkan diakses dimana saja dan berbagi ide serta jadwal dengan siapa saja",
+    tools: ["HTML", "CSS", "JavaScript", "Figma"],
     animationDelay: "700",
-    imageList: [
-      { image: Proyek6, text: "Tampilan Dummy 2" },
-    ],
+    imageList: [{ image: Proyek6, text: "Tampilan Dummy 2" }],
   },
 ];
 
