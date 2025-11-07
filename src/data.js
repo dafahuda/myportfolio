@@ -181,6 +181,30 @@ export const listProyek = [
       { image: Proyek5, text: "Detail Materi" },
     ],
   },
+  {
+    id: 5,
+    thumbnail: Proyek5,
+    title: "Proyek Dummy 5",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
+    tools: ["ReactJS", "TailwindCSS"],
+    animationDelay: "600",
+    imageList: [
+      { image: Proyek5, text: "Tampilan Dummy 1" },
+    ],
+  },
+  {
+    id: 6,
+    thumbnail: Proyek6,
+    title: "Proyek Dummy 6",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
+    tools: ["Vite", "JavaScript"],
+    animationDelay: "700",
+    imageList: [
+      { image: Proyek6, text: "Tampilan Dummy 2" },
+    ],
+  },
 ];
 
 import Sertifikat1 from "/assets/proyek/proyek1.webp";
