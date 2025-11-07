@@ -63,12 +63,12 @@ const HeroSection = () => {
           <button
             onClick={goToSection}
             href="#proyek"
-            className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-600 flex items-center gap-2"
+            className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-600 flex items-center gap-2  cursor-pointer"
           >
             <span>Lihat Proyek</span>
             <Icon icon="lucide:arrow-down" />
           </button>
-          <button className="bg-zinc-800 p-4 rounded-2xl hover:bg-zinc-700 flex items-center gap-2">
+          <button className="bg-zinc-800 p-4 rounded-2xl hover:bg-zinc-700 flex items-center gap-2 cursor-pointer">
             <span>Download CV</span>
             <Icon icon="lucide:download" />
           </button>
