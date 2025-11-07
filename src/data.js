@@ -145,10 +145,18 @@ export const listProyek = [
   {
     id: 3,
     thumbnail: Proyek3,
-    title: "Web Pernikahan 2.0",
+    title: "Mini Weather Station",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["Vite", "ReactJS", "TailwindCSS", "AOS"],
+      "Aplikasi web untuk memantau data cuaca secara real-time dari Mini Weather Station menggunakan arduino mega wifi dan website sebagai tampilan data.",
+    tools: [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Codeigniter 3",
+      "ChartJS",
+      "Bootstrap",
+      "Arduino Mega Wifi",
+    ],
     animationDelay: "400",
     imageList: [{ image: Proyek3, text: "Desain Baru" }],
     link: "#",
@@ -199,85 +207,73 @@ export const listProyek = [
   },
 ];
 
-import Sertifikat1 from "/assets/proyek/proyek1.webp";
-import Sertifikat2 from "/assets/proyek/proyek2.webp";
-import Sertifikat3 from "/assets/proyek/proyek3.webp";
-import Sertifikat4 from "/assets/proyek/proyek4.webp";
+import CertJnaSertifikat from "/assets/sertifikat/Fundamental Junior Network Administrator Sertifikat.webp";
+import CertJnaNilai from "/assets/sertifikat/Fundamental Junior Network Administrator Nilai.webp";
+import CertInaSertifikat from "/assets/sertifikat/Intermediate Junior Network Administrator Sertifikat.webp";
+import CertInaNilai from "/assets/sertifikat/Intermediate Junior Network Administrator Nilai.webp";
+import CertDtSertifikat from "/assets/sertifikat/Teknisi Drive Tester Sertifikat.webp";
+import CertDtNilai from "/assets/sertifikat/Teknisi Drive Tester  Nilai.webp";
+import CertAdtSertifikat from "/assets/sertifikat/Analisi Teknisi Drive Tester Sertifikat.webp";
+import CertAdtNilai from "/assets/sertifikat/Analisi Teknisi Drive Tester Nilai.webp";
+import CertMsSertifikat from "/assets/sertifikat/Sertifikat Microsoft Office Desktop Training.webp";
+import CertMsNilai from "/assets/sertifikat/Sertifikat Microsoft Office Desktop Training Nilai.webp";
 
 export const certificateList = [
   {
     id: 1,
-    name: "Sertifikat Web Stacks",
-    issuer: "Dicoding",
-    description: "Sertifikat kelulusan untuk React, JS, dan pengembangan Web.",
+    name: "Fundamental Junior Network Administrator",
+    issuer: "Digitalent",
+    description:
+      "Sertifikat kelulusan untuk Fundamental Junior Network Administrator.",
     animationDelay: "200",
     imageList: [
-      { image: Sertifikat1, text: "Januari 2023" },
-      { image: Sertifikat2, text: "React" },
-      { image: Sertifikat3, text: "JavaScript" },
-      { image: Sertifikat4, text: "HTML/CSS" },
+      { image: CertJnaSertifikat, text: "Agustus 2025" },
+      { image: CertJnaNilai, text: "Transkrip Nilai" },
     ],
   },
   {
     id: 2,
-    name: "Sertifikat UI/UX Design",
-    issuer: "Google",
-    description: "Sertifikat kelulusan kursus UI/UX Design menggunakan Figma.",
+    name: "Intermediate Junior Network Administrator",
+    issuer: "Digitalent",
+    description:
+      "Sertifikat kelulusan untuk Intermediate Junior Network Administrator.",
     animationDelay: "300",
     imageList: [
-      { image: Proyek2, text: "Maret 2023" },
-      { image: Proyek1, text: "Figma" },
+      { image: CertInaSertifikat, text: "Agustus 2025" },
+      { image: CertInaNilai, text: "Transkrip Nilai" },
     ],
   },
   {
     id: 3,
-    name: "Sertifikat JavaScript",
-    issuer: "FreeCodeCamp",
-    description: "Sertifikat fundamental untuk bahasa pemrograman JavaScript.",
+    name: "Teknisi Drive Tester",
+    issuer: "Digitalent",
+    description: "Sertifikat kelulusan untuk Teknisi Drive Tester.",
     animationDelay: "400",
-    imageList: [{ image: Proyek3, text: "Mei 2023" }],
+    imageList: [
+      { image: CertDtSertifikat, text: "September 2025" },
+      { image: CertDtNilai, text: "Transkrip Nilai" },
+    ],
   },
   {
     id: 4,
-    name: "Sertifikat Web Development",
-    issuer: "Udemy",
-    description: "Sertifikat kelulusan kursus Web Development dari awal.",
+    name: "Analisis Teknisi Drive Tester",
+    issuer: "Digitalent",
+    description: "Sertifikat kelulusan untuk Analisis Teknisi Drive Tester.",
     animationDelay: "500",
     imageList: [
-      { image: Proyek4, text: "Juli 2023" },
-      { image: Proyek1, text: "Fundamental" },
+      { image: CertAdtSertifikat, text: "Oktober 2025" },
+      { image: CertAdtNilai, text: "Transkrip Nilai" },
     ],
   },
   {
     id: 5,
-    name: "Sertifikat Frontend Framework",
-    issuer: "Coursera",
-    description: "Sertifikat untuk penguasaan framework frontend modern.",
+    name: "Microsoft Office Desktop Training",
+    issuer: "Trust Training Partners",
+    description: "Sertifikat pelatihan Microsoft Office.",
     animationDelay: "600",
     imageList: [
-      { image: Sertifikat1, text: "Januari 2023" },
-      { image: Sertifikat2, text: "React" },
-      { image: Sertifikat3, text: "JavaScript" },
-      { image: Sertifikat4, text: "HTML/CSS" },
-    ],
-  },
-  {
-    id: 6,
-    name: "Sertifikat Backend Development",
-    issuer: "Dicoding",
-    description: "Sertifikat untuk pengembangan sisi server.",
-    animationDelay: "700",
-    imageList: [{ image: Proyek1, text: "November 2023" }],
-  },
-  {
-    id: 7,
-    name: "Sertifikat React Lanjutan",
-    issuer: "Udemy",
-    description: "Sertifikat React tingkat lanjut dan manajemen state.",
-    animationDelay: "200",
-    imageList: [
-      { image: Proyek6, text: "Desember 2023" },
-      { image: Proyek5, text: "Advanced" },
+      { image: CertMsSertifikat, text: "September 2019" },
+      { image: CertMsNilai, text: "Transkrip Nilai" },
     ],
   },
 ];

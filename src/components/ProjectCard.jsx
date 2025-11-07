@@ -22,22 +22,24 @@ export function ProjectCard({ title, description, thumbnail, tools, link }) {
           </div>
         )}
       </div>
-      <div className="flex-grow flex flex-col space-y-4 p-6 transition-all duration-300 group-hover:pt-8">
-        <h1 className="text-2xl font-bold text-white transition-colors duration-300 group-hover:text-violet-400">
-          {title}
-        </h1>
-        <p className="text-base/loose text-gray-300 transition-colors duration-300">
-          {description}
-        </p>
-        <div className="flex flex-wrap gap-2">
-          {tools.map((tool, index) => (
-            <p
-              className="py-1 px-3 border border-zinc-600 bg-zinc-600 rounded-md font-semibold text-white text-sm transition-colors duration-300"
-              key={index}
-            >
-              {tool}
-            </p>
-          ))}
+      <div className="flex-grow flex flex-col p-6 transition-all duration-300 group-hover:pt-8 flex-1 flex-col justify-between">
+        <div className="flex-grow flex flex-col space-y-4">
+          <h1 className="text-2xl font-bold text-white transition-colors duration-300 group-hover:text-violet-400">
+            {title}
+          </h1>
+          <p className="text-base/loose text-gray-300 transition-colors duration-300 line-clamp-3">
+            {description}
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {tools.map((tool, index) => (
+              <p
+                className="py-1 px-3 border border-zinc-600 bg-zinc-600 rounded-md font-semibold text-white text-sm transition-colors duration-300"
+                key={index}
+              >
+                {tool}
+              </p>
+            ))}
+          </div>
         </div>
         <div className="mt-auto text-center pt-4">
           <a
