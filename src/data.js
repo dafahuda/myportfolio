@@ -119,13 +119,13 @@ export const listProyek = [
   {
     id: 1,
     thumbnail: Proyek1,
-    title: "Website Sekolah",
+    title: "Website Portfolio",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["HTML", "CSS", "Javascript", "AOS"],
+      "Website portfolio pribadi yang menampilkan informasi tentang diri saya, keterampilan, proyek, dan cara menghubungi saya.",
+    tools: ["HTML", "CSS", "Javascript", "ReactJS", "TailwindCSS"],
     animationDelay: "200",
     imageList: [],
-    link: "#",
+    link: "https://dafahr-myportfolio.vercel.app",
   },
   {
     id: 2,
@@ -279,9 +279,9 @@ export const certificateList = [
 ];
 
 export const heroParagraph = {
-  text: "Hello! I am a Bachelor of Computer Science graduate with a strong interest in Front-End development, UI/UX Design, and an enthusiasm for AI. I am passionate about creating engaging digital experiences and am always determined to provide the best solutions in every project. Let's collaborate and turn extraordinary ideas into reality!",
+  text: "Halo! Saya adalah lulusan Sarjana Ilmu Komputer dengan minat kuat dalam pengembangan Front-End, Desain UI/UX, dan antusiasme terhadap AI. Saya bersemangat dalam menciptakan pengalaman digital yang menarik dan selalu bertekad untuk memberikan solusi terbaik di setiap proyek. Mari berkolaborasi dan mengubah ide-ide luar biasa menjadi kenyataan!",
 };
 
 export const aboutParagraph = {
-  text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor minima praesentium quo libero rerum quidem maiores nostrum nobis vitae saepe placeat, incidunt perferendis nulla deserunt! A eaque quam ipsum impedit!",
+  text: "Halo! Saya Dafa Huda Rifa'i , seorang lulusan Sarjana Ilmu Komputer  yang bersemangat dalam menjembatani data kompleks dengan pengalaman digital yang intuitif. Minat saya ada pada tiga pilar: Front-End Development, UI/UX Design, dan Artificial Intelligence. Saya tidak hanya membuat aplikasi yang terlihat bagus, tetapi juga cerdas. Pengalaman saya mencakup pengembangan web dari ide hingga implementasi, seperti pada MSIB di Infinite Learning , di mana saya mendalami Design Thinking, prototyping Figma , serta pengembangan front-end & back-end. Saya juga telah menerapkan teknik AI seperti Fuzzy Logic dalam proyek pemetaan web dan peramalan cuaca berbasis IoT. Saya bertekad untuk memberikan solusi terbaik di setiap proyek. Mari berkolaborasi dan mengubah ide luar biasa menjadi kenyataan!",
 };

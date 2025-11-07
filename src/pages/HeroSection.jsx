@@ -63,7 +63,7 @@ const HeroSection = () => {
           <button
             onClick={goToSection}
             href="#proyek"
-            className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-600 flex items-center gap-2  cursor-pointer"
+            className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-600 flex items-center gap-2 cursor-pointer"
           >
             <span>Lihat Proyek</span>
             <Icon icon="lucide:arrow-down" />
