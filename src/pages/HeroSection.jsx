@@ -27,7 +27,7 @@ const HeroSection = () => {
       <img
         src={DataImage.HeroImage}
         alt="Hero Image"
-        className="w-full max-w-md md:order-2 md:ml-auto fade-in"
+        className="w-full max-w-md h-auto md:order-2 md:ml-auto fade-in border-4 border-violet-500 rounded-lg"
         loading="lazy"
       />
       <div className="fade-in md:order-1">
