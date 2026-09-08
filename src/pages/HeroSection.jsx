@@ -38,7 +38,7 @@ const HeroSection = () => {
             className="w-10 rounded-md sm:hidden"
             loading="lazy"
           />
-          <q>Kode Yang Indah, Lahir Dari Ketakunan.😊</q>
+          <q>Kode yang Bagus, Lahir Dari Kepercayaan. 😊</q>
         </div>
         <h1 className="text-4xl md:text-5xl/tight font-bold mb-6">
           Hi I'm <br />

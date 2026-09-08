@@ -57,7 +57,7 @@ const Navbar = () => {
             className="hover:text-violet-500 transition-colors"
             onClick={goToSection}
           >
-            Tentang
+            About
           </a>
           <a
             href="#tools"
@@ -71,14 +71,14 @@ const Navbar = () => {
             className="hover:text-violet-500 transition-colors"
             onClick={goToSection}
           >
-            Proyek
+            Projects
           </a>
           <a
             href="#kontak"
             className="hover:text-violet-500 transition-colors"
             onClick={goToSection}
           >
-            Kontak
+            Contact
           </a>
         </div>
 
@@ -114,7 +114,7 @@ const Navbar = () => {
             className="hover:text-violet-500 transition-colors py-2"
             onClick={handleMobileLinkClick}
           >
-            Tentang
+            About
           </a>
           <a
             href="#tools"
@@ -128,14 +128,14 @@ const Navbar = () => {
             className="hover:text-violet-500 transition-colors py-2"
             onClick={handleMobileLinkClick}
           >
-            Proyek
+            Projects
           </a>
           <a
             href="#kontak"
             className="hover:text-violet-500 transition-colors py-2"
             onClick={handleMobileLinkClick}
           >
-            Kontak
+            Contact
           </a>
         </div>
       </div>

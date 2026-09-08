@@ -1,16 +1,16 @@
 # My Portfolio
 
-Personal portfolio website built with React and Vite. This site showcases my projects, skills, and certifications, along with a way to get in touch.
+Personal portfolio website showcasing my projects, skills, and certifications. Built with React and Vite.
 
 ## What's Inside
 
-- **Hero Section** — Quick intro with a typing animation cycling through different roles
-- **About** — Brief background and interests
+- **Hero Section** — Quick intro with typing animation cycling through different roles
+- **About** — Background and interests
 - **Skills** — Tools and technologies I work with
-- **Projects** — A gallery of things I've built, with "Load More" to see the rest
-- **Certificates** — Certifications with a lightbox view
-- **Contact** — A simple form powered by FormSubmit
-- **Scroll Animations** — Subtle animations triggered as you scroll down the page
+- **Projects** — Gallery of things I've built
+- **Certificates** — Certifications with lightbox view
+- **Contact** — Simple form powered by FormSubmit
+- **Scroll Animations** — Subtle animations on scroll
 
 ## Tech Stack
 
@@ -48,7 +48,8 @@ myportfolio/
 ├── public/
 │   └── assets/          # Images (projects, tools, certificates)
 ├── src/
-│   ├── components/      # React components
+│   ├── components/       # React components
+│   ├── pages/           # Page components
 │   ├── App.jsx          # Main app component
 │   ├── data.js          # Content data
 │   └── main.jsx         # Entry point
@@ -59,4 +60,3 @@ myportfolio/
 ## Contact
 
 Reach out via the contact form on the site or open an issue here if something needs fixing.
-Tue Sep  8 10:35:56 PM WIB 2026

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "portfolio-deploy",
+    "execute-command": "/home/ubuntu/portfolio/deploy.sh",
+    "command-working-directory": "/home/ubuntu/portfolio",
+    "response-message": "Deploy triggered",
+    "pass-arguments-to-command":
+      [
+        { "source": "payload" }
+      ],
+    "trigger-rule":
+      {
+        "match":
+          {
+            "type": "payload",
+            "value": "secretPortfolioDeploy123"
+          }
+      }
+  }
+]

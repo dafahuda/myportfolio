@@ -7,9 +7,9 @@ const Footer = () => {
       </h1>
       <div className="flex gap-5">
         <a href="#beranda">Beranda</a>
-        <a href="#tentang">Tentang</a>
+        <a href="#tentang">About</a>
         <a href="#tools">Tools</a>
-        <a href="#proyek">Proyek</a>
+        <a href="#proyek">Projects</a>
         <a href="#kontak">Kontak</a>
       </div>
       <span>© {year}</span>

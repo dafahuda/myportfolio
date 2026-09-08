@@ -17,12 +17,12 @@ const ProjectsSection = () => {
         <h1
           className="text-center text-3xl md:text-4xl font-bold mb-2 fade-in"
         >
-          Proyek & Sertifikat
+          Projects & Certificates
         </h1>
         <p
           className="text-base/loose text-center opacity-50 fade-in"
         >
-          Berikut ini beberapa proyek dan sertifikat yang sudah saya dapatkan
+          Beberapa project yang pernah saya kerjakan dan sertifikasi yang saya punya.
         </p>
 
         {/* Tab Navigation */}
@@ -45,7 +45,7 @@ const ProjectsSection = () => {
             ) : (
               <Icon icon="lucide:layout-list" className="ri-lg" />
             )}
-            <span>Proyek</span>
+            <span>Projects</span>
           </button>
           <button
             onClick={() => {
@@ -63,7 +63,7 @@ const ProjectsSection = () => {
             ) : (
               <Icon icon="bi:award" className="ri-lg" />
             )}
-            <span>Sertifikat</span>
+            <span>Certificates</span>
           </button>
         </div>
 
@@ -115,7 +115,7 @@ const ProjectsSection = () => {
                     }
                     className="flex items-center justify-center gap-2 text-violet-800 hover:text-white cursor-pointer mx-auto group"
                   >
-                    Lihat Lebih Banyak
+                    Load More
                     <span className="animate__animated animate__heartBeat animate__infinite">
                       <Icon icon="lucide:chevrons-down" className="ri-2x group-hover:text-white" />
                     </span>
@@ -134,7 +134,7 @@ const ProjectsSection = () => {
                       }}
                       className="text-white-800 hover:text-violet-800 cursor-pointer gap-2"
                     >
-                      Tampilkan Lebih Sedikit
+                      Show Less
                       <Icon icon="lucide:chevrons-up" className="ri-xl" />
                     </button>
                   </div>
@@ -152,7 +152,7 @@ const ProjectsSection = () => {
                     }
                     className="flex items-center justify-center gap-2 text-violet-800 hover:text-white cursor-pointer mx-auto group"
                   >
-                    Lihat Lebih Banyak
+                    Load More
                     <span className="animate__animated animate__heartBeat animate__infinite">
                       <Icon icon="lucide:chevrons-down" className="ri-2x group-hover:text-white" />
                     </span>
@@ -171,7 +171,7 @@ const ProjectsSection = () => {
                       }}
                       className="text-white-800 hover:text-violet-800 cursor-pointer gap-2"
                     >
-                      Tampilkan Lebih Sedikit
+                      Show Less
                       <Icon icon="lucide:chevrons-up" className="ri-xl" />
                     </button>
                   </div>

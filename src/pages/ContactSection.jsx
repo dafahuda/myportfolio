@@ -6,12 +6,12 @@ const ContactSection = () => {
       <h1
         className="text-center text-3xl md:text-4xl font-bold mb-2 fade-in"
       >
-        Kontak
+        Contact
       </h1>
       <p
         className="text-base/loose text-center mb-10 opacity-50 fade-in"
       >
-        Mari Terhubung dengan saya.
+        Let's Connect.
       </p>
 
       <div className="grid lg:grid-cols-2 gap-10 mt-14 fade-in">

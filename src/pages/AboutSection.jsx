@@ -6,7 +6,7 @@ const AboutSection = () => {
     <div className="about mt-32 py-30" id="tentang">
       <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg fade-in">
         <p className="text-4xl md:text-5xl/tight font-bold mb-2">
-          Tentang Saya
+          About Me
         </p>
         <p className="text-base/loose mb-10">{aboutParagraph.text}</p>
         <div className="flex items-center justify-between">
@@ -22,7 +22,7 @@ const AboutSection = () => {
                 {listProyek.length}
                 <span className="text-violet-500">+</span>
               </h1>
-              <p>Proyek Selesai</p>
+              <p>Projects Done</p>
             </div>
 
             <div>
