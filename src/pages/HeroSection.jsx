@@ -42,10 +42,10 @@ const HeroSection = () => {
         </div>
         <h1 className="text-4xl md:text-5xl/tight font-bold mb-6">
           Hi I'm <br />
-          <p className="text-violet-500 inline-block">
+          <p className="text-violet-500">Dafa Huda Rifa'i</p>
+          <p className="text-violet-500 inline-block mt-2">
             <TextType
               text={[
-                "Dafa Huda Rifa'i",
                 "Front-end Developer",
                 "UI/UX Designer",
                 "Website Developer",
