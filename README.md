@@ -1,16 +1,19 @@
 # My Portfolio
 
-Personal portfolio website showcasing my projects, skills, and certifications. Built with React and Vite.
+Hey, thanks for checking out my work!
+
+This is my personal portfolio website built with React and Vite. It showcases the projects I've worked on, the tools and technologies I use, and some certifications I've picked up along the way. Feel free to look around.
+
+**Live site:** [portfolio.dhr.my.id](https://portfolio.dhr.my.id)
 
 ## What's Inside
 
-- **Hero Section** — Quick intro with typing animation cycling through different roles
-- **About** — Background and interests
-- **Skills** — Tools and technologies I work with
-- **Projects** — Gallery of things I've built
+- **Hero Section** — Quick intro with a typing animation cycling through different roles
+- **About** — A bit about me and my background
+- **Tools & Tech Stack** — The tech I use day-to-day
+- **Projects** — A gallery of things I've built
 - **Certificates** — Certifications with lightbox view
-- **Contact** — Simple form powered by FormSubmit
-- **Scroll Animations** — Subtle animations on scroll
+- **Contact** — Get in touch via the form
 
 ## Tech Stack
 
