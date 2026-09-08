@@ -41,8 +41,8 @@ const HeroSection = () => {
           <q>Kode yang Bagus, Lahir Dari Kepercayaan. 😊</q>
         </div>
         <h1 className="text-4xl md:text-5xl/tight font-bold mb-6">
-          Hi I'm <br />
-          <p className="text-violet-500">Dafa Huda Rifa'i</p>
+          Hi, I'm <span className="text-violet-500">Dafa Huda Rifa'i</span>
+          <br />
           <p className="text-violet-500 inline-block mt-2">
             <TextType
               text={[
