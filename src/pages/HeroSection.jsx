@@ -51,8 +51,8 @@ const HeroSection = () => {
                 "Website Developer",
               ]}
               textColors={["text-violet-500"]}
-              typingSpeed={75}
-              pauseDuration={1500}
+              typingSpeed={150}
+              pauseDuration={3500}
               showCursor={true}
               cursorCharacter="▎"
             />
