@@ -1,22 +1,22 @@
-import { StrictMode, useState } from "react";
+import { StrictMode, useState, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
 import "./index.css";
 import App from "./App.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import PreLoader from "./components/PreLoader.jsx";
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-// CSS smooth scroll + animations
+
+gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
+
+// CSS untuk animasi pulse
 const style = document.createElement('style');
 style.textContent = `
-  html {
-    scroll-behavior: smooth;
-  }
   @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.1); }
@@ -25,68 +25,50 @@ style.textContent = `
   .pulse-animation {
     animation: pulse 1s infinite;
   }
-  .fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
 `;
 document.head.appendChild(style);
 
-// Intersection Observer for fade-in animations
-const initFadeAnimations = () => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    },
-    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-  );
-
-  document.querySelectorAll('.fade-in').forEach((el) => {
-    observer.observe(el);
-  });
-
-  return observer;
-};
-
+// Komponen utama aplikasi
 const MainApp = () => {
   const [loading, setLoading] = useState(true);
 
   useGSAP(
     () => {
-      if (loading) return;
+      if (loading) return; // wait for loading to finish
 
-      // GSAP ScrollTrigger for fade-in (only for elements that need it)
-      gsap.utils.toArray(".gsap-fade").forEach((element) => {
+      const smoother = ScrollSmoother.create({
+        wrapper: "#smooth-wrapper",
+        content: "#smooth-content",
+        smooth: 1,
+        effects: true,
+      });
+
+      // GSAP ScrollTrigger untuk animasi fade-in
+      gsap.utils.toArray(".fade-in").forEach((element) => {
         gsap.fromTo(
           element,
-          { opacity: 0, y: 30 },
+          {
+            opacity: 0,
+            y: 50,
+          },
           {
             opacity: 1,
             y: 0,
-            duration: 0.8,
-            ease: "power2.out",
+            duration: 1,
             scrollTrigger: {
               trigger: element,
-              start: "top 85%",
+              start: "top 80%",
+              end: "bottom 20%",
               toggleActions: "play none none none",
             },
           }
         );
       });
 
-      // Init CSS fade animations for others
-      initFadeAnimations();
-
-      // Cleanup is handled by GSAP ScrollTrigger automatically
+      return () => {
+        // cleanup
+        if (smoother) smoother.kill();
+      };
     },
     { dependencies: [loading] }
   );
@@ -98,10 +80,12 @@ const MainApp = () => {
       ) : (
         <>
           <Navbar />
-          <div>
-            <div className="container mx-auto px-4 pt-16 md:pt-20">
-              <App />
-              <Footer />
+          <div id="smooth-wrapper">
+            <div id="smooth-content">
+              <div className="container mx-auto px-4 pt-16 md:pt-20">
+                <App />
+                <Footer />
+              </div>
             </div>
           </div>
         </>

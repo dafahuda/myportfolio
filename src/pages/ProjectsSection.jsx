@@ -6,7 +6,7 @@ import { Icon } from "@iconify/react";
 
 const ProjectsSection = () => {
   const [visibleProjects, setVisibleProjects] = useState(6);
-  const [activeTab, setActiveTab] = useState("projects");
+  const [activeTab, setActiveTab] = useState("projects"); // 'projects' or 'certificates'
 
   const projectsToShow = listProyek.slice(0, visibleProjects);
   const certificatesToShow = certificateList.slice(0, visibleProjects);
@@ -14,27 +14,37 @@ const ProjectsSection = () => {
   return (
     <>
       <div className="proyek mt-32 py-25" id="proyek">
-        <h2 className="text-center text-3xl md:text-4xl font-bold mb-2 fade-in">
+        <h1
+          className="text-center text-3xl md:text-4xl font-bold mb-2 fade-in"
+        >
           Projects & Certificates
-        </h2>
-        <p className="text-base/loose text-center opacity-50 mb-8 fade-in">
+        </h1>
+        <p
+          className="text-base/loose text-center opacity-50 fade-in"
+        >
           Beberapa project yang pernah saya kerjakan dan sertifikasi yang saya punya.
         </p>
 
         {/* Tab Navigation */}
-        <div className="flex justify-center gap-4 mb-10 fade-in">
+        <div
+          className="flex justify-center mt-8 gap-4 fade-in"
+        >
           <button
             onClick={() => {
               setActiveTab("projects");
               setVisibleProjects(6);
             }}
-            className={`px-6 py-3 rounded-lg transition-colors flex items-center gap-2 font-medium cursor-pointer ${
+            className={`px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2 font-medium cursor-pointer ${
               activeTab === "projects"
                 ? "bg-violet-700 text-white"
                 : "bg-zinc-800 text-gray-300 hover:bg-zinc-700"
             }`}
           >
-            <Icon icon={activeTab === "projects" ? "lucide:layout-grid" : "lucide:layout-list"} className="ri-lg" />
+            {activeTab === "projects" ? (
+              <Icon icon="lucide:layout-grid" className="ri-lg" />
+            ) : (
+              <Icon icon="lucide:layout-list" className="ri-lg" />
+            )}
             <span>Projects</span>
           </button>
           <button
@@ -42,22 +52,29 @@ const ProjectsSection = () => {
               setActiveTab("certificates");
               setVisibleProjects(6);
             }}
-            className={`px-6 py-3 rounded-lg transition-colors flex items-center gap-2 font-medium cursor-pointer ${
+            className={`px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2 font-medium cursor-pointer ${
               activeTab === "certificates"
                 ? "bg-violet-700 text-white"
                 : "bg-zinc-800 text-gray-300 hover:bg-zinc-700"
             }`}
           >
-            <Icon icon={activeTab === "certificates" ? "bi:award-fill" : "bi:award"} className="ri-lg" />
+            {activeTab === "certificates" ? (
+              <Icon icon="bi:award-fill" className="ri-lg" />
+            ) : (
+              <Icon icon="bi:award" className="ri-lg" />
+            )}
             <span>Certificates</span>
           </button>
         </div>
 
-        {/* Content */}
-        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
+        {/* Tab Content */}
+        <div className="proyek-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
           {activeTab === "projects"
             ? projectsToShow.map((project) => (
-                <div key={project.id} className="fade-in">
+                <div
+                  key={project.id}
+                  className="fade-in"
+                >
                   <ProjectCard
                     title={project.title}
                     description={project.description}
@@ -67,13 +84,16 @@ const ProjectsSection = () => {
                   />
                 </div>
               ))
-            : certificatesToShow.map((cert) => (
-                <div key={cert.id} className="fade-in">
+            : certificatesToShow.map((sertifikat) => (
+                <div
+                  key={sertifikat.id}
+                  className="fade-in"
+                >
                   <CertificateCard
-                    title={cert.name}
-                    description={cert.description}
-                    issuer={cert.issuer}
-                    certificates={cert.imageList}
+                    title={sertifikat.name}
+                    description={sertifikat.description}
+                    issuer={sertifikat.issuer}
+                    certificates={sertifikat.imageList}
                     onButtonClick={() => {}}
                     maxVisible={2}
                   />
@@ -81,57 +101,83 @@ const ProjectsSection = () => {
               ))}
         </div>
 
-        {/* Pagination */}
-        <div className="mt-10">
+        {/* Pagination Controls */}
+        <div>
           {activeTab === "projects" ? (
-            visibleProjects < listProyek.length ? (
-              <div className="text-center fade-in">
-                <button
-                  onClick={() => setVisibleProjects((p) => p + 3)}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-zinc-800 hover:bg-zinc-700 rounded-lg text-gray-300 hover:text-white transition-colors cursor-pointer"
+            <>
+              {visibleProjects < listProyek.length && (
+                <div
+                  className="text-center mt-8 fade-in"
                 >
-                  <span>Load More</span>
-                  <Icon icon="lucide:chevrons-down" className="ri-xl" />
-                </button>
-              </div>
-            ) : listProyek.length > 6 ? (
-              <div className="text-center">
-                <button
-                  onClick={() => {
-                    setVisibleProjects(6);
-                    document.getElementById("proyek")?.scrollIntoView({ behavior: "smooth" });
-                  }}
-                  className="inline-flex items-center gap-2 px-6 py-3 text-gray-400 hover:text-white transition-colors cursor-pointer"
+                  <button
+                    onClick={() =>
+                      setVisibleProjects((prevCount) => prevCount + 3)
+                    }
+                    className="flex items-center justify-center gap-2 text-violet-800 hover:text-white cursor-pointer mx-auto group"
+                  >
+                    Load More
+                    <span className="animate__animated animate__heartBeat animate__infinite">
+                      <Icon icon="lucide:chevrons-down" className="ri-2x group-hover:text-white" />
+                    </span>
+                  </button>
+                </div>
+              )}
+              {visibleProjects >= listProyek.length &&
+                listProyek.length > 6 && (
+                  <div className="text-center mt-8">
+                    <button
+                      onClick={() => {
+                        setVisibleProjects(6);
+                        document
+                          .getElementById("proyek")
+                          .scrollIntoView({ behavior: "smooth" });
+                      }}
+                      className="text-white-800 hover:text-violet-800 cursor-pointer gap-2"
+                    >
+                      Show Less
+                      <Icon icon="lucide:chevrons-up" className="ri-xl" />
+                    </button>
+                  </div>
+                )}
+            </>
+          ) : (
+            <>
+              {visibleProjects < certificateList.length && (
+                <div
+                  className="text-center mt-8 fade-in"
                 >
-                  <span>Show Less</span>
-                  <Icon icon="lucide:chevrons-up" className="ri-xl" />
-                </button>
-              </div>
-            ) : null
-          ) : visibleProjects < certificateList.length ? (
-            <div className="text-center fade-in">
-              <button
-                onClick={() => setVisibleProjects((p) => p + 3)}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-zinc-800 hover:bg-zinc-700 rounded-lg text-gray-300 hover:text-white transition-colors cursor-pointer"
-              >
-                <span>Load More</span>
-                <Icon icon="lucide:chevrons-down" className="ri-xl" />
-              </button>
-            </div>
-          ) : certificateList.length > 6 ? (
-            <div className="text-center">
-              <button
-                onClick={() => {
-                  setVisibleProjects(6);
-                  document.getElementById("proyek")?.scrollIntoView({ behavior: "smooth" });
-                }}
-                className="inline-flex items-center gap-2 px-6 py-3 text-gray-400 hover:text-white transition-colors cursor-pointer"
-              >
-                <span>Show Less</span>
-                <Icon icon="lucide:chevrons-up" className="ri-xl" />
-              </button>
-            </div>
-          ) : null}
+                  <button
+                    onClick={() =>
+                      setVisibleProjects((prevCount) => prevCount + 3)
+                    }
+                    className="flex items-center justify-center gap-2 text-violet-800 hover:text-white cursor-pointer mx-auto group"
+                  >
+                    Load More
+                    <span className="animate__animated animate__heartBeat animate__infinite">
+                      <Icon icon="lucide:chevrons-down" className="ri-2x group-hover:text-white" />
+                    </span>
+                  </button>
+                </div>
+              )}
+              {visibleProjects >= certificateList.length &&
+                certificateList.length > 6 && (
+                  <div className="text-center mt-8">
+                    <button
+                      onClick={() => {
+                        setVisibleProjects(6);
+                        document
+                          .getElementById("proyek")
+                          .scrollIntoView({ behavior: "smooth" });
+                      }}
+                      className="text-white-800 hover:text-violet-800 cursor-pointer gap-2"
+                    >
+                      Show Less
+                      <Icon icon="lucide:chevrons-up" className="ri-xl" />
+                    </button>
+                  </div>
+                )}
+            </>
+          )}
         </div>
       </div>
     </>
