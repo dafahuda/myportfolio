@@ -1,0 +1,14 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger VPS Deploy
+        run: |
+          curl -s -X POST "https://portfolio.dhr.my.id/webhook/deploy?secret=secretPortfolioDeploy123"
