@@ -74,7 +74,7 @@ export function CertificateCard({
           onClick={onButtonClick}
           className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-violet-700 px-4 text-sm font-medium text-slate-50 shadow transition-colors hover:bg-violet-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-slate-950 disabled:pointer-events-none disabled:opacity-50 group-hover:gap-4"
         >
-          Lihat Sertifikat
+          View Certificate
           <Icon icon="lucide:arrow-right" className="h-4 w-4 flex items-center transition-transform duration-300 group-hover:translate-x-1" />
         </button>
       </div>

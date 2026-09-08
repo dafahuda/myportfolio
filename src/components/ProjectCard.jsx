@@ -50,7 +50,7 @@ export function ProjectCard({ title, description, thumbnail, tools, link }) {
               isDisabled && "opacity-50 pointer-events-none"
             }`}
           >
-            Lihat Website
+            View Project
             <Icon
               icon="lucide:arrow-right"
               className="h-4 w-4 flex items-center transition-transform duration-300 group-hover:translate-x-1"
