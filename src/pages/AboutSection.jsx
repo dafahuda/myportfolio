@@ -44,7 +44,7 @@ const AboutSection = () => {
             <div className="border border-[var(--color-line)] rounded-lg p-5 bg-[var(--color-surface)]">
               <p className="text-xs uppercase tracking-[0.12em] text-[var(--color-muted)] mb-2">Posisi yang saya incar</p>
               <p className="text-sm text-[var(--color-ink)] leading-relaxed">
-                Front-end Developer atau UI/UX Designer. Terbuka untuk kerja jarak jauh maupun onsite di Jakarta atau Bogor. Tersedia mulai Juni 2026.
+                Front-end Developer atau UI/UX Designer. Terbuka untuk kerja jarak jauh maupun onsite di Jakarta atau Bogor. Siap mulai segera.
               </p>
             </div>
             <p className="text-sm text-[var(--color-muted)]">
