@@ -1,40 +1,40 @@
 import { listTools } from "../data";
-import LogoLoop from "../components/LogoLoop";
-import { Icon } from "@iconify/react";
 
 const ToolsSection = () => {
-  const logos = listTools.map((tool) => ({
-    src: tool.gambar,
-    alt: tool.nama,
-  }));
-
   return (
-    <div className="tools mt-32 py-25" id="tools">
-      <h1
-        className="text-center text-3xl md:text-4xl/snug font-bold mb-4 fade-in"
-      >
-        Tools & Tech Stack
-      </h1>
-      <p
-        className="text-center mx-auto xl:w-2/5 lg:w-2/4 md:w-2/3 sm:w-3/4 w-full text-base/loose opacity-50 fade-in"
-      >
-        Tech stack yang saya gunakan day-to-day untuk build website dan design.
-      </p>
-      <div
-        className="w-full overflow-hidden mt-14 fade-in"
-      >
-        <LogoLoop
-          logos={logos}
-          speed={100}
-          direction="left"
-          logoHeight={80}
-          gap={40}
-          pauseOnHover
-          scaleOnHover
-          ariaLabel="Tools I use"
-        />
+    <section id="tools" className="section">
+      <div className="container-page">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16">
+          <div className="md:col-span-5" data-reveal>
+            <span className="section-label">Tools</span>
+            <h2 className="section-title">Perkakas.</h2>
+            <p className="lead">
+              Yang saya pakai untuk membangun web dan menyusun desain sehari-hari.
+            </p>
+          </div>
+          <ul className="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-6" data-reveal>
+            {listTools.map((t) => (
+              <li key={t.id} className="flex items-center gap-3">
+                <img
+                  src={t.gambar}
+                  alt=""
+                  width="32"
+                  height="32"
+                  loading="lazy"
+                  className="h-8 w-8 object-contain flex-shrink-0"
+                />
+                <div className="min-w-0">
+                  <p className="text-sm font-medium text-[var(--color-ink)] truncate">
+                    {t.nama}
+                  </p>
+                  <p className="text-xs text-[var(--color-muted)]">{t.ket}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

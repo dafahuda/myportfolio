@@ -1,40 +1,53 @@
-import DataImage from "../data";
-import { aboutParagraph, listProyek } from "../data";
+import { aboutParagraph } from "../data";
+
+const FOCUS = [
+  {
+    title: "Front-end Development",
+    detail: "React, Next.js, Tailwind CSS. Antarmuka bersih dan responsif.",
+  },
+  {
+    title: "UI/UX Design",
+    detail: "Design thinking, wireframing, dan prototyping di Figma.",
+  },
+  {
+    title: "IoT & AI",
+    detail:
+      "Sistem berbasis mikrokontroler dan penerapan AI seperti Fuzzy Logic.",
+  },
+];
 
 const AboutSection = () => {
   return (
-    <div className="about mt-32 py-30" id="tentang">
-      <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg fade-in">
-        <p className="text-4xl md:text-5xl/tight font-bold mb-2">
-          About Me
-        </p>
-        <p className="text-base/loose mb-10">{aboutParagraph.text}</p>
-        <div className="flex items-center justify-between">
-          <img
-            src={DataImage.HeroImage}
-            alt="Image"
-            className="w-12 rounded-md sm:block hidden"
-            loading="lazy"
-          />
-          <div className="flex items-center gap-6">
-            <div>
-              <h1 className="text-4xl mb-1">
-                {listProyek.length}
-                <span className="text-violet-500">+</span>
-              </h1>
-              <p>Projects Done</p>
-            </div>
-
-            <div>
-              <h1 className="text-4xl mb-1">
-                1<span className="text-violet-500">+</span>
-              </h1>
-              <p>Tahun Pengalaman</p>
-            </div>
+    <section id="tentang" className="section">
+      <div className="container-page">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16">
+          <div className="md:col-span-5" data-reveal>
+            <span className="section-label">Tentang</span>
+            <h2 className="section-title">Kenalan singkat.</h2>
+          </div>
+          <div className="md:col-span-7 space-y-8" data-reveal>
+            <p className="text-[17px] leading-[1.75] text-[var(--color-ink)]">
+              {aboutParagraph.text}
+            </p>
+            <ul className="grid sm:grid-cols-2 gap-6 pt-4 border-t border-[var(--color-line)]">
+              {FOCUS.map((f) => (
+                <li key={f.title}>
+                  <h3 className="font-sans text-base font-semibold mb-1" style={{ fontFamily: "var(--font-sans)", letterSpacing: 0 }}>
+                    {f.title}
+                  </h3>
+                  <p className="text-sm text-[var(--color-muted)] leading-relaxed">
+                    {f.detail}
+                  </p>
+                </li>
+              ))}
+            </ul>
+            <p className="text-sm text-[var(--color-muted)]">
+              S1 Ilmu Komputer · Universitas Pakuan · 2019–2025 · IPK 3.60
+            </p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

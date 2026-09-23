@@ -1,80 +1,58 @@
-import DataImage from "../data";
-import { heroParagraph } from "../data";
-import { ScrollSmoother } from "gsap/ScrollSmoother";
-import TextType from "../components/TextType";
 import { Icon } from "@iconify/react";
-
-const goToSection = (e) => {
-  e.preventDefault();
-  const smoother = ScrollSmoother.get();
-  const target = e.currentTarget.getAttribute("href");
-  try {
-    smoother.scrollTo(target, true);
-  } catch (error) {
-    console.error(
-      `GSAP ScrollSmoother not found or target "${target}" does not exist.`,
-      error
-    );
-  }
-};
+import DataImage, { heroParagraph } from "../data";
 
 const HeroSection = () => {
   return (
-    <div
-      id="beranda"
-      className="hero grid md:grid-cols-2 item-center xl:gap-0 gap-6 grid-cols-1 pt-4 md:pt-0"
-    >
-      <img
-        src={DataImage.HeroImage}
-        alt="Hero Image"
-        className="w-full max-w-md h-auto md:order-2 md:ml-auto fade-in border-4 border-violet-500 rounded-lg"
-        loading="lazy"
-      />
-      <div className="fade-in md:order-1">
-        <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-4 rounded-2xl">
-          <img
-            src={DataImage.HeroImage}
-            alt="Hero Image"
-            className="w-10 rounded-md sm:hidden"
-            loading="lazy"
-          />
-          <q>Kode yang Bagus, Lahir Dari Kepercayaan. 😊</q>
-        </div>
-        <h1 className="text-4xl md:text-5xl/tight font-bold mb-6">
-          Hi, I'm <span className="text-violet-500">Dafa Huda Rifa'i</span>
-          <br />
-          <p className="text-violet-500 inline-block mt-2">
-            <TextType
-              text={[
-                "Front-end Developer",
-                "UI/UX Designer",
-                "Website Developer",
-              ]}
-              textColors={["text-violet-500"]}
-              typingSpeed={150}
-              pauseDuration={3500}
-              showCursor={true}
-              cursorCharacter="▎"
-            />
-          </p>
-        </h1>
-        <p className="text-base/loose mb-6 opacity-90">{heroParagraph.text}</p>
-        <div className="flex items-center sm:gap-4 gap-2">
-          <button
-            onClick={goToSection}
-            href="#proyek"
-            className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-600 flex items-center gap-2 cursor-pointer"
+    <section id="beranda" className="pt-28 md:pt-36 pb-20 md:pb-28">
+      <div className="container-page grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
+        <div className="md:col-span-7" data-reveal>
+          <span className="section-label">
+            Front-end Developer · UI/UX Designer
+          </span>
+          <h1
+            className="mt-2 mb-6"
+            style={{
+              fontSize: "clamp(3rem, 8vw, 6.5rem)",
+              lineHeight: 0.88,
+              letterSpacing: "-0.015em",
+            }}
           >
-            <span>Lihat Proyek</span>
-            <Icon icon="lucide:arrow-down" />
-          </button>
-          <button className="bg-zinc-800 p-4 rounded-2xl hover:bg-zinc-700 flex items-center gap-2 cursor-pointer">
-            <span>Download CV</span>
-            <Icon icon="lucide:download" />
-          </button>
+            Dafa Huda
+            <br />
+            Rifa&apos;i.
+          </h1>
+          <p className="lead mb-8">{heroParagraph.text}</p>
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href="/assets/cv/Cv_ATS_Dafa_Huda_Rifai.pdf"
+              download
+              className="btn btn-primary"
+            >
+              <Icon icon="lucide:download" />
+              <span>Unduh CV</span>
+            </a>
+            <a href="#proyek" className="btn btn-ghost">
+              <span>Lihat proyek</span>
+              <Icon icon="lucide:arrow-down" />
+            </a>
+          </div>
+        </div>
+
+        <div className="md:col-span-5 order-first md:order-last" data-reveal>
+          <div className="relative overflow-hidden rounded-lg border border-[var(--color-line)] bg-[var(--color-surface)]">
+            <img
+              src={DataImage.HeroImage}
+              alt="Foto Dafa Huda Rifa'i"
+              width="800"
+              height="912"
+              loading="eager"
+              fetchpriority="high"
+              className="w-full h-auto block"
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
