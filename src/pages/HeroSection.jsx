@@ -1,4 +1,5 @@
 import Icon from "../components/Icon";
+import InlineSvg from "../components/InlineSvg";
 import DataImage from "../data";
 import { listTools } from "../data";
 import LogoLoop from "../components/LogoLoop";
@@ -9,7 +10,10 @@ const HeroSection = () => {
   const logos = listTools.map((t) =>
     t.icon
       ? { node: <Icon icon={t.icon} size={26} />, ariaLabel: t.nama }
-      : { src: t.gambar, alt: t.nama, width: 26, height: 26 }
+      : {
+          node: <InlineSvg markup={t.gambar} size={26} label={t.nama} />,
+          ariaLabel: t.nama,
+        }
   );
 
   return (

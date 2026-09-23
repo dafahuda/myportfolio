@@ -1,5 +1,6 @@
 import { listTools } from "../data";
 import Icon from "../components/Icon";
+import InlineSvg from "../components/InlineSvg";
 
 const ToolsSection = () => {
   return (
@@ -23,13 +24,10 @@ const ToolsSection = () => {
                     className="flex-shrink-0"
                   />
                 ) : (
-                  <img
-                    src={t.gambar}
-                    alt=""
-                    width="30"
-                    height="30"
-                    loading="lazy"
-                    className="h-[30px] w-[30px] object-contain flex-shrink-0"
+                  <InlineSvg
+                    markup={t.gambar}
+                    size={30}
+                    className="flex-shrink-0"
                   />
                 )}
                 <div className="min-w-0">

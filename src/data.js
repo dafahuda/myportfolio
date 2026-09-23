@@ -10,8 +10,8 @@ export default Image;
  * menyatu dengan palet situs (ink di latar cream). Dua merek tidak ada di
  * Tabler, jadi memakai berkas SVG lokal yang sudah diseragamkan warnanya.
  * ============================================================ */
-import ToolsCodeigniter from "/assets/tools/codeigniter.svg";
-import ToolsCanva from "/assets/tools/canva.svg";
+import ToolsCodeigniter from "/assets/tools/codeigniter.svg?raw";
+import ToolsCanva from "/assets/tools/canva.svg?raw";
 
 export const listTools = [
   { id: 1, icon: "brand-html5", nama: "HTML", ket: "Markup" },

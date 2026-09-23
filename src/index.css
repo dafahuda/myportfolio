@@ -205,3 +205,20 @@
     }
   }
 }
+
+/* SVG yang ditanam langsung ke DOM (lihat components/InlineSvg.jsx).
+   Diperlukan supaya currentColor di dalam berkas benar-benar mewarisi
+   warna teks — hal yang tidak bisa dilakukan <img> terhadap berkas SVG. */
+.inline-svg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: inherit;
+}
+
+.inline-svg > svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
