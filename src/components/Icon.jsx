@@ -1,53 +1,56 @@
 import {
-  ArrowDown,
-  ArrowRight,
-  ArrowUp,
-  ArrowUpRight,
-  Download,
-  ImageOff,
-  Menu,
-  Send,
-  X,
-} from "lucide-react";
+  IconArrowDown,
+  IconArrowRight,
+  IconArrowUp,
+  IconArrowUpRight,
+  IconDownload,
+  IconMenu2,
+  IconPhotoOff,
+  IconSend,
+  IconX,
+} from "@tabler/icons-react";
 import {
-  FaEnvelope,
-  FaFileLines,
-  FaGithub,
-  FaInstagram,
-  FaLinkedin,
-} from "react-icons/fa6";
+  IconBrandGithubFilled,
+  IconBrandInstagramFilled,
+  IconBrandLinkedinFilled,
+  IconFileTextFilled,
+  IconMailFilled,
+} from "@tabler/icons-react";
 
 /**
- * Satu pembungkus ikon untuk seluruh situs.
+ * Satu pembungkus ikon untuk seluruh situs. Semua ikon dari Tabler Icons.
  *
  * Aturan (selaras DESIGN.md):
- *   - Ikon aksi (panah, unduh, tutup, kirim)  -> bergaris, dari Lucide
- *   - Ikon identitas & dokumen (merek, surat) -> terisi, dari Font Awesome
+ *   - Ikon aksi (panah, unduh, tutup, kirim)   -> bergaris, stroke 2px
+ *   - Ikon identitas & dokumen (merek, surat)  -> terisi
  *
- * Ikon ikut dibundel bersama JS, jadi tidak ada permintaan ke API pihak ketiga
- * dan ikon tidak pernah gagal tampil karena jaringan.
+ * Tabler memakai grid 24px dengan stroke 2px — sama seperti yang dipakai
+ * sebelumnya, jadi ukuran dan ketebalan di tombol tidak berubah.
  *
- * Nilai yang dipakai: nama polos tanpa awalan, mis. "arrow-up", "linkedin".
- * Ukuran bawaan 1em supaya ikut ukuran teks di sekelilingnya.
+ * Ikon ikut dibundel bersama JS (tidak ada permintaan ke API pihak ketiga)
+ * dan mewarisi warna teks di sekitarnya lewat currentColor, sehingga otomatis
+ * menyesuaikan latar section: ink di bagian cream, cream di footer gelap.
+ *
+ * Prop `icon` memakai nama polos, mis. "arrow-up", "linkedin".
  */
 const ACTIONS = {
-  "arrow-up": ArrowUp,
-  "arrow-down": ArrowDown,
-  "arrow-right": ArrowRight,
-  "arrow-up-right": ArrowUpRight,
-  download: Download,
-  "image-off": ImageOff,
-  menu: Menu,
-  send: Send,
-  x: X,
+  "arrow-up": IconArrowUp,
+  "arrow-down": IconArrowDown,
+  "arrow-right": IconArrowRight,
+  "arrow-up-right": IconArrowUpRight,
+  download: IconDownload,
+  "image-off": IconPhotoOff,
+  menu: IconMenu2,
+  send: IconSend,
+  x: IconX,
 };
 
 const MARKS = {
-  github: FaGithub,
-  linkedin: FaLinkedin,
-  instagram: FaInstagram,
-  envelope: FaEnvelope,
-  "file-lines": FaFileLines,
+  github: IconBrandGithubFilled,
+  linkedin: IconBrandLinkedinFilled,
+  instagram: IconBrandInstagramFilled,
+  envelope: IconMailFilled,
+  "file-lines": IconFileTextFilled,
 };
 
 export default function Icon({
@@ -58,11 +61,25 @@ export default function Icon({
   ...rest
 }) {
   const key = name ?? icon;
-  const Component = ACTIONS[key] ?? MARKS[key];
-  if (!Component) return null;
+  const Action = ACTIONS[key];
+  const Mark = MARKS[key];
+  if (!Action && !Mark) return null;
+
+  if (Action) {
+    return (
+      <Action
+        className={className}
+        size={size}
+        stroke={2}
+        aria-hidden="true"
+        focusable="false"
+        {...rest}
+      />
+    );
+  }
 
   return (
-    <Component
+    <Mark
       className={className}
       size={size}
       aria-hidden="true"
