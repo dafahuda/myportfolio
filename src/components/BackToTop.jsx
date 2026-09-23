@@ -33,7 +33,7 @@ const BackToTop = () => {
       ref={ref}
       onClick={handleClick}
       aria-label="Kembali ke atas"
-      className="fixed right-6 bottom-6 z-40 flex size-12 items-center justify-center rounded-full bg-[var(--color-ink)] text-[var(--color-bg)] shadow-lg hover:bg-[var(--color-accent)] hover:shadow-xl md:right-10 md:bottom-10"
+      className="fixed right-6 bottom-6 z-40 flex size-12 items-center justify-center rounded-full bg-[var(--color-bg)] text-[var(--color-ink)] shadow-lg hover:bg-[var(--color-accent)] hover:text-[var(--color-bg)] hover:shadow-xl md:right-10 md:bottom-10"
       style={{
         transform: visible ? "translateY(0)" : "translateY(24px)",
         opacity: visible ? 1 : 0,
