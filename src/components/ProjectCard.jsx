@@ -1,4 +1,4 @@
-import { Icon } from "@iconify/react";
+import Icon from "./Icon";
 
 const STATUS_LABEL = {
   live: "Live",
@@ -34,7 +34,7 @@ export function ProjectCard({
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center text-[var(--color-muted)]">
-            <Icon icon="lucide:image-off" className="text-4xl" />
+            <Icon icon="image-off" className="text-4xl" />
           </div>
         )}
       </div>
@@ -79,7 +79,7 @@ export function ProjectCard({
               className="link-underline inline-flex items-center gap-1.5 font-medium"
             >
               <span>Demo</span>
-              <Icon icon="lucide:arrow-up-right" className="w-4 h-4" />
+              <Icon icon="arrow-up-right" className="w-4 h-4" />
             </a>
           )}
           {hasRepo && (
@@ -90,7 +90,7 @@ export function ProjectCard({
               className="link-underline inline-flex items-center gap-1.5 font-medium"
             >
               <span>Repo</span>
-              <Icon icon="lucide:github" className="w-4 h-4" />
+              <Icon icon="arrow-up-right" className="w-4 h-4" />
             </a>
           )}
           {!hasDemo && !hasRepo && (

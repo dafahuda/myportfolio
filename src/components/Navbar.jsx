@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Icon } from "@iconify/react";
+import Icon from "./Icon";
 
 const NAV_LINKS = [
   { href: "#beranda", label: "Beranda" },
@@ -62,7 +62,7 @@ const Navbar = () => {
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
         >
-          <Icon icon={isOpen ? "lucide:x" : "lucide:menu"} className="text-xl" />
+          <Icon icon={isOpen ? "x" : "menu"} className="text-xl" />
         </button>
       </div>
 

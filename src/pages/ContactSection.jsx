@@ -1,30 +1,30 @@
 import { useState } from "react";
-import { Icon } from "@iconify/react";
+import Icon from "../components/Icon";
 
 const SOCIALS = [
   {
     href: "mailto:dafahudarifai147@gmail.com",
     label: "Email",
     value: "dafahudarifai147@gmail.com",
-    icon: "lucide:mail",
+    icon: "envelope",
   },
   {
     href: "https://www.linkedin.com/in/dafa-huda-rifa-i",
     label: "LinkedIn",
     value: "in/dafa-huda-rifa-i",
-    icon: "uil:linkedin",
+    icon: "linkedin",
   },
   {
     href: "https://github.com/dafahuda",
     label: "GitHub",
     value: "@dafahuda",
-    icon: "lucide:github",
+    icon: "github",
   },
   {
     href: "https://www.instagram.com/dafa.h.r",
     label: "Instagram",
     value: "@dafa.h.r",
-    icon: "lucide:instagram",
+    icon: "instagram",
   },
 ];
 
@@ -85,7 +85,7 @@ const ContactSection = () => {
                       </p>
                     </div>
                     <Icon
-                      icon="lucide:arrow-up-right"
+                      icon="arrow-up-right"
                       className="text-[var(--color-muted)] group-hover:text-[var(--color-accent)] transition-colors"
                     />
                   </a>
@@ -161,7 +161,7 @@ const ContactSection = () => {
                 className="btn btn-primary w-full sm:w-auto"
               >
                 {status === "sending" ? "Mengirim..." : "Kirim pesan"}
-                {status !== "sending" && <Icon icon="lucide:send" />}
+                {status !== "sending" && <Icon icon="send" />}
               </button>
             </form>
           </div>

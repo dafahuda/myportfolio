@@ -1,10 +1,10 @@
-import { Icon } from "@iconify/react";
+import Icon from "./Icon";
 
 const LINKS = [
-  { href: "https://github.com/dafahuda", icon: "lucide:github", label: "GitHub" },
-  { href: "https://www.linkedin.com/in/dafa-huda-rifa-i", icon: "uil:linkedin", label: "LinkedIn" },
-  { href: "mailto:dafahudarifai147@gmail.com", icon: "lucide:mail", label: "Email" },
-  { href: "/assets/cv/Cv_ATS_Dafa_Huda_Rifai.pdf", icon: "lucide:file-text", label: "CV", download: true },
+  { href: "https://github.com/dafahuda", icon: "github", label: "GitHub" },
+  { href: "https://www.linkedin.com/in/dafa-huda-rifa-i", icon: "linkedin", label: "LinkedIn" },
+  { href: "mailto:dafahudarifai147@gmail.com", icon: "envelope", label: "Email" },
+  { href: "/assets/cv/Cv_ATS_Dafa_Huda_Rifai.pdf", icon: "file-lines", label: "CV", download: true },
 ];
 
 const Footer = () => {

@@ -1,4 +1,4 @@
-import { Icon } from "@iconify/react";
+import Icon from "../components/Icon";
 import DataImage from "../data";
 import { listTools } from "../data";
 import LogoLoop from "../components/LogoLoop";
@@ -50,12 +50,12 @@ const HeroSection = () => {
               download
               className="btn btn-primary"
             >
-              <Icon icon="lucide:download" />
+              <Icon icon="download" />
               <span>Unduh CV</span>
             </a>
             <a href="#proyek" className="btn btn-ghost">
               <span>Lihat yang saya kerjakan</span>
-              <Icon icon="lucide:arrow-down" />
+              <Icon icon="arrow-down" />
             </a>
           </div>
         </div>

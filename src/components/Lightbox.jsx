@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Icon } from "@iconify/react";
+import Icon from "./Icon";
 
 /**
  * Accessible modal lightbox. Traps focus, closes on Esc / backdrop click.
@@ -41,7 +41,7 @@ export default function Lightbox({ src, alt, caption, onClose }) {
         aria-label="Tutup"
         className="absolute top-4 right-4 h-10 w-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center"
       >
-        <Icon icon="lucide:x" className="text-xl" />
+        <Icon icon="x" className="text-xl" />
       </button>
       <figure
         className="max-w-5xl max-h-[90vh] flex flex-col items-center gap-3"

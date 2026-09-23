@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Icon } from "@iconify/react";
+import Icon from "./Icon";
 
 const BackToTop = () => {
   const [visible, setVisible] = useState(false);
@@ -60,7 +60,7 @@ const BackToTop = () => {
         color: fg,
       }}
     >
-      <Icon icon="lucide:arrow-up" className="size-5" />
+      <Icon icon="arrow-up" className="size-5" />
     </a>
   );
 };
