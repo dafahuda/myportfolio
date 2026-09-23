@@ -41,6 +41,12 @@ const AboutSection = () => {
                 </li>
               ))}
             </ul>
+            <div className="border border-[var(--color-line)] rounded-lg p-5 bg-[var(--color-surface)]">
+              <p className="text-xs uppercase tracking-[0.12em] text-[var(--color-muted)] mb-2">Posisi yang saya incar</p>
+              <p className="text-sm text-[var(--color-ink)] leading-relaxed">
+                Front-end Developer atau UI/UX Designer. Terbuka untuk kerja jarak jauh maupun onsite di Jakarta atau Bogor. Tersedia mulai Juni 2026.
+              </p>
+            </div>
             <p className="text-sm text-[var(--color-muted)]">
               S1 Ilmu Komputer · Universitas Pakuan · 2019–2025 · IPK 3.60
             </p>

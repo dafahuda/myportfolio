@@ -79,11 +79,11 @@ export const listProyek = [
   {
     id: 1,
     thumbnail: Proyek1,
-    title: "Website Portfolio",
-    year: "2025",
+    title: "Portfolio Redesign 2026",
+    year: "2026",
     role: "Solo",
     description:
-      "Situs ini. Ditulis ulang dengan React 19, Vite, dan Tailwind untuk tampilan editorial yang lebih tenang dan mudah dipelihara.",
+      "Situs ini. Ditulis ulang dari nol dengan React 19, Vite, dan Tailwind — mengadopsi palet editorial cream, tipografi Big Shoulders Display, dan放弃了 scroll animation yang tidak perlu.",
     tools: ["React", "Vite", "Tailwind CSS"],
     repo: "https://github.com/dafahuda/myportfolio",
     link: "https://portfolio.dhr.my.id",
@@ -96,7 +96,7 @@ export const listProyek = [
     year: "2023",
     role: "Tim · MSIB",
     description:
-      "Platform edukasi keuangan sebagai capstone MSIB. Membantu pengguna memahami manajemen finansial lewat konten interaktif dan informasi ekonomi terkurasi.",
+      "Capstone MSIB Batch 3 — platform edukasi keuangan. Saya bagian tim frontend, membangun antarmuka dan integrasi API untuk konten interaktif dan feed informasi ekonomi.",
     tools: ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
     repo: "https://github.com/dafahuda/Fintrack",
     link: "https://fintrack-ten.vercel.app",
@@ -122,7 +122,7 @@ export const listProyek = [
     year: "2022",
     role: "Tim · MSIB",
     description:
-      "Platform edukasi untuk mengurangi konflik SARA dengan pendekatan konten yang membangun empati antar kelompok.",
+      "Capstone MSIB Batch 3 — platform edukasi antarm kelompok. Bertugas sebagai UI designer, menyusun wireframe dan prototipe interaktif.",
     tools: ["React", "Tailwind CSS"],
     repo: "https://github.com/dafahuda/macro_freedom",
     link: "",
@@ -135,7 +135,7 @@ export const listProyek = [
     year: "2022",
     role: "Solo",
     description:
-      "Konsep website kolaborasi untuk berbagi ide dan menyusun jadwal tim. Prototipe awal berbasis HTML dan Figma.",
+      "Prototipe kolaborasi tim — fitur chat, pembagian tugas, dan penjadwalan. Dibuat dengan HTML, CSS, dan JavaScript; desain di Figma.",
     tools: ["HTML", "CSS", "JavaScript", "Figma"],
     repo: "",
     link: "",
@@ -194,50 +194,30 @@ import CertMsNilai from "/assets/sertifikat/Sertifikat Microsoft Office Desktop 
 export const certificateList = [
   {
     id: 1,
-    name: "Fundamental Junior Network Administrator",
+    name: "Junior Network Administrator — Fundamental & Intermediate",
     issuer: "Digital Talent Scholarship",
     date: "2025",
     description:
-      "Fundamental jaringan komputer dan administrasi server dasar.",
+      "Dua level sertifikasi jaringan komputer: Fundamental (dasar jaringan, administrasi server) dan Intermediate (konfigurasi jaringan tingkat menengah, layanan server).",
     imageList: [
-      { image: CertJnaSertifikat, text: "Sertifikat" },
-      { image: CertJnaNilai, text: "Transkrip" },
-    ],
-  },
-  {
-    id: 2,
-    name: "Intermediate Junior Network Administrator",
-    issuer: "Digital Talent Scholarship",
-    date: "2025",
-    description:
-      "Konfigurasi jaringan tingkat menengah dan layanan server.",
-    imageList: [
-      { image: CertInaSertifikat, text: "Sertifikat" },
-      { image: CertInaNilai, text: "Transkrip" },
+      { image: CertJnaSertifikat, text: "Fundamental — Sertifikat" },
+      { image: CertJnaNilai, text: "Fundamental — Transkrip" },
+      { image: CertInaSertifikat, text: "Intermediate — Sertifikat" },
+      { image: CertInaNilai, text: "Intermediate — Transkrip" },
     ],
   },
   {
     id: 3,
-    name: "Teknisi Drive Tester",
+    name: "Teknisi Drive Tester — Fundamental & Intermediate",
     issuer: "Digital Talent Scholarship",
     date: "2025",
     description:
-      "Metodologi drive test dan analisis performa jaringan seluler.",
+      "Dua level sertifikasi drive test: Fundamental (metodologi pengujian dan analisis performa jaringan seluler) dan Intermediate (post-processing data untuk optimasi jaringan).",
     imageList: [
-      { image: CertDtSertifikat, text: "Sertifikat" },
-      { image: CertDtNilai, text: "Transkrip" },
-    ],
-  },
-  {
-    id: 4,
-    name: "Analisis Teknisi Drive Tester",
-    issuer: "Digital Talent Scholarship",
-    date: "2025",
-    description:
-      "Post-processing data drive test untuk optimasi jaringan.",
-    imageList: [
-      { image: CertAdtSertifikat, text: "Sertifikat" },
-      { image: CertAdtNilai, text: "Transkrip" },
+      { image: CertDtSertifikat, text: "Fundamental — Sertifikat" },
+      { image: CertDtNilai, text: "Fundamental — Transkrip" },
+      { image: CertAdtSertifikat, text: "Intermediate — Sertifikat" },
+      { image: CertAdtNilai, text: "Intermediate — Transkrip" },
     ],
   },
   {
@@ -280,9 +260,9 @@ export const certificateExtras = [
  * Copy blocks
  * ============================================================ */
 export const heroParagraph = {
-  text: "Sarjana Ilmu Komputer dengan fokus di front-end development, UI/UX design, dan penerapan AI. Suka merancang antarmuka web yang bersih dan pengalaman pengguna yang tenang.",
+  text: "Sarjana Ilmu Komputer, Universitas Pakuan. Membangun dashboard SDM untuk 1.284 pegawai di Badan Bahasa menggunakan Google Apps Script. Fokus di front-end development, UI/UX design, dan penerapan AI.",
 };
 
 export const aboutParagraph = {
-  text: "Saya Dafa Huda Rifa'i, sarjana Ilmu Komputer dari Universitas Pakuan. Ketertarikan saya berpusat pada tiga hal: front-end development, UI/UX design, dan artificial intelligence — menjembatani teknologi yang kompleks menjadi antarmuka yang mudah dipahami. Pengalaman terbaru mencakup pengelolaan data dan pengembangan dashboard di Badan Pengembangan dan Pembinaan Bahasa, serta MSIB Batch 3 di Infinite Learning yang membawa saya melalui alur UI/UX, front-end, hingga full-stack. Saya juga pernah menerapkan Fuzzy Logic untuk pemetaan risiko dan peramalan cuaca berbasis IoT.",
+  text: "Saya Dafa Huda Rifa'i — sarjana Ilmu Komputer Universitas Pakuan. Terbaru, saya membangun dan mengelola dashboard SDM untuk 1.284 pegawai di Badan Pengembangan dan Pembinaan Bahasa. Sebelumnya, melalui MSIB Batch 3 di Infinite Learning, saya melewati alur UI/UX Designer → Frontend Developer → Full Stack Engineer, dan menyelesaikan capstone Fintrack sebagai bagian dari tim. Saya juga menerapkan Fuzzy Logic untuk pemetaan risiko tanah longsor dan peramalan cuaca berbasis IoT.",
 };
