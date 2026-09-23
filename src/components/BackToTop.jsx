@@ -3,6 +3,7 @@ import { Icon } from "@iconify/react";
 
 const BackToTop = () => {
   const [visible, setVisible] = useState(false);
+  const [overFooter, setOverFooter] = useState(false);
   const [reduced, setReduced] = useState(false);
   const ref = useRef(null);
 
@@ -16,8 +17,19 @@ const BackToTop = () => {
 
   useEffect(() => {
     const onScroll = () => {
-      setVisible(window.scrollY > 500);
+      const scrollY = window.scrollY;
+      const docH = document.documentElement.scrollHeight;
+      const winH = window.innerHeight;
+      const footerH = document.querySelector("footer")?.offsetHeight ?? 0;
+
+      // Show button after 500px scroll
+      setVisible(scrollY > 500);
+
+      // Switch to dark variant when footer is in view
+      const footerTop = docH - footerH - winH;
+      setOverFooter(scrollY >= footerTop - 100);
     };
+
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -28,17 +40,26 @@ const BackToTop = () => {
 
   if (reduced) return null;
 
+  const isDark = overFooter;
+
   return (
     <a
       ref={ref}
       onClick={handleClick}
       aria-label="Kembali ke atas"
-      className="fixed right-6 bottom-6 z-40 flex size-12 items-center justify-center rounded-full bg-[var(--color-bg)] text-[var(--color-ink)] shadow-lg hover:bg-[var(--color-accent)] hover:text-[var(--color-bg)] hover:shadow-xl md:right-10 md:bottom-10"
+      className="fixed right-6 bottom-6 z-40 flex size-12 items-center justify-center rounded-full shadow-lg transition-shadow duration-300 md:right-10 md:bottom-10"
       style={{
         transform: visible ? "translateY(0)" : "translateY(24px)",
         opacity: visible ? 1 : 0,
-        transition: "transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease, background-color 0.3s ease",
+        transition: [
+          "transform 0.35s cubic-bezier(0.4, 0, 0.2, 1)",
+          "opacity 0.35s ease",
+          `background-color 0.3s ease, color 0.3s ease`,
+          `box-shadow 0.3s ease`,
+        ].join(", "),
         pointerEvents: visible ? "auto" : "none",
+        backgroundColor: isDark ? "var(--color-ink)" : "var(--color-bg)",
+        color: isDark ? "var(--color-bg)" : "var(--color-ink)",
       }}
     >
       <Icon icon="lucide:arrow-up" className="size-5" />
