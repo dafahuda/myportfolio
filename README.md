@@ -71,36 +71,23 @@ mengikuti warna teks — `currentColor` tidak diwarisi lewat `<img>`; pakai
 
 ## Deploy
 
-Tiga jalur, semuanya berakhir di `/var/www/portfolio`:
+Deploy **manual saja**:
 
 ```bash
-# manual (yang dipakai sehari-hari)
 npm run build && sudo rsync -a --delete dist/ /var/www/portfolio/ \
   && sudo chown -R www-data:www-data /var/www/portfolio
 ```
 
-**Otomatis.** Setiap push ke `main` memicu GitHub Actions
-(`.github/workflows/deploy.yml`) yang memanggil webhook di VPS:
-
-```
-GitHub Actions  ->  POST https://portfolio.dhr.my.id/webhook/deploy?secret=...
-                ->  nginx mem-proxy ke 127.0.0.1:9000
-                ->  deploy.sh (git pull, npm install, npm run build, rsync)
-```
-
-Webhook-nya adalah layanan systemd:
-
-```bash
-systemctl status portfolio-webhook
-sudo systemctl restart portfolio-webhook
-journalctl -u portfolio-webhook -n 50
-```
-
-Secret-nya **tidak** ada di dalam repo. Nilainya dibaca dari
-`/home/ubuntu/.portfolio-deploy-secret` (mode 600) di sisi server, dan dari
-GitHub Actions secret bernama `DEPLOY_SECRET` di sisi GitHub. Untuk merotasi:
-ganti isi berkas itu, `systemctl restart portfolio-webhook`, lalu
-`gh secret set DEPLOY_SECRET`.
+> **Auto-deploy sudah dihapus dengan sengaja** (24 Sep 2026), jangan
+> ditambahkan kembali tanpa persetujuan pemilik. Alasannya: endpoint webhook-nya
+> publik sehingga secretnya pernah bocor di repo ini, dan setiap deploy
+> menjalankan `npm install` + build di VPS 2 GB yang juga menjalankan Docker,
+> Postgres, dan Redis — cukup untuk mengganggu layanan lain.
+>
+> Yang dibuang: berkas workflow GitHub Actions, layanan systemd
+> `portfolio-webhook`, blok `location /webhook` di nginx, dan berkas secret.
+> `deploy.sh` di server masih ada sebagai alternatif manual, tapi tidak dipanggil
+> apa pun secara otomatis.
 
 Penting: `rsync --delete` dan `sudo rm -rf /var/www/portfolio/*` menghapus apa
 pun yang tidak ada di `dist/`. Selalu salin dulu webroot ke

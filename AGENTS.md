@@ -4,8 +4,10 @@ This is the personal portfolio of Dafa Huda Rifa'i.
 Live: https://portfolio.dhr.my.id
 
 ## Stack
-React 19, Vite 7, Tailwind 4, Iconify. Deploy via webhook to VPS
-(`git pull origin main → npm run build → rsync to /var/www/portfolio`).
+React 19, Vite 7, Tailwind 4, Tabler Icons. Deploy is MANUAL only:
+`npm run build && sudo rsync -a --delete dist/ /var/www/portfolio/`.
+The webhook/GitHub Actions auto-deploy was deliberately removed — do not
+re-add it without the owner's approval.
 
 ## Design & UI
 If the task involves building or editing UI/UX, read `DESIGN.md`
@@ -32,10 +34,9 @@ UI work complete.
   before triggering deploy.
 - Do not modify `deploy.sh`, nginx config, or PM2 entries without the
   owner's explicit approval.
-- Never write the deploy secret into any file in this repo — it is PUBLIC.
-  The live secret is at `/home/ubuntu/.portfolio-deploy-secret` (server) and in
-  the GitHub Actions secret `DEPLOY_SECRET`. The webhook runs as the systemd
-  unit `portfolio-webhook`; a value that ever appeared in git must be rotated.
+- Never write a secret, token, or password into any file in this repo — it is
+  PUBLIC. The portfolio once shipped a deploy secret in a workflow file; it had
+  to be rotated. Auto-deploy is gone now; there is no deploy secret to use.
 
 ## Planning
 Multi-step design or refactor work: write a plan under

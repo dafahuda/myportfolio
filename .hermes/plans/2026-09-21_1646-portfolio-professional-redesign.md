@@ -19,7 +19,7 @@ bukan CV panjang. Cepat, profesional, kredibel.
 |---|---|
 | Live | https://portfolio.dhr.my.id (nginx 1.24.0, HTTP 200) |
 | nginx | `/etc/nginx/sites-enabled/portfolio.dhr.my.id` → serve dari `/var/www/portfolio` |
-| Deploy webhook | POST `127.0.0.1:9000/deploy?secret=secretPortfolioDeploy123` (standalone `webhook-server.py`) |
+| Deploy | Manual: `npm run build && sudo rsync -a --delete dist/ /var/www/portfolio/`. Auto-deploy (webhook + GitHub Actions) dihapus 24 Sep 2026 |
 | Repo | `/home/ubuntu/portfolio`, remote `github.com/dafahuda/myportfolio` |
 | Branch aktif | `feat/professional-redesign` (base `main` @ 8fcd110) |
 | Stack tetap | React 19.1, Vite 7.1, Tailwind 4, `@iconify/react` |
