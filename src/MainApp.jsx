@@ -1,6 +1,7 @@
 import App from "./App.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
+import BackToTop from "./components/BackToTop.jsx";
 import { useReveal } from "./hooks/useReveal.js";
 
 export default function MainApp() {
@@ -18,6 +19,7 @@ export default function MainApp() {
         <App />
       </main>
       <Footer />
+      <BackToTop />
     </>
   );
 }
