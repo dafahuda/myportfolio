@@ -14,21 +14,26 @@ const BackToTop = () => {
     return () => mq.removeEventListener("change", handler);
   }, []);
 
+  // Muncul setelah scroll melewati hero.
   useEffect(() => {
-    const onScroll = () => {
-      const scrollY = window.scrollY;
-      const docH = document.documentElement.scrollHeight;
-      const winH = window.innerHeight;
-      const footerH = document.querySelector("footer")?.offsetHeight ?? 0;
-      const footerTop = docH - footerH - winH;
-
-      setVisible(scrollY > 500);
-      // Switch to light button when footer (dark section) is in view
-      setOverDark(scrollY >= footerTop - 80);
-    };
-
+    const onScroll = () => setVisible(window.scrollY > 500);
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Warna: berubah saat footer gelap berada tepat di belakang tombol.
+  // IntersectionObserver lebih presisi daripada hitungan scroll.
+  useEffect(() => {
+    const footer = document.querySelector("footer");
+    if (!footer || !("IntersectionObserver" in window)) return;
+
+    const io = new IntersectionObserver(
+      ([entry]) => setOverDark(entry.isIntersecting),
+      { rootMargin: "0px 0px -72px 0px", threshold: 0 }
+    );
+    io.observe(footer);
+    return () => io.disconnect();
   }, []);
 
   const handleClick = () => {
@@ -37,7 +42,7 @@ const BackToTop = () => {
 
   if (reduced) return null;
 
-  // Light section -> dark button. Dark footer -> light button.
+  // Section terang -> tombol hitam. Footer gelap -> tombol cream.
   const bg = overDark ? "var(--color-bg)" : "var(--color-ink)";
   const fg = overDark ? "var(--color-ink)" : "var(--color-bg)";
 
@@ -53,7 +58,6 @@ const BackToTop = () => {
           "transform 0.35s cubic-bezier(0.4, 0, 0.2, 1)",
           "opacity 0.35s ease",
           "background-color 0.3s ease, color 0.3s ease",
-          "box-shadow 0.3s ease",
         ].join(", "),
         pointerEvents: visible ? "auto" : "none",
         backgroundColor: bg,
