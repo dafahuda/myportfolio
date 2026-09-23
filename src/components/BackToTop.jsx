@@ -37,9 +37,9 @@ const BackToTop = () => {
 
   if (reduced) return null;
 
-  // Light button on dark bg, dark button on light bg — always contrasting
-  const bg = overDark ? "var(--color-ink)" : "var(--color-bg)";
-  const fg = overDark ? "var(--color-bg)" : "var(--color-ink)";
+  // Light section -> dark button. Dark footer -> light button.
+  const bg = overDark ? "var(--color-bg)" : "var(--color-ink)";
+  const fg = overDark ? "var(--color-ink)" : "var(--color-bg)";
 
   return (
     <a
