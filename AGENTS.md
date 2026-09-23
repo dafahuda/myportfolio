@@ -32,6 +32,10 @@ UI work complete.
   before triggering deploy.
 - Do not modify `deploy.sh`, nginx config, or PM2 entries without the
   owner's explicit approval.
+- Never write the deploy secret into any file in this repo — it is PUBLIC.
+  The live secret is at `/home/ubuntu/.portfolio-deploy-secret` (server) and in
+  the GitHub Actions secret `DEPLOY_SECRET`. The webhook runs as the systemd
+  unit `portfolio-webhook`; a value that ever appeared in git must be rotated.
 
 ## Planning
 Multi-step design or refactor work: write a plan under

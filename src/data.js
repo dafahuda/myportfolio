@@ -116,7 +116,7 @@ export const listProyek = [
     description:
       "Capstone MSIB Batch 3 — platform edukasi antarm kelompok. Bertugas sebagai UI designer, menyusun wireframe dan prototipe interaktif.",
     tools: ["React", "Tailwind CSS"],
-    repo: "https://github.com/dafahuda/macro_freedom",
+    repo: "https://github.com/Raihan32/Freedom-macro-ReactJS",
     link: "",
     status: "archived",
   },

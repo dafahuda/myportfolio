@@ -78,6 +78,14 @@ MOTION: 1   (minimum viable — fade-up only, plus at most one marquee)
 ```
 
 ## Component notes
+- **Ikon**: satu sumber, `src/components/Icon.jsx`. Jangan menambah pustaka ikon
+  kedua. Ikon aksi bergaris (`stroke={2}`), ikon identitas dan dokumen terisi.
+  Semuanya `currentColor` sehingga mengikuti warna section. Untuk SVG yang harus
+  mewarisi warna teks jangan pakai `<img>` — `currentColor` tidak diwarisi lewat
+  `<img>`; pakai `InlineSvg`.
+- **Merek tools**: monokrom, satu warna. Jangan memakai logo berwarna — 30 warna
+  merek dagang di halaman yang paletnya tiga adalah pelanggaran terbesar yang
+  pernah ada di sini.
 - **Buttons**: `btn-primary` = ink bg + cream text, hover shifts to accent.
   `btn-ghost` = ink border only. Radius 6px. No pill shapes on primary CTAs.
 - **Cards**: 1px `--color-line` border, radius 8px, no shadow. Hover: border
