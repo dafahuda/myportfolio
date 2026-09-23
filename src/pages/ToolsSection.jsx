@@ -1,4 +1,5 @@
 import { listTools } from "../data";
+import Icon from "../components/Icon";
 
 const ToolsSection = () => {
   return (
@@ -14,15 +15,23 @@ const ToolsSection = () => {
           </div>
           <ul className="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-6" data-reveal>
             {listTools.map((t) => (
-              <li key={t.id} className="flex items-center gap-3">
-                <img
-                  src={t.gambar}
-                  alt=""
-                  width="32"
-                  height="32"
-                  loading="lazy"
-                  className="h-8 w-8 object-contain flex-shrink-0"
-                />
+              <li key={t.id} className="flex items-center gap-3 text-[var(--color-ink)]">
+                {t.icon ? (
+                  <Icon
+                    icon={t.icon}
+                    size={30}
+                    className="flex-shrink-0"
+                  />
+                ) : (
+                  <img
+                    src={t.gambar}
+                    alt=""
+                    width="30"
+                    height="30"
+                    loading="lazy"
+                    className="h-[30px] w-[30px] object-contain flex-shrink-0"
+                  />
+                )}
                 <div className="min-w-0">
                   <p className="text-sm font-medium text-[var(--color-ink)] truncate">
                     {t.nama}

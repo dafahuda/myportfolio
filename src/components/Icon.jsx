@@ -10,9 +10,21 @@ import {
   IconX,
 } from "@tabler/icons-react";
 import {
+  IconBrandBootstrap,
+  IconBrandCss3,
+  IconBrandFigma,
+  IconBrandGithub,
   IconBrandGithubFilled,
+  IconBrandHtml5,
   IconBrandInstagramFilled,
+  IconBrandJavascript,
   IconBrandLinkedinFilled,
+  IconBrandMysql,
+  IconBrandNextjs,
+  IconBrandNodejs,
+  IconBrandPhp,
+  IconBrandReact,
+  IconBrandTailwind,
   IconFileTextFilled,
   IconMailFilled,
 } from "@tabler/icons-react";
@@ -53,6 +65,22 @@ const MARKS = {
   "file-lines": IconFileTextFilled,
 };
 
+// Merek tools di section "Perkakas" — monokrom, mengikuti warna teks.
+const TOOLS = {
+  "brand-html5": IconBrandHtml5,
+  "brand-css3": IconBrandCss3,
+  "brand-javascript": IconBrandJavascript,
+  "brand-php": IconBrandPhp,
+  "brand-react": IconBrandReact,
+  "brand-nextjs": IconBrandNextjs,
+  "brand-nodejs": IconBrandNodejs,
+  "brand-tailwind": IconBrandTailwind,
+  "brand-bootstrap": IconBrandBootstrap,
+  "brand-mysql": IconBrandMysql,
+  "brand-figma": IconBrandFigma,
+  "brand-github": IconBrandGithub,
+};
+
 export default function Icon({
   icon,
   name,
@@ -63,7 +91,8 @@ export default function Icon({
   const key = name ?? icon;
   const Action = ACTIONS[key];
   const Mark = MARKS[key];
-  if (!Action && !Mark) return null;
+  const Tool = TOOLS[key];
+  if (!Action && !Mark && !Tool) return null;
 
   if (Action) {
     return (
@@ -71,6 +100,19 @@ export default function Icon({
         className={className}
         size={size}
         stroke={2}
+        aria-hidden="true"
+        focusable="false"
+        {...rest}
+      />
+    );
+  }
+
+  if (Tool) {
+    return (
+      <Tool
+        className={className}
+        size={size}
+        stroke={1.5}
         aria-hidden="true"
         focusable="false"
         {...rest}

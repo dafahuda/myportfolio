@@ -6,37 +6,28 @@ export default Image;
 
 /* ============================================================
  * Tools & tech stack
+ * Monokrom: ikon merek dari Tabler yang mewarisi warna teks, sehingga
+ * menyatu dengan palet situs (ink di latar cream). Dua merek tidak ada di
+ * Tabler, jadi memakai berkas SVG lokal yang sudah diseragamkan warnanya.
  * ============================================================ */
-import Tools1 from "/assets/tools/html.svg";
-import Tools2 from "/assets/tools/css.svg";
-import Tools3 from "/assets/tools/javascript.svg";
-import Tools4 from "/assets/tools/php.svg";
-import Tools5 from "/assets/tools/react_light.svg";
-import Tools6 from "/assets/tools/nextjs.svg";
-import Tools7 from "/assets/tools/nodejs.svg";
-import Tools8 from "/assets/tools/codeigniter.svg";
-import Tools9 from "/assets/tools/tailwindcss.svg";
-import Tools10 from "/assets/tools/bootstrap.svg";
-import Tools11 from "/assets/tools/mysql.svg";
-import Tools12 from "/assets/tools/figma.svg";
-import Tools13 from "/assets/tools/canva.svg";
-import Tools14 from "/assets/tools/github_dark.svg";
+import ToolsCodeigniter from "/assets/tools/codeigniter.svg";
+import ToolsCanva from "/assets/tools/canva.svg";
 
 export const listTools = [
-  { id: 1, gambar: Tools1, nama: "HTML", ket: "Markup" },
-  { id: 2, gambar: Tools2, nama: "CSS", ket: "Styling" },
-  { id: 3, gambar: Tools3, nama: "JavaScript", ket: "Bahasa" },
-  { id: 4, gambar: Tools4, nama: "PHP", ket: "Bahasa" },
-  { id: 5, gambar: Tools5, nama: "React", ket: "Library" },
-  { id: 6, gambar: Tools6, nama: "Next.js", ket: "Framework" },
-  { id: 7, gambar: Tools7, nama: "Node.js", ket: "Runtime" },
-  { id: 8, gambar: Tools8, nama: "CodeIgniter", ket: "Framework" },
-  { id: 9, gambar: Tools9, nama: "Tailwind CSS", ket: "Framework" },
-  { id: 10, gambar: Tools10, nama: "Bootstrap", ket: "Framework" },
-  { id: 11, gambar: Tools11, nama: "MySQL", ket: "Database" },
-  { id: 12, gambar: Tools12, nama: "Figma", ket: "Design" },
-  { id: 13, gambar: Tools13, nama: "Canva", ket: "Design" },
-  { id: 14, gambar: Tools14, nama: "GitHub", ket: "Versioning" },
+  { id: 1, icon: "brand-html5", nama: "HTML", ket: "Markup" },
+  { id: 2, icon: "brand-css3", nama: "CSS", ket: "Styling" },
+  { id: 3, icon: "brand-javascript", nama: "JavaScript", ket: "Bahasa" },
+  { id: 4, icon: "brand-php", nama: "PHP", ket: "Bahasa" },
+  { id: 5, icon: "brand-react", nama: "React", ket: "Library" },
+  { id: 6, icon: "brand-nextjs", nama: "Next.js", ket: "Framework" },
+  { id: 7, icon: "brand-nodejs", nama: "Node.js", ket: "Runtime" },
+  { id: 8, gambar: ToolsCodeigniter, nama: "CodeIgniter", ket: "Framework" },
+  { id: 9, icon: "brand-tailwind", nama: "Tailwind CSS", ket: "Framework" },
+  { id: 10, icon: "brand-bootstrap", nama: "Bootstrap", ket: "Framework" },
+  { id: 11, icon: "brand-mysql", nama: "MySQL", ket: "Database" },
+  { id: 12, icon: "brand-figma", nama: "Figma", ket: "Design" },
+  { id: 13, gambar: ToolsCanva, nama: "Canva", ket: "Design" },
+  { id: 14, icon: "brand-github", nama: "GitHub", ket: "Versioning" },
 ];
 
 /* ============================================================
