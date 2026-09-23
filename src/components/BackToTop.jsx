@@ -36,10 +36,6 @@ const BackToTop = () => {
     return () => io.disconnect();
   }, []);
 
-  const handleClick = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   if (reduced) return null;
 
   // Section terang -> tombol hitam. Footer gelap -> tombol cream.
@@ -48,7 +44,7 @@ const BackToTop = () => {
 
   return (
     <a
-      onClick={handleClick}
+      href="#beranda"
       aria-label="Kembali ke atas"
       className="fixed right-6 bottom-6 z-40 flex size-12 items-center justify-center rounded-full shadow-lg md:right-10 md:bottom-10"
       style={{

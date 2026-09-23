@@ -3,8 +3,20 @@ import DataImage from "../data";
 import { listTools } from "../data";
 import LogoLoop from "../components/LogoLoop";
 
+// Dimensi intrinsik tiap logo (diambil dari viewBox SVG) supaya browser
+// tahu ruang yang dibutuhkan sebelum gambar selesai dimuat.
+const LOGO_SIZE = {
+  HTML: [21, 24], CSS: [24, 24], JavaScript: [24, 24], PHP: [44, 24],
+  React: [27, 24], "Next.js": [24, 24], "Node.js": [24, 24], CodeIgniter: [24, 24],
+  "Tailwind CSS": [39, 24], Bootstrap: [30, 24], MySQL: [24, 24],
+  Figma: [16, 24], Canva: [24, 24], GitHub: [24, 24],
+};
+
 const HeroSection = () => {
-  const logos = listTools.map((t) => ({ src: t.gambar, alt: t.nama }));
+  const logos = listTools.map((t) => {
+    const [width, height] = LOGO_SIZE[t.nama] ?? [24, 24];
+    return { src: t.gambar, alt: t.nama, width, height };
+  });
 
   return (
     <section id="beranda" className="pt-28 md:pt-36 pb-14 md:pb-20">
