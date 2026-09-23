@@ -83,7 +83,7 @@ export const listProyek = [
     year: "2026",
     role: "Solo",
     description:
-      "Situs ini. Ditulis ulang dari nol dengan React 19, Vite, dan Tailwind — mengadopsi palet editorial cream, tipografi Big Shoulders Display, dan放弃了 scroll animation yang tidak perlu.",
+      "Ditulis ulang dari nol dengan React 19, Vite, dan Tailwind — palet editorial cream, tipografi Big Shoulders Display, dan animasi scroll yang minimum.",
     tools: ["React", "Vite", "Tailwind CSS"],
     repo: "https://github.com/dafahuda/myportfolio",
     link: "https://portfolio.dhr.my.id",
