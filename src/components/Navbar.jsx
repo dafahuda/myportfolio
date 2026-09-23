@@ -1,142 +1,88 @@
-import { useState } from "react";
-import { ScrollSmoother } from "gsap/ScrollSmoother";
+import { useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
 
+const NAV_LINKS = [
+  { href: "#beranda", label: "Beranda" },
+  { href: "#tentang", label: "Tentang" },
+  { href: "#pengalaman", label: "Pengalaman" },
+  { href: "#tools", label: "Tools" },
+  { href: "#proyek", label: "Proyek" },
+  { href: "#sertifikat", label: "Sertifikat" },
+  { href: "#kontak", label: "Kontak" },
+];
+
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
-
-  // Fungsi untuk menangani klik navigasi & memicu ScrollSmoother
-  const goToSection = (e) => {
-    e.preventDefault();
-    const smoother = ScrollSmoother.get();
-    const target = e.currentTarget.getAttribute("href");
-    try {
-      smoother.scrollTo(target, true);
-    } catch (error) {
-      console.error(
-        `GSAP ScrollSmoother not found or target "${target}" does not exist.`,
-        error
-      );
-    }
-  };
-
-  // Fungsi gabungan untuk menu mobile
-  const handleMobileLinkClick = (e) => {
-    closeMenu();
-    goToSection(e);
-  };
+  const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-zinc-900 bg-opacity-90 backdrop-blur-sm">
-      <div className="container mx-auto px-5 py-3 flex justify-between items-center">
-        <h1 className="text-xl font-bold">
-          <a href="#beranda" onClick={goToSection}>
-            <p>My Portfolio</p>
-          </a>
-        </h1>
+    <nav
+      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-200 ${
+        scrolled
+          ? "bg-[var(--color-bg)]/85 backdrop-blur-md border-b border-[var(--color-line)]"
+          : "bg-transparent"
+      }`}
+      aria-label="Navigasi utama"
+    >
+      <div className="container-page flex h-16 items-center justify-between">
+        <a
+          href="#beranda"
+          className="font-display text-lg font-bold tracking-tight"
+          style={{ fontFamily: "var(--font-display)" }}
+        >
+          Dafa Huda Rifa&apos;i
+        </a>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8">
-          <a
-            href="#beranda"
-            className="hover:text-violet-500 transition-colors"
-            onClick={goToSection}
-          >
-            Beranda
-          </a>
-          <a
-            href="#tentang"
-            className="hover:text-violet-500 transition-colors"
-            onClick={goToSection}
-          >
-            About
-          </a>
-          <a
-            href="#tools"
-            className="hover:text-violet-500 transition-colors"
-            onClick={goToSection}
-          >
-            Tools
-          </a>
-          <a
-            href="#proyek"
-            className="hover:text-violet-500 transition-colors"
-            onClick={goToSection}
-          >
-            Projects
-          </a>
-          <a
-            href="#kontak"
-            className="hover:text-violet-500 transition-colors"
-            onClick={goToSection}
-          >
-            Contact
-          </a>
+        <div className="hidden md:flex items-center gap-7 text-sm">
+          {NAV_LINKS.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              className="link-underline text-[var(--color-ink)]"
+            >
+              {l.label}
+            </a>
+          ))}
         </div>
 
-        {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-2xl focus:outline-none"
-          onClick={toggleMenu}
+          type="button"
+          className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-[var(--color-line)] text-[var(--color-ink)]"
+          onClick={() => setIsOpen((v) => !v)}
+          aria-label={isOpen ? "Tutup menu" : "Buka menu"}
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
         >
-          {isMenuOpen ? (
-            <Icon icon="lucide:x" />
-          ) : (
-            <Icon icon="lucide:menu" />
-          )}
+          <Icon icon={isOpen ? "lucide:x" : "lucide:menu"} className="text-xl" />
         </button>
       </div>
 
-      {/* Mobile Menu */}
       <div
-        className={`absolute w-full left-0 bg-zinc-900/90 backdrop-blur-sm transition-all duration-300 ease-in-out md:hidden ${
-          isMenuOpen ? "top-16" : "-top-96"
+        id="mobile-menu"
+        className={`md:hidden overflow-hidden border-t border-[var(--color-line)] bg-[var(--color-bg)] transition-[max-height] duration-300 ${
+          isOpen ? "max-h-[500px]" : "max-h-0"
         }`}
       >
-        <div className="flex flex-col space-y-4 p-5">
-          <a
-            href="#beranda"
-            className="hover:text-violet-500 transition-colors py-2"
-            onClick={handleMobileLinkClick}
-          >
-            Beranda
-          </a>
-          <a
-            href="#tentang"
-            className="hover:text-violet-500 transition-colors py-2"
-            onClick={handleMobileLinkClick}
-          >
-            About
-          </a>
-          <a
-            href="#tools"
-            className="hover:text-violet-500 transition-colors py-2"
-            onClick={handleMobileLinkClick}
-          >
-            Tools
-          </a>
-          <a
-            href="#proyek"
-            className="hover:text-violet-500 transition-colors py-2"
-            onClick={handleMobileLinkClick}
-          >
-            Projects
-          </a>
-          <a
-            href="#kontak"
-            className="hover:text-violet-500 transition-colors py-2"
-            onClick={handleMobileLinkClick}
-          >
-            Contact
-          </a>
+        <div className="container-page py-4 flex flex-col gap-1">
+          {NAV_LINKS.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              className="py-2.5 text-[var(--color-ink)] link-underline"
+              onClick={closeMenu}
+            >
+              {l.label}
+            </a>
+          ))}
         </div>
       </div>
     </nav>

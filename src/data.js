@@ -1,11 +1,11 @@
 import HeroImage from "/assets/hero-img.webp";
 
-const Image = {
-  HeroImage,
-};
-
+const Image = { HeroImage };
 export default Image;
 
+/* ============================================================
+ * Tools & tech stack
+ * ============================================================ */
 import Tools1 from "/assets/tools/html.svg";
 import Tools2 from "/assets/tools/css.svg";
 import Tools3 from "/assets/tools/javascript.svg";
@@ -22,92 +22,25 @@ import Tools13 from "/assets/tools/canva.svg";
 import Tools14 from "/assets/tools/github_dark.svg";
 
 export const listTools = [
-  {
-    id: 1,
-    gambar: Tools1,
-    nama: "HTML",
-    ket: "Markup Language",
-  },
-  {
-    id: 2,
-    gambar: Tools2,
-    nama: "CSS",
-    ket: "Styling",
-  },
-  {
-    id: 3,
-    gambar: Tools3,
-    nama: "JavaScript",
-    ket: "Programming Language",
-  },
-  {
-    id: 4,
-    gambar: Tools4,
-    nama: "PHP",
-    ket: "Programming Language",
-  },
-  {
-    id: 5,
-    gambar: Tools5,
-    nama: "React JS",
-    ket: "Framework",
-  },
-  {
-    id: 6,
-    gambar: Tools6,
-    nama: "Next JS",
-    ket: "Framework",
-  },
-  {
-    id: 7,
-    gambar: Tools7,
-    nama: "Node JS",
-    ket: "Runtime",
-  },
-  {
-    id: 8,
-    gambar: Tools8,
-    nama: "CodeIgniter",
-    ket: "Framework",
-  },
-  {
-    id: 9,
-    gambar: Tools9,
-    nama: "Tailwind CSS",
-    ket: "Framework",
-  },
-  {
-    id: 10,
-    gambar: Tools10,
-    nama: "Bootstrap",
-    ket: "Framework",
-  },
-  {
-    id: 11,
-    gambar: Tools11,
-    nama: "MySQL",
-    ket: "Database",
-  },
-  {
-    id: 12,
-    gambar: Tools12,
-    nama: "Figma",
-    ket: "Design Tool",
-  },
-  {
-    id: 13,
-    gambar: Tools13,
-    nama: "Canva",
-    ket: "Design Tool",
-  },
-  {
-    id: 14,
-    gambar: Tools14,
-    nama: "GitHub",
-    ket: "Repository",
-  },
+  { id: 1, gambar: Tools1, nama: "HTML", ket: "Markup" },
+  { id: 2, gambar: Tools2, nama: "CSS", ket: "Styling" },
+  { id: 3, gambar: Tools3, nama: "JavaScript", ket: "Bahasa" },
+  { id: 4, gambar: Tools4, nama: "PHP", ket: "Bahasa" },
+  { id: 5, gambar: Tools5, nama: "React", ket: "Library" },
+  { id: 6, gambar: Tools6, nama: "Next.js", ket: "Framework" },
+  { id: 7, gambar: Tools7, nama: "Node.js", ket: "Runtime" },
+  { id: 8, gambar: Tools8, nama: "CodeIgniter", ket: "Framework" },
+  { id: 9, gambar: Tools9, nama: "Tailwind CSS", ket: "Framework" },
+  { id: 10, gambar: Tools10, nama: "Bootstrap", ket: "Framework" },
+  { id: 11, gambar: Tools11, nama: "MySQL", ket: "Database" },
+  { id: 12, gambar: Tools12, nama: "Figma", ket: "Design" },
+  { id: 13, gambar: Tools13, nama: "Canva", ket: "Design" },
+  { id: 14, gambar: Tools14, nama: "GitHub", ket: "Versioning" },
 ];
 
+/* ============================================================
+ * Projects
+ * ============================================================ */
 import Proyek1 from "/assets/proyek/proyek1.webp";
 import Proyek2 from "/assets/proyek/proyek2.webp";
 import Proyek3 from "/assets/proyek/proyek3.webp";
@@ -117,96 +50,135 @@ import Proyek6 from "/assets/proyek/proyek6.webp";
 
 export const listProyek = [
   {
-    id: 1,
-    thumbnail: Proyek1,
-    title: "Website Portfolio",
+    id: 7,
+    thumbnail: Proyek4,
+    title: "SIMPEG Dashboard",
+    year: "2026",
+    role: "Full-stack · Magang",
     description:
-      "Portfolio pribadi yang menampilkan project, skill, dan info kontak. Dibangun dengan React dan Tailwind CSS.",
-    tools: ["HTML", "CSS", "JavaScript", "React JS", "Tailwind CSS"],
-    animationDelay: "200",
-    imageList: [],
-    link: "https://dafahr-myportfolio.vercel.app",
+      "Dashboard SDM internal Badan Bahasa untuk mengelola data pegawai — CRUD data pribadi, pendidikan, jabatan, pelatihan, hingga otomasi dokumen via Google Forms dan Autocrat.",
+    tools: ["Google Apps Script", "HTML", "CSS", "JavaScript", "Google Sheets"],
+    repo: "https://github.com/dafahuda/MY-SIMPEG-APP",
+    link: "",
+    status: "internal",
   },
   {
     id: 2,
     thumbnail: Proyek2,
     title: "Bogor Landslide Risk",
+    year: "2025",
+    role: "Solo · Skripsi",
     description:
-      "Peta interaktif untuk visualisasi batas wilayah Kota Bogor. Menggunakan metode Fuzzy Logic untuk kalkulasi risiko tanah longsor.",
-    tools: ["HTML", "CSS", "JavaScript", "Leaflet JS", "Chart.js"],
-    animationDelay: "300",
-    imageList: [
-      { image: Proyek2, text: "Tampilan Utama" },
-      { image: Proyek1, text: "Halaman Login" },
-      { image: Proyek3, text: "Galeri" },
-    ],
+      "Peta interaktif batas wilayah Kota Bogor dengan kalkulasi risiko tanah longsor berbasis Fuzzy Logic. Visualisasi data multi-parameter di peta Leaflet.",
+    tools: ["JavaScript", "Leaflet.js", "Chart.js", "Fuzzy Logic"],
+    repo: "https://github.com/dafahuda/bogor-landslide-risk",
     link: "https://dafahuda.github.io/bogor-landslide-risk",
+    status: "live",
   },
   {
-    id: 3,
-    thumbnail: Proyek3,
-    title: "Mini Weather Station",
+    id: 1,
+    thumbnail: Proyek1,
+    title: "Website Portfolio",
+    year: "2025",
+    role: "Solo",
     description:
-      "Sistem monitoring cuaca real-time dari hardware Arduino Mega WiFi. Data ditampilkan di web app dengan chart interaktif.",
-    tools: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "CodeIgniter 3",
-      "Chart.js",
-      "Bootstrap",
-      "Arduino Mega WiFi",
-    ],
-    animationDelay: "400",
-    imageList: [{ image: Proyek3, text: "Dashboard" }],
-    link: "#",
+      "Situs ini. Ditulis ulang dengan React 19, Vite, dan Tailwind untuk tampilan editorial yang lebih tenang dan mudah dipelihara.",
+    tools: ["React", "Vite", "Tailwind CSS"],
+    repo: "https://github.com/dafahuda/myportfolio",
+    link: "https://portfolio.dhr.my.id",
+    status: "live",
   },
   {
     id: 4,
     thumbnail: Proyek4,
     title: "Fintrack",
+    year: "2023",
+    role: "Tim · MSIB",
     description:
-      "Platform edukasi keuangan untuk masyarakat. Membantu memahami manajemen finansial dan informasi ekonomi dengan cara yang mudah.",
-    tools: [
-      "HTML",
-      "CSS",
-      "MongoDB",
-      "Express.js",
-      "React JS",
-      "Node.js",
-      "Tailwind CSS",
-    ],
-    animationDelay: "500",
-    imageList: [
-      { image: Proyek4, text: "Halaman Utama" },
-      { image: Proyek5, text: "Detail Kursus" },
-    ],
+      "Platform edukasi keuangan sebagai capstone MSIB. Membantu pengguna memahami manajemen finansial lewat konten interaktif dan informasi ekonomi terkurasi.",
+    tools: ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
+    repo: "https://github.com/dafahuda/Fintrack",
     link: "https://fintrack-ten.vercel.app",
+    status: "live",
+  },
+  {
+    id: 3,
+    thumbnail: Proyek3,
+    title: "Mini Weather Station",
+    year: "2023",
+    role: "Solo · IoT",
+    description:
+      "Sistem monitoring cuaca real-time yang membaca data dari Arduino Mega WiFi dan menampilkannya di web dengan chart interaktif.",
+    tools: ["CodeIgniter 3", "Bootstrap", "Chart.js", "Arduino"],
+    repo: "",
+    link: "",
+    status: "private",
   },
   {
     id: 5,
     thumbnail: Proyek5,
     title: "Freedom",
+    year: "2022",
+    role: "Tim · MSIB",
     description:
-      "Platform edukasi untuk mengurangi konflik sosial dan SARA. Fokus pada pengembangan empati melalui content yang engage.",
-    tools: ["HTML", "CSS", "React JS", "Tailwind CSS"],
-    animationDelay: "600",
-    imageList: [{ image: Proyek5, text: "Tampilan Utama" }],
-    link: "#",
+      "Platform edukasi untuk mengurangi konflik SARA dengan pendekatan konten yang membangun empati antar kelompok.",
+    tools: ["React", "Tailwind CSS"],
+    repo: "https://github.com/dafahuda/macro_freedom",
+    link: "",
+    status: "archived",
   },
   {
     id: 6,
     thumbnail: Proyek6,
     title: "Gabungin",
+    year: "2022",
+    role: "Solo",
     description:
-      "Website kolaborasi untuk berbagi ide dan jadwal dengan tim. Bisa diakses dari mana aja, kapan aja.",
+      "Konsep website kolaborasi untuk berbagi ide dan menyusun jadwal tim. Prototipe awal berbasis HTML dan Figma.",
     tools: ["HTML", "CSS", "JavaScript", "Figma"],
-    animationDelay: "700",
-    imageList: [{ image: Proyek6, text: "Interface" }],
-    link: "#",
+    repo: "",
+    link: "",
+    status: "private",
   },
 ];
 
+/* ============================================================
+ * Experience (from LinkedIn, verified)
+ * ============================================================ */
+export const experienceList = [
+  {
+    id: 1,
+    period: "Nov 2025 – Mei 2026",
+    company: "Badan Pengembangan dan Pembinaan Bahasa",
+    role: "Data & Information Management",
+    location: "Bogor",
+    bullets: [
+      "Membangun dashboard informasi pegawai lengkap dengan modul CRUD data pribadi, pendidikan, riwayat jabatan, kepangkatan, pelatihan, dan administrasi.",
+      "Menata dan membersihkan data pegawai dari berbagai format sumber menggunakan Google Sheets.",
+      "Menyusun alur input data terstruktur lewat Google Forms dan Google Sheets.",
+      "Mengotomasi pembuatan dokumen menggunakan Google Forms, Google Sheets, dan Autocrat.",
+      "Mendukung validasi data, debugging, perbaikan UI, dan penulisan dokumentasi sistem.",
+    ],
+    stack: ["Google Apps Script", "HTML", "CSS", "JavaScript", "Google Sheets"],
+  },
+  {
+    id: 2,
+    period: "Sep 2022 – Feb 2023",
+    company: "Infinite Learning Indonesia",
+    role: "MSIB Batch 3 · Web Development",
+    location: "Batam",
+    bullets: [
+      "Program Kampus Merdeka jalur Studi Independen di Nongsa Digital Park.",
+      "Mengikuti alur belajar bertahap: UI/UX Designer → Frontend Developer → Full Stack Engineer.",
+      "Menyelesaikan capstone project Fintrack sebagai bagian dari tim pengembang.",
+    ],
+    stack: ["Figma", "React", "Node.js", "MongoDB", "Tailwind CSS"],
+  },
+];
+
+/* ============================================================
+ * Certificates
+ * ============================================================ */
 import CertJnaSertifikat from "/assets/sertifikat/Fundamental Junior Network Administrator Sertifikat.webp";
 import CertJnaNilai from "/assets/sertifikat/Fundamental Junior Network Administrator Nilai.webp";
 import CertInaSertifikat from "/assets/sertifikat/Intermediate Junior Network Administrator Sertifikat.webp";
@@ -222,69 +194,94 @@ export const certificateList = [
   {
     id: 1,
     name: "Fundamental Junior Network Administrator",
-    issuer: "Digitalent",
+    issuer: "Digital Talent Scholarship",
+    date: "2025",
     description:
-      "Sertifikasi jaringan komputer dasar dari Digitalent, mencakup fundamental networking dan administrasi server.",
-    animationDelay: "200",
+      "Fundamental jaringan komputer dan administrasi server dasar.",
     imageList: [
       { image: CertJnaSertifikat, text: "Sertifikat" },
-      { image: CertJnaNilai, text: "Transkrip Nilai" },
+      { image: CertJnaNilai, text: "Transkrip" },
     ],
   },
   {
     id: 2,
     name: "Intermediate Junior Network Administrator",
-    issuer: "Digitalent",
+    issuer: "Digital Talent Scholarship",
+    date: "2025",
     description:
-      "Sertifikasi jaringan komputer level intermediate. Menitikberatkan pada konfigurasi jaringan yang lebih kompleks.",
-    animationDelay: "300",
+      "Konfigurasi jaringan tingkat menengah dan layanan server.",
     imageList: [
       { image: CertInaSertifikat, text: "Sertifikat" },
-      { image: CertInaNilai, text: "Transkrip Nilai" },
+      { image: CertInaNilai, text: "Transkrip" },
     ],
   },
   {
     id: 3,
     name: "Teknisi Drive Tester",
-    issuer: "Digitalent",
+    issuer: "Digital Talent Scholarship",
+    date: "2025",
     description:
-      "Sertifikasi untuk teknisi pengetes jaringan seluler. Mencakup metodologi drive test dan analisis performa.",
-    animationDelay: "400",
+      "Metodologi drive test dan analisis performa jaringan seluler.",
     imageList: [
       { image: CertDtSertifikat, text: "Sertifikat" },
-      { image: CertDtNilai, text: "Transkrip Nilai" },
+      { image: CertDtNilai, text: "Transkrip" },
     ],
   },
   {
     id: 4,
     name: "Analisis Teknisi Drive Tester",
-    issuer: "Digitalent",
+    issuer: "Digital Talent Scholarship",
+    date: "2025",
     description:
-      "Sertifikasi advanced untuk analisis data drive test. Meliputi post-processing dan optimasi jaringan.",
-    animationDelay: "500",
+      "Post-processing data drive test untuk optimasi jaringan.",
     imageList: [
       { image: CertAdtSertifikat, text: "Sertifikat" },
-      { image: CertAdtNilai, text: "Transkrip Nilai" },
+      { image: CertAdtNilai, text: "Transkrip" },
     ],
   },
   {
     id: 5,
     name: "Microsoft Office Desktop Training",
     issuer: "Trust Training Partners",
+    date: "2019",
     description:
-      "Pelatihan lengkap Microsoft Office: Word, Excel, dan PowerPoint untuk penggunaan profesional.",
-    animationDelay: "600",
+      "Pelatihan Word, Excel, dan PowerPoint untuk penggunaan profesional.",
     imageList: [
       { image: CertMsSertifikat, text: "Sertifikat" },
-      { image: CertMsNilai, text: "Transkrip Nilai" },
+      { image: CertMsNilai, text: "Transkrip" },
     ],
   },
 ];
 
+// Sertifikat tanpa berkas gambar — tampil sebagai baris teks.
+export const certificateExtras = [
+  {
+    id: "e1",
+    name: "Data & Information Management — Maganghub Batch 2",
+    issuer: "Kementerian Ketenagakerjaan Republik Indonesia",
+    date: "Mei 2026",
+  },
+  {
+    id: "e2",
+    name: "Artificial Intelligence Learning Hub Huawei",
+    issuer: "Digital Talent Scholarship",
+    date: "Okt 2025",
+  },
+  {
+    id: "e3",
+    name: "Web Development — MSIB Batch 3",
+    issuer: "Kampus Merdeka",
+    date: "Jan 2023",
+  },
+];
+
+/* ============================================================
+ * Copy blocks
+ * ============================================================ */
 export const heroParagraph = {
-  text: "Lulusan Sarjana Ilmu Komputer dengan fokus di front-end development, UI/UX design, dan AI. Suka bikin tampilan web yang clean dan pengalaman pengguna yang nyaman. Kalau ada ide menarik, yuk ngobrol.",
+  text: "Sarjana Ilmu Komputer dengan fokus di front-end development, UI/UX design, dan penerapan AI. Suka merancang antarmuka web yang bersih dan pengalaman pengguna yang tenang.",
 };
 
 export const aboutParagraph = {
-  text: "Hai, saya Dafa Huda Rifa'i. Saya interested di tiga area: front-end development, UI/UX design, dan artificial intelligence. Saya suka jembatanin antara teknologi yang kompleks dengan antarmuka yang mudah dipahami. Pengalaman meliputi pengembangan web dari ide sampai jadi — salah satunya saat MSIB di Infinite Learning, dimana saya belajar design thinking, prototyping Figma, dan development front-end & back-end. Pernah juga implementasi AI kayak Fuzzy Logic untuk proyek pemetaan dan peramalan cuaca berbasis IoT. Kalau ada proyek atau ide yang bisa dikerjakan bareng, langsung aja hubungi.",
+  text: "Saya Dafa Huda Rifa'i, sarjana Ilmu Komputer dari Universitas Pakuan. Ketertarikan saya berpusat pada tiga hal: front-end development, UI/UX design, dan artificial intelligence — menjembatani teknologi yang kompleks menjadi antarmuka yang mudah dipahami. Pengalaman terbaru mencakup pengelolaan data dan pengembangan dashboard di Badan Pengembangan dan Pembinaan Bahasa, serta MSIB Batch 3 di Infinite Learning yang membawa saya melalui alur UI/UX, front-end, hingga full-stack. Saya juga pernah menerapkan Fuzzy Logic untuk pemetaan risiko dan peramalan cuaca berbasis IoT.",
 };

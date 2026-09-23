@@ -22,5 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-192.168.1.5_*
-about.txt
+
+# Deploy log
+deploy.log

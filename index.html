@@ -1,38 +1,92 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/public/assets/favicon//apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/public/assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/public/assets/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/public/assets/favicon/site.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#F2F1EC" />
 
-    <!-- Font Poppins -->
+    <title>Dafa Huda Rifa'i — Front-end Developer & UI/UX Designer</title>
+    <meta
+      name="description"
+      content="Portfolio Dafa Huda Rifa'i. Front-end developer dan UI/UX designer lulusan Ilmu Komputer Universitas Pakuan. Fokus di pengembangan web, IoT, dan AI."
+    />
+    <link rel="canonical" href="https://portfolio.dhr.my.id/" />
+    <meta name="author" content="Dafa Huda Rifa'i" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:url" content="https://portfolio.dhr.my.id/" />
+    <meta property="og:title" content="Dafa Huda Rifa'i — Front-end Developer & UI/UX Designer" />
+    <meta
+      property="og:description"
+      content="Portfolio Dafa Huda Rifa'i. Front-end developer dan UI/UX designer lulusan Ilmu Komputer Universitas Pakuan."
+    />
+    <meta property="og:image" content="https://portfolio.dhr.my.id/assets/hero-img.webp" />
+    <meta property="og:site_name" content="Dafa Huda Rifa'i" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Dafa Huda Rifa'i — Front-end Developer & UI/UX Designer" />
+    <meta
+      name="twitter:description"
+      content="Portfolio Dafa Huda Rifa'i. Front-end developer dan UI/UX designer."
+    />
+    <meta name="twitter:image" content="https://portfolio.dhr.my.id/assets/hero-img.webp" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Fonts: Big Shoulders Display + Instrument Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Instrument+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
 
-    <title>My PortFolio</title>
+    <!-- Preload hero image untuk LCP -->
+    <link rel="preload" as="image" href="/assets/hero-img.webp" fetchpriority="high" />
+
+    <!-- JSON-LD Person -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Dafa Huda Rifa'i",
+        "url": "https://portfolio.dhr.my.id/",
+        "jobTitle": "Front-end Developer & UI/UX Designer",
+        "image": "https://portfolio.dhr.my.id/assets/hero-img.webp",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Universitas Pakuan"
+        },
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Badan Pengembangan dan Pembinaan Bahasa"
+        },
+        "knowsAbout": [
+          "Front-end Development",
+          "UI/UX Design",
+          "React",
+          "Next.js",
+          "Tailwind CSS",
+          "Artificial Intelligence",
+          "Internet of Things"
+        ],
+        "sameAs": [
+          "https://github.com/dafahuda",
+          "https://www.linkedin.com/in/dafa-huda-rifa-i",
+          "https://www.instagram.com/dafa.h.r"
+        ]
+      }
+    </script>
   </head>
-  <body class="bg-zinc-900 text-white" id="beranda">
+  <body id="beranda">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
