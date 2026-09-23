@@ -90,7 +90,7 @@ export function ProjectCard({
               className="link-underline inline-flex items-center gap-1.5 font-medium"
             >
               <span>Repo</span>
-              <Icon icon="arrow-up-right" className="w-4 h-4" />
+              <Icon icon="brand-github" stroke={2} className="w-4 h-4" />
             </a>
           )}
           {!hasDemo && !hasRepo && (
