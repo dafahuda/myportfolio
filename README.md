@@ -1,65 +1,64 @@
-# My Portfolio
+# Portfolio — Dafa Huda Rifa'i
 
-Hey, thanks for checking out my work!
+Portfolio pribadi. Front-end developer & UI/UX designer.
+Sarjana Ilmu Komputer Universitas Pakuan.
 
-This is my personal portfolio website built with React and Vite. It showcases the projects I've worked on, the tools and technologies I use, and some certifications I've picked up along the way. Feel free to look around.
+**Live:** [portfolio.dhr.my.id](https://portfolio.dhr.my.id)
 
-**Live site:** [portfolio.dhr.my.id](https://portfolio.dhr.my.id)
+---
 
-## What's Inside
+## Isi
 
-- **Hero Section** — Quick intro with a typing animation cycling through different roles
-- **About** — A bit about me and my background
-- **Tools & Tech Stack** — The tech I use day-to-day
-- **Projects** — A gallery of things I've built
-- **Certificates** — Certifications with lightbox view
-- **Contact** — Get in touch via the form
+- **Hero** — sudut pandang kerja, unduh CV, marquee tools
+- **Tentang** — fokus area dan kredensial
+- **Pengalaman** — Badan Pengembangan dan Pembinaan Bahasa, Infinite Learning MSIB
+- **Tools** — tech stack sehari-hari
+- **Proyek** — tujuh proyek nyata dengan tautan repo dan demo
+- **Sertifikat** — lima sertifikat lengkap (lightbox) + tiga referensi
+- **Kontak** — email, LinkedIn, GitHub, Instagram, form
 
-## Tech Stack
+## Stack
 
-- **React** — UI library
-- **Vite** — Build tool
-- **Tailwind CSS** — Styling
-- **Remix Icon** — Icons
-- **AOS** — Scroll animations
-- **GSAP** — Advanced animations
-- **ESLint** — Code linting
+- React 19 + Vite 7
+- Tailwind CSS 4
+- Iconify
+- GSAP (motion minimal, tanpa ScrollSmoother)
 
-## Running Locally
+## Menjalankan lokal
 
 ```bash
 git clone https://github.com/dafahuda/myportfolio.git
 cd myportfolio
 npm install
-npm run dev
+npm run dev        # http://localhost:5173
+npm run build      # produksi ke dist/
+npm run preview    # http://localhost:4173
 ```
 
-The site will be available at `http://localhost:5173`.
-
-## Building for Production
-
-```bash
-npm run build
-```
-
-Output goes to the `dist/` folder.
-
-## Project Structure
+## Struktur
 
 ```
-myportfolio/
-├── public/
-│   └── assets/          # Images (projects, tools, certificates)
+├── AGENTS.md              # router untuk AI coding agent
+├── DESIGN.md              # arah style (palet, tipografi, voice)
+├── ANTISLOP.md            # filter anti-slop UI
+├── public/assets/         # aset statis (foto, ikon, CV, sertifikat)
 ├── src/
-│   ├── components/       # React components
-│   ├── pages/           # Page components
-│   ├── App.jsx          # Main app component
-│   ├── data.js          # Content data
-│   └── main.jsx         # Entry point
-├── package.json
+│   ├── MainApp.jsx        # root aplikasi
+│   ├── App.jsx            # urutan seksi
+│   ├── data.js            # semua konten
+│   ├── index.css          # token desain + Tailwind
+│   ├── hooks/useReveal.js # IntersectionObserver fade-up
+│   ├── components/        # Navbar, Footer, ProjectCard, dst.
+│   └── pages/             # tujuh seksi halaman
 └── vite.config.js
 ```
 
-## Contact
+## Deploy
 
-Reach out via the contact form on the site or open an issue here if something needs fixing.
+Auto-deploy lewat webhook di VPS. `git push origin main` memicu:
+`git pull → npm install → npm run build → rsync ke /var/www/portfolio`.
+
+## Kontak
+
+Email: dafahudarifai147@gmail.com
+LinkedIn: [in/dafa-huda-rifa-i](https://www.linkedin.com/in/dafa-huda-rifa-i)
