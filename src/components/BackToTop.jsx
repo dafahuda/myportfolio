@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 
 const BackToTop = () => {
   const [visible, setVisible] = useState(false);
+  const [overDark, setOverDark] = useState(false);
   const [reduced, setReduced] = useState(false);
 
   useEffect(() => {
@@ -15,8 +16,17 @@ const BackToTop = () => {
 
   useEffect(() => {
     const onScroll = () => {
-      setVisible(window.scrollY > 500);
+      const scrollY = window.scrollY;
+      const docH = document.documentElement.scrollHeight;
+      const winH = window.innerHeight;
+      const footerH = document.querySelector("footer")?.offsetHeight ?? 0;
+      const footerTop = docH - footerH - winH;
+
+      setVisible(scrollY > 500);
+      // Switch to light button when footer (dark section) is in view
+      setOverDark(scrollY >= footerTop - 80);
     };
+
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -27,11 +37,15 @@ const BackToTop = () => {
 
   if (reduced) return null;
 
+  // Light button on dark bg, dark button on light bg — always contrasting
+  const bg = overDark ? "var(--color-ink)" : "var(--color-bg)";
+  const fg = overDark ? "var(--color-bg)" : "var(--color-ink)";
+
   return (
     <a
       onClick={handleClick}
       aria-label="Kembali ke atas"
-      className="fixed right-6 bottom-6 z-40 flex size-12 items-center justify-center rounded-full bg-[var(--color-bg)] text-[var(--color-ink)] shadow-lg hover:bg-[var(--color-accent)] hover:text-[var(--color-bg)] hover:shadow-xl md:right-10 md:bottom-10"
+      className="fixed right-6 bottom-6 z-40 flex size-12 items-center justify-center rounded-full shadow-lg md:right-10 md:bottom-10"
       style={{
         transform: visible ? "translateY(0)" : "translateY(24px)",
         opacity: visible ? 1 : 0,
@@ -42,6 +56,8 @@ const BackToTop = () => {
           "box-shadow 0.3s ease",
         ].join(", "),
         pointerEvents: visible ? "auto" : "none",
+        backgroundColor: bg,
+        color: fg,
       }}
     >
       <Icon icon="lucide:arrow-up" className="size-5" />
