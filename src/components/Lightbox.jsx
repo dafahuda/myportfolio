@@ -8,10 +8,14 @@ import { Icon } from "@iconify/react";
  */
 export default function Lightbox({ src, alt, caption, onClose }) {
   const closeBtnRef = useRef(null);
+  // Simpan onClose di ref agar efek tidak dijalankan ulang tiap render induk
+  // (kalau dijalankan ulang, fokus akan melompat kembali ke tombol tutup).
+  const onCloseRef = useRef(onClose);
+  onCloseRef.current = onClose;
 
   useEffect(() => {
     const onKey = (e) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === "Escape") onCloseRef.current();
     };
     window.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
@@ -20,7 +24,7 @@ export default function Lightbox({ src, alt, caption, onClose }) {
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
     };
-  }, [onClose]);
+  }, []);
 
   return (
     <div

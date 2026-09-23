@@ -51,6 +51,8 @@ const HeroSection = () => {
         <div className="md:col-span-5 order-first md:order-last" data-reveal>
           <img
             src={DataImage.HeroImage}
+            srcSet={`${DataImage.HeroImageSmall} 400w, ${DataImage.HeroImage} 800w`}
+            sizes="(min-width: 768px) 40vw, 100vw"
             alt="Foto Dafa Huda Rifa'i"
             width="800"
             height="912"

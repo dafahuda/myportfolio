@@ -1,9 +1,22 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { certificateList, certificateExtras } from "../data";
 import Lightbox from "../components/Lightbox";
 
 const CertificatesSection = () => {
   const [box, setBox] = useState(null);
+  // Simpan tombol pemicu supaya fokus bisa dikembalikan setelah lightbox ditutup.
+  const triggerRef = useRef(null);
+
+  const openBox = (payload) => (event) => {
+    triggerRef.current = event.currentTarget;
+    setBox(payload);
+  };
+
+  const closeBox = () => {
+    setBox(null);
+    // Tunggu React selesai unmount, baru pindahkan fokus kembali.
+    requestAnimationFrame(() => triggerRef.current?.focus());
+  };
 
   return (
     <section id="sertifikat" className="section">
@@ -28,13 +41,11 @@ const CertificatesSection = () => {
               <li key={c.id} data-reveal>
                 <button
                   type="button"
-                  onClick={() =>
-                    setBox({
-                      src: cover.image,
-                      alt: `${c.name} — ${cover.text}`,
-                      caption: `${c.name} · ${c.issuer}`,
-                    })
-                  }
+                  onClick={openBox({
+                    src: cover.image,
+                    alt: `${c.name} — ${cover.text}`,
+                    caption: `${c.name} · ${c.issuer}`,
+                  })}
                   className="card overflow-hidden text-left w-full h-full flex flex-col group"
                 >
                   <div className="aspect-[4/3] overflow-hidden border-b border-[var(--color-line)] bg-[var(--color-bg)]">
@@ -85,7 +96,7 @@ const CertificatesSection = () => {
         )}
       </div>
 
-      {box && <Lightbox {...box} onClose={() => setBox(null)} />}
+      {box && <Lightbox {...box} onClose={closeBox} />}
     </section>
   );
 };

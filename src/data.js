@@ -1,6 +1,7 @@
 import HeroImage from "/assets/hero-img.webp";
+import HeroImageSmall from "/assets/hero-img-400.webp";
 
-const Image = { HeroImage };
+const Image = { HeroImage, HeroImageSmall };
 export default Image;
 
 /* ============================================================
@@ -54,7 +55,7 @@ export const listProyek = [
     id: 7,
     thumbnail: ProyekSimpeg,
     title: "SIMPEG Dashboard",
-    year: "2026",
+    year: "2025–2026",
     role: "Full-stack · Magang",
     description:
       "Dashboard SDM internal Badan Bahasa untuk mengelola data pegawai — CRUD data pribadi, pendidikan, jabatan, pelatihan, hingga otomasi dokumen via Google Forms dan Autocrat.",
@@ -80,7 +81,7 @@ export const listProyek = [
     id: 1,
     thumbnail: Proyek1,
     title: "Portfolio Redesign 2026",
-    year: "2026",
+    year: "Sep 2026",
     role: "Solo",
     description:
       "Ditulis ulang dari nol dengan React 19, Vite, dan Tailwind — palet editorial cream, tipografi Big Shoulders Display, dan animasi scroll yang minimum.",
