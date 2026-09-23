@@ -1,9 +1,13 @@
 import { Icon } from "@iconify/react";
-import DataImage, { heroParagraph } from "../data";
+import DataImage from "../data";
+import { listTools } from "../data";
+import LogoLoop from "../components/LogoLoop";
 
 const HeroSection = () => {
+  const logos = listTools.map((t) => ({ src: t.gambar, alt: t.nama }));
+
   return (
-    <section id="beranda" className="pt-28 md:pt-36 pb-20 md:pb-28">
+    <section id="beranda" className="pt-28 md:pt-36 pb-14 md:pb-20">
       <div className="container-page grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
         <div className="md:col-span-7" data-reveal>
           <span className="section-label">
@@ -17,11 +21,17 @@ const HeroSection = () => {
               letterSpacing: "-0.015em",
             }}
           >
-            Dafa Huda
+            Merancang antarmuka
             <br />
-            Rifa&apos;i.
+            yang tidak minta
+            <br />
+            perhatian.
           </h1>
-          <p className="lead mb-8">{heroParagraph.text}</p>
+          <p className="lead mb-8">
+            Saya Dafa Huda Rifa&apos;i — sarjana Ilmu Komputer Universitas
+            Pakuan. Fokus di front-end web, sistem SDM internal, dan penerapan
+            AI seperti Fuzzy Logic untuk pemetaan risiko.
+          </p>
           <div className="flex flex-wrap items-center gap-3">
             <a
               href="/assets/cv/Cv_ATS_Dafa_Huda_Rifai.pdf"
@@ -32,25 +42,38 @@ const HeroSection = () => {
               <span>Unduh CV</span>
             </a>
             <a href="#proyek" className="btn btn-ghost">
-              <span>Lihat proyek</span>
+              <span>Lihat yang saya kerjakan</span>
               <Icon icon="lucide:arrow-down" />
             </a>
           </div>
         </div>
 
         <div className="md:col-span-5 order-first md:order-last" data-reveal>
-          <div className="relative overflow-hidden rounded-lg border border-[var(--color-line)] bg-[var(--color-surface)]">
-            <img
-              src={DataImage.HeroImage}
-              alt="Foto Dafa Huda Rifa'i"
-              width="800"
-              height="912"
-              loading="eager"
-              fetchpriority="high"
-              className="w-full h-auto block"
-            />
-          </div>
+          <img
+            src={DataImage.HeroImage}
+            alt="Foto Dafa Huda Rifa'i"
+            width="800"
+            height="912"
+            loading="eager"
+            fetchpriority="high"
+            className="w-full h-auto block rounded-lg"
+          />
         </div>
+      </div>
+
+      <div className="mt-16 md:mt-24 border-y border-[var(--color-line)] py-5 overflow-hidden">
+        <LogoLoop
+          logos={logos}
+          speed={30}
+          direction="left"
+          logoHeight={24}
+          gap={56}
+          pauseOnHover={false}
+          scaleOnHover={false}
+          fadeOut
+          fadeOutColor="#F2F1EC"
+          ariaLabel="Tools yang saya pakai"
+        />
       </div>
     </section>
   );
