@@ -259,4 +259,6 @@ export const heroParagraph = {
 
 export const aboutParagraph = {
   text: "Saya Dafa Huda Rifa'i — sarjana Ilmu Komputer Universitas Pakuan. Terbaru, saya membangun dan mengelola dashboard SDM untuk 1.284 pegawai di Badan Pengembangan dan Pembinaan Bahasa. Sebelumnya, melalui MSIB Batch 3 di Infinite Learning, saya melewati alur UI/UX Designer → Frontend Developer → Full Stack Engineer, dan menyelesaikan capstone Fintrack sebagai bagian dari tim. Saya juga menerapkan Fuzzy Logic untuk pemetaan risiko tanah longsor dan peramalan cuaca berbasis IoT.",
+  // Kata yang diberi ornamen stabilo di mode gelap (lihat .mark-accent).
+  highlights: ["1.284 pegawai", "Fuzzy Logic"],
 };

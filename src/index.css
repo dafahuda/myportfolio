@@ -205,22 +205,38 @@ html.dark {
     opacity: 1;
     transform: translateY(0);
   }
+}
 
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
-    .reveal {
-      opacity: 1;
-      transform: none;
-      transition: none;
-    }
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.001ms !important;
-      transition-duration: 0.001ms !important;
-    }
+/* Diluar @layer: rule di dalam @layer utilities tidak ikut ter-emit
+   kalau tidak ada utility yang memakainya, jadi blok reduced-motion
+   harus berada di luar layer agar pasti masuk ke hasil build. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .aw-word {
+    transform: none;
+    animation: none;
+  }
+  .aw-accent {
+    color: var(--color-accent);
+    -webkit-text-fill-color: var(--color-accent);
+    background-image: none;
+    animation: none;
+  }
+  .theme-icon-in {
+    animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
   }
 }
 
@@ -239,4 +255,80 @@ html.dark {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+/* Tombol mode gelap/terang: ikon berganti dengan rotasi singkat —
+   sun/moon saling menggantikan lewat setengah putaran. */
+@keyframes theme-icon-in {
+  from {
+    transform: rotate(-120deg) scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+.theme-icon-in {
+  animation: theme-icon-in 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Headline hero: kata terungkap naik dari balik masker (AnimatedWords),
+   dengan shimmer gradasi pada kata aksen — pola yang sama seperti pada
+   collectiveminds.com.sg, disesuaikan dengan palet situs ini. */
+@keyframes aw-rise {
+  from {
+    transform: translateY(110%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.aw-word {
+  display: inline-block;
+  transform: translateY(110%);
+  animation: aw-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Kata aksen: warna dasar aksen dengan kilau gradasi yang bergerak
+   perlahan dari kiri ke kanan. */
+@keyframes aw-shimmer {
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.aw-accent {
+  background-image: linear-gradient(
+    100deg,
+    var(--color-accent) 40%,
+    var(--color-ink) 50%,
+    var(--color-accent) 60%
+  );
+  background-size: 260% 100%;
+  background-position: 100% 0;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation:
+    aw-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+    aw-shimmer 6s linear infinite;
+}
+
+/* Ornamen stabilo (HighlightText) — blok terracotta dengan teks gelap,
+   hanya di mode gelap, pada frasa kunci di paragraf Tentang.
+   Pola serupa dipakai alphavarianceauthority.com (mark.block-accent). */
+.mark-accent {
+  background-color: transparent;
+  color: inherit;
+  padding: 0 0.14em;
+  border-radius: 3px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.dark .mark-accent {
+  background-color: var(--color-accent);
+  color: #1a1815;
 }

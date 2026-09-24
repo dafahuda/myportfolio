@@ -1,4 +1,5 @@
 import { aboutParagraph } from "../data";
+import HighlightText from "../components/HighlightText";
 
 const FOCUS = [
   {
@@ -27,7 +28,7 @@ const AboutSection = () => {
           </div>
           <div className="md:col-span-7 space-y-8" data-reveal>
             <p className="text-[17px] leading-[1.75] text-[var(--color-ink)]">
-              {aboutParagraph.text}
+              <HighlightText text={aboutParagraph.text} phrases={aboutParagraph.highlights} />
             </p>
             <ul className="grid sm:grid-cols-2 gap-6 pt-4 border-t border-[var(--color-line)]">
               {FOCUS.map((f) => (

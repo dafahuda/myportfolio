@@ -3,6 +3,7 @@ import InlineSvg from "../components/InlineSvg";
 import DataImage from "../data";
 import { listTools } from "../data";
 import LogoLoop from "../components/LogoLoop";
+import AnimatedWords from "../components/AnimatedWords";
 
 // Marquee memakai ikon merek monokrom (mewarisi warna teks) supaya menyatu
 // dengan palet situs. Dua merek yang tidak ada di Tabler tetap memakai SVG.
@@ -31,11 +32,11 @@ const HeroSection = () => {
               letterSpacing: "-0.015em",
             }}
           >
-            Merancang antarmuka
+            <AnimatedWords text="Merancang antarmuka" />
             <br />
-            yang tidak minta
+            <AnimatedWords text="yang tidak minta" delay={240} />
             <br />
-            perhatian.
+            <AnimatedWords text="perhatian." delay={480} accent="perhatian." />
           </h1>
           <p className="lead mb-8">
             Saya Dafa Huda Rifa&apos;i — sarjana Ilmu Komputer Universitas
