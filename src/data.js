@@ -40,11 +40,13 @@ import Proyek4 from "/assets/proyek/proyek4.webp";
 import Proyek5 from "/assets/proyek/proyek5.webp";
 import Proyek6 from "/assets/proyek/proyek6.webp";
 import ProyekSimpeg from "/assets/proyek/simpeg.svg";
+import ProyekSimpegDark from "/assets/proyek/simpeg-dark.svg";
 
 export const listProyek = [
   {
     id: 7,
     thumbnail: ProyekSimpeg,
+    thumbnailDark: ProyekSimpegDark,
     title: "SIMPEG Dashboard",
     year: "2025–2026",
     role: "Full-stack · Magang",

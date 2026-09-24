@@ -93,6 +93,21 @@
         ]
       }
     </script>
+    <!-- Anti-FOUC: pasang kelas dark sebelum React render supaya tidak ada kedipan.
+         Prioritas: pilihan pengguna (localStorage) -> preferensi OS. -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          var dark =
+            t === "dark" ||
+            (t !== "light" &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches);
+          if (dark) document.documentElement.classList.add("dark");
+        } catch (e) {}
+      })();
+    </script>
+    <meta name="color-scheme" content="light dark" />
   </head>
   <body id="beranda">
     <div id="root"></div>

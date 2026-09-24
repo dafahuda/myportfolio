@@ -5,8 +5,10 @@ import {
   IconArrowUpRight,
   IconDownload,
   IconMenu2,
+  IconMoon,
   IconPhotoOff,
   IconSend,
+  IconSun,
   IconX,
 } from "@tabler/icons-react";
 import {
@@ -53,7 +55,9 @@ const ACTIONS = {
   download: IconDownload,
   "image-off": IconPhotoOff,
   menu: IconMenu2,
+  moon: IconMoon,
   send: IconSend,
+  sun: IconSun,
   x: IconX,
 };
 

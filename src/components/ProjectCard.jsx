@@ -13,6 +13,7 @@ export function ProjectCard({
   role,
   description,
   thumbnail,
+  thumbnailDark,
   tools,
   link,
   repo,
@@ -25,13 +26,33 @@ export function ProjectCard({
     <article className="card overflow-hidden flex flex-col h-full">
       <div className="aspect-[16/10] overflow-hidden border-b border-[var(--color-line)] bg-[var(--color-bg)]">
         {thumbnail ? (
-          <img
-            src={thumbnail}
-            alt={`Cuplikan proyek ${title}`}
-            loading="lazy"
-            decoding="async"
-            className="w-full h-full object-cover"
-          />
+          thumbnailDark ? (
+            <>
+              <img
+                src={thumbnail}
+                alt={`Cuplikan proyek ${title}`}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover dark:hidden"
+              />
+              <img
+                src={thumbnailDark}
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                className="hidden w-full h-full object-cover dark:block"
+              />
+            </>
+          ) : (
+            <img
+              src={thumbnail}
+              alt={`Cuplikan proyek ${title}`}
+              loading="lazy"
+              decoding="async"
+              className="w-full h-full object-cover"
+            />
+          )
         ) : (
           <div className="w-full h-full flex items-center justify-center text-[var(--color-muted)]">
             <Icon icon="image-off" className="text-4xl" />

@@ -38,9 +38,11 @@ const BackToTop = () => {
 
   if (reduced) return null;
 
-  // Section terang -> tombol hitam. Footer gelap -> tombol cream.
-  const bg = overDark ? "var(--color-bg)" : "var(--color-ink)";
-  const fg = overDark ? "var(--color-ink)" : "var(--color-bg)";
+  // Di atas section: ikut tema (terang -> tombol ink; gelap -> tombol cream).
+  // Di atas footer: footer selalu gelap di kedua tema, jadi tombol selalu cream
+  // memakai token footer yang nilainya tetap.
+  const bg = overDark ? "var(--color-footer-fg)" : "var(--color-ink)";
+  const fg = overDark ? "var(--color-footer-bg)" : "var(--color-bg)";
 
   return (
     <a

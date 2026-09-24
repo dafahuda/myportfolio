@@ -83,7 +83,6 @@ const HeroSection = () => {
           pauseOnHover={false}
           scaleOnHover={false}
           fadeOut
-          fadeOutColor="#F2F1EC"
           ariaLabel="Tools yang saya pakai"
         />
       </div>

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-bg: #f2f1ec;
   --color-surface: #ffffff;
@@ -8,9 +10,25 @@
   --color-line: #d9d7cf;
   --color-accent: #c64f2e;
   --color-accent-hover: #a63f22;
+  --color-footer-bg: #0b0b0b;
+  --color-footer-fg: #f2f1ec;
 
   --font-display: "Big Shoulders Display", "Arial Narrow", sans-serif;
   --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Mode gelap hangat — near-black cokelat, bukan gelap dingin.
+   Terracotta sedikit dinaikkan agar tahan di latar gelap. */
+html.dark {
+  --color-bg: #1a1815;
+  --color-surface: #242019;
+  --color-ink: #f2f1ec;
+  --color-muted: #a39e93;
+  --color-line: #3b362e;
+  --color-accent: #d4643f;
+  --color-accent-hover: #e0754f;
+  --color-footer-bg: #141210;
+  --color-footer-fg: #f2f1ec;
 }
 
 @layer base {

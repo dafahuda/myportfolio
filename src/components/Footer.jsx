@@ -10,7 +10,7 @@ const LINKS = [
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-[var(--color-ink)] text-[var(--color-bg)] mt-8">
+    <footer className="bg-[var(--color-footer-bg)] text-[var(--color-footer-fg)] mt-8">
       <div className="container-page py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div>
           <p className="font-display text-xl" style={{ fontFamily: "var(--font-display)", fontWeight: 800 }}>

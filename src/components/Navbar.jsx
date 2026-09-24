@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Icon from "./Icon";
+import ThemeToggle from "./ThemeToggle";
 
 const NAV_LINKS = [
   { href: "#beranda", label: "Beranda" },
@@ -54,16 +55,19 @@ const Navbar = () => {
           ))}
         </div>
 
-        <button
-          type="button"
-          className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-[var(--color-line)] text-[var(--color-ink)]"
-          onClick={() => setIsOpen((v) => !v)}
-          aria-label={isOpen ? "Tutup menu" : "Buka menu"}
-          aria-expanded={isOpen}
-          aria-controls="mobile-menu"
-        >
-          <Icon icon={isOpen ? "x" : "menu"} className="text-xl" />
-        </button>
+        <div className="flex items-center gap-1 md:gap-2">
+          <ThemeToggle />
+          <button
+            type="button"
+            className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-[var(--color-line)] text-[var(--color-ink)]"
+            onClick={() => setIsOpen((v) => !v)}
+            aria-label={isOpen ? "Tutup menu" : "Buka menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
+          >
+            <Icon icon={isOpen ? "x" : "menu"} className="text-xl" />
+          </button>
+        </div>
       </div>
 
       <div
