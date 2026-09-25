@@ -29,6 +29,7 @@ const HeroSection = () => {
           </span>
           <h1
             className="mt-2 mb-6"
+            aria-label="Merancang antarmuka yang tidak minta perhatian."
             style={{
               fontSize: "clamp(3rem, 8vw, 6.5rem)",
               lineHeight: 0.88,
@@ -42,7 +43,7 @@ const HeroSection = () => {
             <AnimatedWords text="perhatian." delay={480} accent="perhatian." />
           </h1>
           <p className="lead mb-8" data-reveal data-reveal-delay="850">
-            Saya Dafa Huda Rifa&apos;i — sarjana Ilmu Komputer Universitas
+            Saya Dafa Huda Rifa&apos;i, sarjana Ilmu Komputer Universitas
             Pakuan. Fokus di front-end web, sistem SDM internal, dan penerapan
             AI seperti Fuzzy Logic untuk pemetaan risiko.
           </p>

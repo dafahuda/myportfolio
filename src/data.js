@@ -51,7 +51,7 @@ export const listProyek = [
     year: "2025–2026",
     role: "Full-stack · Magang",
     description:
-      "Dashboard SDM internal Badan Bahasa untuk mengelola data pegawai — CRUD data pribadi, pendidikan, jabatan, pelatihan, hingga otomasi dokumen via Google Forms dan Autocrat.",
+      "Dashboard SDM internal Badan Bahasa untuk mengelola data pegawai, mencakup CRUD data pribadi, pendidikan, jabatan, pelatihan, hingga otomasi dokumen via Google Forms dan Autocrat.",
     tools: ["Google Apps Script", "HTML", "CSS", "JavaScript", "Google Sheets"],
     repo: "https://github.com/dafahuda/MY-SIMPEG-APP",
     link: "",
@@ -77,7 +77,7 @@ export const listProyek = [
     year: "Sep 2026",
     role: "Solo",
     description:
-      "Ditulis ulang dari nol dengan React 19, Vite, dan Tailwind — palet editorial cream, tipografi Big Shoulders Display, dan animasi scroll yang minimum.",
+      "Ditulis ulang dari nol dengan React 19, Vite, dan Tailwind, memadukan palet editorial cream, tipografi Big Shoulders Display, dan animasi scroll yang terukur.",
     tools: ["React", "Vite", "Tailwind CSS"],
     repo: "https://github.com/dafahuda/myportfolio",
     link: "https://portfolio.dhr.my.id",
@@ -90,7 +90,7 @@ export const listProyek = [
     year: "2023",
     role: "Tim · MSIB",
     description:
-      "Capstone MSIB Batch 3 — platform edukasi keuangan. Saya bagian tim frontend, membangun antarmuka dan integrasi API untuk konten interaktif dan feed informasi ekonomi.",
+      "Capstone MSIB Batch 3, platform edukasi keuangan. Saya bagian tim frontend, membangun antarmuka dan integrasi API untuk konten interaktif dan feed informasi ekonomi.",
     tools: ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
     repo: "https://github.com/dafahuda/Fintrack",
     link: "https://fintrack-ten.vercel.app",
@@ -116,7 +116,7 @@ export const listProyek = [
     year: "2022",
     role: "Tim · MSIB",
     description:
-      "Capstone MSIB Batch 3 — platform edukasi antarm kelompok. Bertugas sebagai UI designer, menyusun wireframe dan prototipe interaktif.",
+      "Capstone MSIB Batch 3, platform edukasi antar-kelompok. Bertugas sebagai UI designer, menyusun wireframe dan prototipe interaktif.",
     tools: ["React", "Tailwind CSS"],
     repo: "https://github.com/Raihan32/Freedom-macro-ReactJS",
     link: "",
@@ -129,7 +129,7 @@ export const listProyek = [
     year: "2022",
     role: "Solo",
     description:
-      "Prototipe kolaborasi tim — fitur chat, pembagian tugas, dan penjadwalan. Dibuat dengan HTML, CSS, dan JavaScript; desain di Figma.",
+      "Prototipe kolaborasi tim, mencakup fitur chat, pembagian tugas, dan penjadwalan. Dibuat dengan HTML, CSS, dan JavaScript; desain di Figma.",
     tools: ["HTML", "CSS", "JavaScript", "Figma"],
     repo: "",
     link: "",
@@ -258,7 +258,7 @@ export const heroParagraph = {
 };
 
 export const aboutParagraph = {
-  text: "Saya Dafa Huda Rifa'i — sarjana Ilmu Komputer Universitas Pakuan. Terbaru, saya membangun dan mengelola dashboard SDM untuk 1.284 pegawai di Badan Pengembangan dan Pembinaan Bahasa. Sebelumnya, melalui MSIB Batch 3 di Infinite Learning, saya melewati alur UI/UX Designer → Frontend Developer → Full Stack Engineer, dan menyelesaikan capstone Fintrack sebagai bagian dari tim. Saya juga menerapkan Fuzzy Logic untuk pemetaan risiko tanah longsor dan peramalan cuaca berbasis IoT.",
+  text: "Saya Dafa Huda Rifa'i, sarjana Ilmu Komputer Universitas Pakuan. Terbaru, saya membangun dan mengelola dashboard SDM untuk 1.284 pegawai di Badan Pengembangan dan Pembinaan Bahasa. Sebelumnya, melalui MSIB Batch 3 di Infinite Learning, saya melewati alur UI/UX Designer → Frontend Developer → Full Stack Engineer, dan menyelesaikan capstone Fintrack sebagai bagian dari tim. Saya juga menerapkan Fuzzy Logic untuk pemetaan risiko tanah longsor dan peramalan cuaca berbasis IoT.",
   // Kata yang diberi ornamen stabilo di mode gelap (lihat .mark-accent).
   highlights: ["1.284 pegawai", "Fuzzy Logic"],
 };

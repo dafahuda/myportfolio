@@ -34,7 +34,7 @@ export default function AnimatedWords({ text, accent = "", className = "", delay
               style={{ animationDelay: `${delay + i * 60}ms` }}
             >
               {w}
-            </span>
+            </span>{" "}
           </span>
         );
       })}

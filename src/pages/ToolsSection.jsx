@@ -8,7 +8,7 @@ const ToolsSection = () => {
       <div className="container-page">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16">
           <div className="md:col-span-5" data-reveal>
-            <span className="section-label">Tools</span>
+            <span className="section-label">Perkakas</span>
             <h2 className="section-title">Perkakas.</h2>
             <p className="lead">
               Yang saya pakai untuk membangun web dan menyusun desain sehari-hari.

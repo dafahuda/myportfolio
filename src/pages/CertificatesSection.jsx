@@ -28,8 +28,8 @@ const CertificatesSection = () => {
           </div>
           <div className="md:col-span-7" data-reveal>
             <p className="lead">
-              Pelatihan yang saya selesaikan — sebagian dengan berkas lengkap,
-              sebagian sebagai catatan referensi.
+              Pelatihan yang saya selesaikan, sebagian dengan berkas lengkap
+              dan sebagian sebagai catatan referensi.
             </p>
           </div>
         </div>
@@ -44,7 +44,7 @@ const CertificatesSection = () => {
                   onClick={openBox({
                     files: c.imageList.map((img) => ({
                       src: img.image,
-                      alt: `${c.name} — ${img.text}`,
+                      alt: `${c.name}: ${img.text}`,
                       caption: `${c.name} · ${c.issuer} · ${img.text}`,
                     })),
                   })}
