@@ -319,14 +319,17 @@ html.dark {
     aw-shimmer 6s linear infinite;
 }
 
-/* Ornamen stabilo (HighlightText) — blok terracotta dengan teks gelap,
-   hanya di mode gelap, pada frasa kunci di paragraf Tentang.
-   Pola serupa dipakai alphavarianceauthority.com (mark.block-accent). */
+/* Ornamen stabilo (HighlightText / Hero mark) — blok terracotta tegas
+   seperti alphavarianceauthority.com (mark.block-accent).
+   Teks kontras tinggi: putih di mode terang, near-black di mode gelap. */
 .mark-accent {
-  background-color: transparent;
-  color: inherit;
-  padding: 0 0.14em;
-  border-radius: 3px;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  padding: 0.05em 0.2em;
+  border-radius: 0px;
+  display: inline-block;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
