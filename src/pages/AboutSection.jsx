@@ -34,6 +34,8 @@ const AboutSection = () => {
               height="912"
               loading="lazy"
               className="mt-8 w-full h-auto block rounded-lg"
+              data-reveal
+              data-reveal-delay="200"
             />
           </div>
           <div className="md:col-span-7 space-y-8" data-reveal>

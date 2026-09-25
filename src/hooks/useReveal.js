@@ -37,7 +37,10 @@ export function useReveal() {
 
           // Batch: elemen yang tampil hampir bersamaan diberi delay
           // bertingkat, lalu counter direset setelah jeda singkat.
-          entry.target.style.transitionDelay = `${Math.min(staggerIndex, 3) * 90}ms`;
+          // data-reveal-delay = offset dasar per elemen (mis. hero menunggu
+          // headline selesai), stagger tetap dibatasi 270ms di atasnya.
+          const base = Number(entry.target.dataset.revealDelay || 0);
+          entry.target.style.transitionDelay = `${base + Math.min(staggerIndex, 3) * 90}ms`;
           entry.target.classList.add("is-visible");
           observer.unobserve(entry.target);
           staggerIndex += 1;
