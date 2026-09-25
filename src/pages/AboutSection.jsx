@@ -1,4 +1,4 @@
-import { aboutParagraph } from "../data";
+import Image, { aboutParagraph } from "../data";
 import HighlightText from "../components/HighlightText";
 
 const FOCUS = [
@@ -25,6 +25,16 @@ const AboutSection = () => {
           <div className="md:col-span-5" data-reveal>
             <span className="section-label">Tentang</span>
             <h2 className="section-title">Kenalan singkat.</h2>
+            <img
+              src={Image.HeroImage}
+              srcSet={`${Image.HeroImageSmall} 400w, ${Image.HeroImage} 800w`}
+              sizes="(min-width: 768px) 35vw, 100vw"
+              alt="Foto Dafa Huda Rifa'i"
+              width="800"
+              height="912"
+              loading="lazy"
+              className="mt-8 w-full h-auto block rounded-lg"
+            />
           </div>
           <div className="md:col-span-7 space-y-8" data-reveal>
             <p className="text-[17px] leading-[1.75] text-[var(--color-ink)]">
