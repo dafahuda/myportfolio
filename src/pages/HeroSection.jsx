@@ -1,21 +1,25 @@
 import Icon from "../components/Icon";
 import InlineSvg from "../components/InlineSvg";
 import DataImage from "../data";
-import { listTools } from "../data";
+import { listMinat } from "../data";
 import LogoLoop from "../components/LogoLoop";
 import AnimatedWords from "../components/AnimatedWords";
 
-// Marquee memakai ikon merek monokrom (mewarisi warna teks) supaya menyatu
-// dengan palet situs. Dua merek yang tidak ada di Tabler tetap memakai SVG.
+// Marquee di bawah hero memuat BIDANG MINAT, bukan daftar tools — section
+// "Perkakas" sudah memuat tools lengkap, marquee menjawab "bidang apa".
+// Teks memakai font display (Big Shoulders), pemisah titik tengah terracotta.
 const HeroSection = () => {
-  const logos = listTools.map((t) =>
-    t.icon
-      ? { node: <Icon icon={t.icon} size={26} />, ariaLabel: t.nama }
-      : {
-          node: <InlineSvg markup={t.gambar} size={26} label={t.nama} />,
-          ariaLabel: t.nama,
-        }
-  );
+  const logos = listMinat.map((m) => ({
+    node: (
+      <span className="hero-marquee-item">
+        <span className="hero-marquee-dot" aria-hidden="true">
+          ·
+        </span>
+        {m}
+      </span>
+    ),
+    ariaLabel: m,
+  }));
 
   return (
     <section id="beranda" className="pt-28 md:pt-36 pb-14 md:pb-20">
@@ -74,17 +78,17 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="mt-16 md:mt-24 border-y border-[var(--color-line)] py-5 overflow-hidden text-[var(--color-muted)]">
+      <div className="mt-16 md:mt-24 border-y border-[var(--color-line)] py-4 overflow-hidden text-[var(--color-muted)]">
         <LogoLoop
           logos={logos}
           speed={30}
           direction="left"
-          logoHeight={26}
-          gap={56}
+          logoHeight={22}
+          gap={64}
           pauseOnHover={false}
           scaleOnHover={false}
           fadeOut
-          ariaLabel="Tools yang saya pakai"
+          ariaLabel="Bidang yang saya tekuni"
         />
       </div>
     </section>

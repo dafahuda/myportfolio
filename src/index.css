@@ -332,3 +332,21 @@ html.dark .mark-accent {
   background-color: var(--color-accent);
   color: #1a1815;
 }
+
+/* Marquee bidang minat di bawah hero: teks font display, uppercase,
+   pemisah titik tengah beraksen terracotta (satu-satunya aksen di situ). */
+.hero-marquee-item {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--color-muted);
+}
+
+.hero-marquee-dot {
+  color: var(--color-accent);
+  margin-right: 0.9em;
+  font-weight: 800;
+}

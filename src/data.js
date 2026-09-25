@@ -262,3 +262,17 @@ export const aboutParagraph = {
   // Kata yang diberi ornamen stabilo di mode gelap (lihat .mark-accent).
   highlights: ["1.284 pegawai", "Fuzzy Logic"],
 };
+
+/* ============================================================
+ * BIDANG MINAT — isi marquee di bawah hero.
+ * Sebelumnya marquee memakai daftar tools yang sama dengan section
+ * "Perkakas" (duplikat); kini memakai bidang yang ditekuni supaya
+ * marquee menjawab "orang ini bidang apa", bukan "pakai apa".
+ * ============================================================ */
+export const listMinat = [
+  "Front-end Development",
+  "UI/UX Design",
+  "IoT & Autentikasi",
+  "AI & Fuzzy Logic",
+  "Sistem SDM Internal",
+];
