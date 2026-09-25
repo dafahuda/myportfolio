@@ -32,17 +32,17 @@ const HeroSection = () => {
             aria-label="Merancang antarmuka yang tidak minta perhatian."
             style={{
               fontSize: "clamp(3rem, 8vw, 6.5rem)",
-              lineHeight: 1.05,
+              lineHeight: 0.90,
               letterSpacing: "-0.01em",
             }}
           >
-            <AnimatedWords text="Merancang antarmuka" className="mb-2" />
+            <AnimatedWords text="Merancang antarmuka" className="mb-1" />
             <br />
-            <AnimatedWords text="yang tidak minta" className="mb-2" delay={240} />
+            <AnimatedWords text="yang tidak minta" className="mb-1" delay={240} />
             <br />
             <AnimatedWords text="perhatian." delay={480} accent="perhatian." />
           </h1>
-          <p className="lead mb-10 text-[18px] md:text-[19px] leading-[1.85]" data-reveal data-reveal-delay="850">
+          <p className="lead mb-10 text-[18px] md:text-[19px] leading-[1.7]" data-reveal data-reveal-delay="850">
             Saya Dafa Huda Rifa&apos;i, sarjana Ilmu Komputer Universitas
             Pakuan. Fokus di front-end web, sistem informasi internal, dan
             pemanfaatan alat AI modern untuk mempercepat pengembangan.
