@@ -28,12 +28,12 @@ const HeroSection = () => {
             Front-end Developer · UI/UX Designer
           </span>
           <h1
-            className="mt-2 mb-6"
+            className="mt-2 mb-6 font-extrabold"
             aria-label="Merancang antarmuka yang tidak minta perhatian."
             style={{
-              fontSize: "clamp(2.75rem, 7vw, 5.75rem)",
-              lineHeight: 1.02,
-              letterSpacing: "-0.02em",
+              fontSize: "clamp(2.75rem, 7.5vw, 6rem)",
+              lineHeight: 0.94,
+              letterSpacing: "-0.03em",
             }}
           >
             <AnimatedWords text="Merancang antarmuka" />
