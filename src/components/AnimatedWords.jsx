@@ -13,37 +13,28 @@
  */
 import { useMemo } from "react";
 
-export default function AnimatedWords({ text, accent = "", highlight = "", className = "", delay = 0 }) {
+export default function AnimatedWords({ text, accent = "", className = "", delay = 0 }) {
   const words = useMemo(() => text.split(" "), [text]);
   const accentSet = useMemo(
     () => new Set(accent.split(" ").filter(Boolean)),
     [accent]
-  );
-  const highlightSet = useMemo(
-    () => new Set(highlight.split(" ").filter(Boolean)),
-    [highlight]
   );
 
   return (
     <span className={`inline-block ${className}`}>
       {words.map((w, i) => {
         const isAccent = accentSet.has(w);
-        const isHighlight = highlightSet.has(w);
-        const inner = (
-          <span
-            className={`aw-word inline-block ${isAccent ? "aw-accent" : ""} ${isHighlight ? "mark-accent" : ""}`}
-            style={{ animationDelay: `${delay + i * 60}ms` }}
-          >
-            {w}
-          </span>
-        );
-
         return (
           <span
             key={`${w}-${i}`}
             className="mr-[0.18em] inline-block overflow-hidden pb-[0.08em] align-bottom"
           >
-            {inner}{" "}
+            <span
+              className={`aw-word inline-block ${isAccent ? "aw-accent" : ""}`}
+              style={{ animationDelay: `${delay + i * 60}ms` }}
+            >
+              {w}
+            </span>{" "}
           </span>
         );
       })}

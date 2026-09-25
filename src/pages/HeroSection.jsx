@@ -38,7 +38,7 @@ const HeroSection = () => {
           >
             <AnimatedWords text="Merancang antarmuka" />
             <br />
-            <AnimatedWords text="yang tidak minta" highlight="tidak minta" delay={240} />
+            <AnimatedWords text="yang tidak minta" delay={240} />
             <br />
             <AnimatedWords text="perhatian." delay={480} accent="perhatian." />
           </h1>
