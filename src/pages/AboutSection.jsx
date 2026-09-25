@@ -37,8 +37,8 @@ const AboutSection = () => {
               data-reveal-delay="200"
             />
           </div>
-          <div className="md:col-span-7 space-y-8" data-reveal>
-            <p className="text-[17px] leading-[1.75] text-[var(--color-ink)]">
+          <div className="md:col-span-7 space-y-10" data-reveal>
+            <p className="text-[17px] md:text-[18px] leading-[1.9] text-[var(--color-ink)]">
               {aboutParagraph.text}
             </p>
             <ul className="grid sm:grid-cols-2 gap-6 pt-4 border-t border-[var(--color-line)]">
