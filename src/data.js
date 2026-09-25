@@ -84,19 +84,6 @@ export const listProyek = [
     status: "live",
   },
   {
-    id: 4,
-    thumbnail: Proyek4,
-    title: "Fintrack",
-    year: "2023",
-    role: "Tim · MSIB",
-    description:
-      "Capstone MSIB Batch 3, platform edukasi keuangan. Saya bagian tim frontend, membangun antarmuka dan integrasi API untuk konten interaktif dan feed informasi ekonomi.",
-    tools: ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
-    repo: "https://github.com/dafahuda/Fintrack",
-    link: "https://fintrack-ten.vercel.app",
-    status: "live",
-  },
-  {
     id: 3,
     thumbnail: Proyek3,
     title: "Mini Weather Station",
@@ -108,6 +95,19 @@ export const listProyek = [
     repo: "",
     link: "",
     status: "private",
+  },
+  {
+    id: 4,
+    thumbnail: Proyek4,
+    title: "Fintrack",
+    year: "2023",
+    role: "Tim · MSIB",
+    description:
+      "Capstone MSIB Batch 3, platform edukasi keuangan. Saya bagian tim frontend, membangun antarmuka dan integrasi API untuk konten interaktif dan feed informasi ekonomi.",
+    tools: ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
+    repo: "https://github.com/dafahuda/Fintrack",
+    link: "https://fintrack-ten.vercel.app",
+    status: "live",
   },
   {
     id: 5,
