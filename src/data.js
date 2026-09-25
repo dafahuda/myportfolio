@@ -270,9 +270,9 @@ export const aboutParagraph = {
  * marquee menjawab "orang ini bidang apa", bukan "pakai apa".
  * ============================================================ */
 export const listMinat = [
-  "Front-end Development",
-  "UI/UX Design",
-  "IoT & Autentikasi",
-  "AI & Fuzzy Logic",
-  "Sistem SDM Internal",
+  "Computer Science",
+  "Front-end Web Development",
+  "Embedded Systems & IoT Enthusiast",
+  "AI & Fuzzy Logic Enthusiast",
+  "HR Information Systems",
 ];

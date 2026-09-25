@@ -84,7 +84,7 @@ const HeroSection = () => {
           speed={30}
           direction="left"
           logoHeight={22}
-          gap={64}
+          gap={0}
           pauseOnHover={false}
           scaleOnHover={false}
           fadeOut

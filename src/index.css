@@ -347,6 +347,6 @@ html.dark .mark-accent {
 
 .hero-marquee-dot {
   color: var(--color-accent);
-  margin-right: 0.9em;
+  margin: 0 0.9em;
   font-weight: 800;
 }
