@@ -42,9 +42,11 @@ const CertificatesSection = () => {
                 <button
                   type="button"
                   onClick={openBox({
-                    src: cover.image,
-                    alt: `${c.name} — ${cover.text}`,
-                    caption: `${c.name} · ${c.issuer}`,
+                    files: c.imageList.map((img) => ({
+                      src: img.image,
+                      alt: `${c.name} — ${img.text}`,
+                      caption: `${c.name} · ${c.issuer} · ${img.text}`,
+                    })),
                   })}
                   className="card overflow-hidden text-left w-full h-full flex flex-col group"
                 >

@@ -1,5 +1,6 @@
 import {
   IconArrowDown,
+  IconArrowLeft,
   IconArrowRight,
   IconArrowUp,
   IconArrowUpRight,
@@ -50,6 +51,7 @@ import {
 const ACTIONS = {
   "arrow-up": IconArrowUp,
   "arrow-down": IconArrowDown,
+  "arrow-left": IconArrowLeft,
   "arrow-right": IconArrowRight,
   "arrow-up-right": IconArrowUpRight,
   download: IconDownload,
