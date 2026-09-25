@@ -94,7 +94,7 @@ const ContactSection = () => {
             </ul>
           </div>
 
-          <div className="md:col-span-7" data-reveal>
+          <div className="md:col-span-7">
             <form
               action="https://formsubmit.co/dafahudarifai147@gmail.com"
               method="POST"

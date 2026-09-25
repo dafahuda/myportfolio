@@ -26,7 +26,7 @@ const CertificatesSection = () => {
             <span className="section-label">Sertifikat</span>
             <h2 className="section-title">Pelatihan tersertifikasi.</h2>
           </div>
-          <div className="md:col-span-7" data-reveal>
+          <div className="md:col-span-7">
             <p className="lead">
               Pelatihan yang saya selesaikan — sebagian dengan berkas lengkap,
               sebagian sebagai catatan referensi.
@@ -38,7 +38,7 @@ const CertificatesSection = () => {
           {certificateList.map((c) => {
             const cover = c.imageList[0];
             return (
-              <li key={c.id} data-reveal>
+              <li key={c.id}>
                 <button
                   type="button"
                   onClick={openBox({
@@ -79,7 +79,7 @@ const CertificatesSection = () => {
         </ul>
 
         {certificateExtras.length > 0 && (
-          <div className="mt-14 pt-10 border-t border-[var(--color-line)]" data-reveal>
+          <div className="mt-14 pt-10 border-t border-[var(--color-line)]">
             <p className="section-label mb-4">Referensi lain</p>
             <ul className="divide-y divide-[var(--color-line)]">
               {certificateExtras.map((c) => (

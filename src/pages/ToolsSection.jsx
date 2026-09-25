@@ -14,7 +14,7 @@ const ToolsSection = () => {
               Yang saya pakai untuk membangun web dan menyusun desain sehari-hari.
             </p>
           </div>
-          <ul className="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-6" data-reveal>
+          <ul className="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-6">
             {listTools.map((t) => (
               <li key={t.id} className="flex items-center gap-3 text-[var(--color-ink)]">
                 {t.icon ? (

@@ -17,7 +17,6 @@ const ExperienceSection = () => {
               <li
                 key={job.id}
                 className="pb-10 border-b border-[var(--color-line)] last:border-b-0 last:pb-0"
-                data-reveal
               >
                 <p className="text-sm text-[var(--color-muted)]">{job.period}</p>
                 <h3
