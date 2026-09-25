@@ -23,8 +23,8 @@ const HeroSection = () => {
   return (
     <section id="beranda" className="pt-28 md:pt-36 pb-14 md:pb-20">
       <div className="container-page">
-        <div className="md:max-w-[75%]" data-reveal>
-          <span className="section-label">
+        <div className="md:max-w-[75%]">
+          <span className="section-label" data-reveal>
             Front-end Developer · UI/UX Designer
           </span>
           <h1
@@ -41,12 +41,12 @@ const HeroSection = () => {
             <br />
             <AnimatedWords text="perhatian." delay={480} accent="perhatian." />
           </h1>
-          <p className="lead mb-8">
+          <p className="lead mb-8" data-reveal>
             Saya Dafa Huda Rifa&apos;i — sarjana Ilmu Komputer Universitas
             Pakuan. Fokus di front-end web, sistem SDM internal, dan penerapan
             AI seperti Fuzzy Logic untuk pemetaan risiko.
           </p>
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex flex-wrap items-center gap-3" data-reveal>
             <a
               href="/assets/cv/Cv_ATS_Dafa_Huda_Rifai.pdf"
               download
