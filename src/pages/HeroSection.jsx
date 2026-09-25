@@ -44,8 +44,8 @@ const HeroSection = () => {
           </h1>
           <p className="lead mb-8" data-reveal data-reveal-delay="850">
             Saya Dafa Huda Rifa&apos;i, sarjana Ilmu Komputer Universitas
-            Pakuan. Fokus di front-end web, sistem SDM internal, dan penerapan
-            AI seperti Fuzzy Logic untuk pemetaan risiko.
+            Pakuan. Fokus di front-end web, sistem informasi internal, dan
+            pemanfaatan alat AI modern untuk mempercepat pengembangan.
           </p>
           <div className="flex flex-wrap items-center gap-3" data-reveal data-reveal-delay="1100">
             <a

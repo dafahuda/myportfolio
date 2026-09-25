@@ -62,7 +62,7 @@ export const listProyek = [
     thumbnail: Proyek2,
     title: "Bogor Landslide Risk",
     year: "2025",
-    role: "Solo · Skripsi",
+    role: "Solo",
     description:
       "Peta interaktif batas wilayah Kota Bogor dengan kalkulasi risiko tanah longsor berbasis Fuzzy Logic. Visualisasi data multi-parameter di peta Leaflet.",
     tools: ["JavaScript", "Leaflet.js", "Chart.js", "Fuzzy Logic"],
@@ -100,11 +100,11 @@ export const listProyek = [
     id: 3,
     thumbnail: Proyek3,
     title: "Mini Weather Station",
-    year: "2023",
-    role: "Solo · IoT",
+    year: "2024",
+    role: "Solo · Skripsi",
     description:
-      "Sistem monitoring cuaca real-time yang membaca data dari Arduino Mega WiFi dan menampilkannya di web dengan chart interaktif.",
-    tools: ["CodeIgniter 3", "Bootstrap", "Chart.js", "Arduino"],
+      "Tugas akhir skripsi berupa sistem monitoring cuaca real-time yang membaca sensor mikrokontroler dan menerapkan estimasi kondisi cuaca.",
+    tools: ["Arduino", "CodeIgniter 3", "Bootstrap", "Chart.js", "Fuzzy Logic"],
     repo: "",
     link: "",
     status: "private",
@@ -254,13 +254,13 @@ export const certificateExtras = [
  * Copy blocks
  * ============================================================ */
 export const heroParagraph = {
-  text: "Sarjana Ilmu Komputer, Universitas Pakuan. Membangun dashboard SDM untuk 1.284 pegawai di Badan Bahasa menggunakan Google Apps Script. Fokus di front-end development, UI/UX design, dan penerapan AI.",
+  text: "Sarjana Ilmu Komputer, Universitas Pakuan. Membangun dashboard kepegawaian internal di Badan Bahasa menggunakan Google Apps Script. Fokus di front-end development, UI/UX design, dan alur kerja AI modern.",
 };
 
 export const aboutParagraph = {
-  text: "Saya Dafa Huda Rifa'i, sarjana Ilmu Komputer Universitas Pakuan. Terbaru, saya membangun dan mengelola dashboard SDM untuk 1.284 pegawai di Badan Pengembangan dan Pembinaan Bahasa. Sebelumnya, melalui MSIB Batch 3 di Infinite Learning, saya melewati alur UI/UX Designer → Frontend Developer → Full Stack Engineer, dan menyelesaikan capstone Fintrack sebagai bagian dari tim. Saya juga menerapkan Fuzzy Logic untuk pemetaan risiko tanah longsor dan peramalan cuaca berbasis IoT.",
+  text: "Saya Dafa Huda Rifa'i, sarjana Ilmu Komputer Universitas Pakuan. Terbaru, saya membangun dan mengelola dashboard kepegawaian internal di Badan Pengembangan dan Pembinaan Bahasa. Sebelumnya, melalui MSIB Batch 3 di Infinite Learning, saya melewati alur UI/UX Designer → Frontend Developer → Full Stack Engineer, dan menyelesaikan capstone Fintrack sebagai bagian dari tim. Untuk tugas akhir skripsi, saya merancang stasiun pemantau cuaca mini berbasis IoT yang mengintegrasikan logika fuzzy.",
   // Kata yang diberi ornamen stabilo di mode gelap (lihat .mark-accent).
-  highlights: ["1.284 pegawai", "Fuzzy Logic"],
+  highlights: ["dashboard kepegawaian", "stasiun pemantau cuaca mini"],
 };
 
 /* ============================================================
@@ -273,6 +273,7 @@ export const listMinat = [
   "Computer Science",
   "Front-end Web Development",
   "Embedded Systems & IoT Enthusiast",
-  "AI & Fuzzy Logic Enthusiast",
+  "Modern AI Tools Enthusiast",
+  "AI-Assisted Workflow Enthusiast",
   "HR Information Systems",
 ];

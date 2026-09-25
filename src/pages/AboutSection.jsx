@@ -13,7 +13,7 @@ const FOCUS = [
   {
     title: "IoT & AI",
     detail:
-      "Sistem berbasis mikrokontroler dan penerapan AI seperti Fuzzy Logic.",
+      "Sistem berbasis mikrokontroler dan integrasi alat AI modern untuk mempercepat alur kerja.",
   },
 ];
 
