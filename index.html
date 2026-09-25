@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#F2F1EC" />
+    <meta name="theme-color" content="#F2F1EC" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1A1815" media="(prefers-color-scheme: dark)" />
 
     <title>Dafa Huda Rifa'i — Front-end Developer & UI/UX Designer</title>
     <meta
@@ -103,13 +104,17 @@
             t === "dark" ||
             (t !== "light" &&
               window.matchMedia("(prefers-color-scheme: dark)").matches);
-          if (dark) document.documentElement.classList.add("dark");
+          if (dark) {
+            document.documentElement.classList.add("dark");
+            var m = document.querySelector('meta[name="theme-color"]');
+            if (m) m.setAttribute("content", "#1A1815");
+          }
         } catch (e) {}
       })();
     </script>
     <meta name="color-scheme" content="light dark" />
   </head>
-  <body id="beranda">
+  <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

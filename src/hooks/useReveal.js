@@ -37,7 +37,7 @@ export function useReveal() {
 
           // Batch: elemen yang tampil hampir bersamaan diberi delay
           // bertingkat, lalu counter direset setelah jeda singkat.
-          entry.target.style.transitionDelay = `${staggerIndex * 90}ms`;
+          entry.target.style.transitionDelay = `${Math.min(staggerIndex, 3) * 90}ms`;
           entry.target.classList.add("is-visible");
           observer.unobserve(entry.target);
           staggerIndex += 1;
