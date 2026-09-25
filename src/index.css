@@ -13,7 +13,7 @@
   --color-footer-bg: #0b0b0b;
   --color-footer-fg: #f2f1ec;
 
-  --font-display: "Big Shoulders Display", "Arial Narrow", sans-serif;
+  --font-display: "Instrument Serif", Georgia, serif;
   --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -50,9 +50,9 @@ html.dark {
   h2,
   h3 {
     font-family: var(--font-display);
-    font-weight: 800;
+    font-weight: 400;
     letter-spacing: -0.01em;
-    line-height: 0.92;
+    line-height: 1.05;
     color: var(--color-ink);
   }
 
@@ -341,10 +341,10 @@ html.dark .mark-accent {
 /* Marquee bidang minat di bawah hero: teks font display, uppercase,
    pemisah titik tengah beraksen terracotta (satu-satunya aksen di situ). */
 .hero-marquee-item {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 22px;
-  letter-spacing: 0.06em;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   white-space: nowrap;
   color: var(--color-muted);
