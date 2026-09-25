@@ -23,7 +23,7 @@ const HeroSection = () => {
   return (
     <section id="beranda" className="pt-28 md:pt-36 pb-14 md:pb-20">
       <div className="container-page">
-        <div className="md:max-w-[62%]" data-reveal>
+        <div className="md:max-w-[75%]" data-reveal>
           <span className="section-label">
             Front-end Developer · UI/UX Designer
           </span>
