@@ -32,7 +32,7 @@ const HeroSection = () => {
             aria-label="Merancang antarmuka yang tidak minta perhatian."
             style={{
               fontSize: "clamp(3rem, 8vw, 6.5rem)",
-              lineHeight: 0.90,
+              lineHeight: 1.0,
               letterSpacing: "-0.01em",
             }}
           >
