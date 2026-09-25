@@ -32,8 +32,8 @@ const HeroSection = () => {
             aria-label="Merancang antarmuka yang tidak minta perhatian."
             style={{
               fontSize: "clamp(2.75rem, 7.5vw, 6rem)",
-              lineHeight: 0.94,
-              letterSpacing: "-0.03em",
+              lineHeight: 0.98,
+              letterSpacing: "-0.025em",
             }}
           >
             <AnimatedWords text="Merancang antarmuka" />

@@ -13,8 +13,8 @@
   --color-footer-bg: #0b0b0b;
   --color-footer-fg: #f2f1ec;
 
-  --font-display: "Syne", sans-serif;
-  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Epilogue", ui-sans-serif, sans-serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 /* Mode gelap hangat — near-black cokelat, bukan gelap dingin.
@@ -51,8 +51,8 @@ html.dark {
   h3 {
     font-family: var(--font-display);
     font-weight: 800;
-    letter-spacing: -0.03em;
-    line-height: 0.95;
+    letter-spacing: -0.025em;
+    line-height: 0.96;
     color: var(--color-ink);
   }
 
