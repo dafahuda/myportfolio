@@ -10,7 +10,7 @@ const ProjectsSection = () => {
             <span className="section-label">Proyek</span>
             <h2 className="section-title">Yang saya kerjakan.</h2>
           </div>
-          <div className="md:col-span-7">
+          <div className="md:col-span-7" data-reveal>
             <p className="lead">
               Kumpulan proyek nyata, sebagian tim, sebagian solo. Klik demo untuk
               melihat versi langsung, atau repo untuk masuk ke kodenya.
@@ -20,7 +20,7 @@ const ProjectsSection = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {listProyek.map((p) => (
-            <div key={p.id}>
+            <div key={p.id} data-reveal>
               <ProjectCard {...p} />
             </div>
           ))}

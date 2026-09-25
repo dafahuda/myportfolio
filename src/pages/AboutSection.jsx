@@ -36,7 +36,7 @@ const AboutSection = () => {
               className="mt-8 w-full h-auto block rounded-lg"
             />
           </div>
-          <div className="md:col-span-7 space-y-8">
+          <div className="md:col-span-7 space-y-8" data-reveal>
             <p className="text-[17px] leading-[1.75] text-[var(--color-ink)]">
               <HighlightText text={aboutParagraph.text} phrases={aboutParagraph.highlights} />
             </p>
