@@ -89,13 +89,13 @@ html.dark {
   }
 
   .section {
-    padding-block: 6rem;
+    padding-block: clamp(3.5rem, 8vh, 6rem);
     border-top: 1px solid var(--color-line);
   }
 
   @media (min-width: 768px) {
     .section {
-      padding-block: 8rem;
+      padding-block: clamp(4.5rem, 11vh, 8rem);
     }
   }
 
