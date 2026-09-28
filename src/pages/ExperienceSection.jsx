@@ -12,20 +12,28 @@ const ExperienceSection = () => {
               Dua tempat yang membentuk cara saya mendekati produk digital.
             </p>
           </div>
-          <ol className="md:col-span-7 space-y-10">
+          <ol className="md:col-span-7">
             {experienceList.map((job) => (
               <li
                 key={job.id}
-                className="pb-10 border-b border-[var(--color-line)] last:border-b-0 last:pb-0"
+                className="group border-b border-[var(--color-line)] py-8 first:pt-0 last:border-b-0 transition-colors duration-300 hover:border-[var(--color-accent)]"
                 data-reveal
               >
-                <p className="text-sm text-[var(--color-muted)]">{job.period}</p>
-                <h3
-                  className="mt-1 text-2xl md:text-3xl"
-                  style={{ letterSpacing: "-0.01em", lineHeight: 1.05 }}
-                >
-                  {job.company}
-                </h3>
+                <div className="flex items-baseline justify-between gap-4">
+                  <h3
+                    className="text-3xl md:text-4xl transition-transform duration-500 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover:translate-x-2"
+                    style={{ letterSpacing: "-0.01em", lineHeight: 1.05 }}
+                  >
+                    {job.company}
+                  </h3>
+                  <span
+                    className="font-display text-2xl md:text-3xl text-[var(--color-muted)] transition-colors duration-300 group-hover:text-[var(--color-accent)] flex-shrink-0"
+                    style={{ fontFamily: "var(--font-display)" }}
+                    aria-label={job.period}
+                  >
+                    {job.period}
+                  </span>
+                </div>
                 <p className="mt-1 text-base font-medium text-[var(--color-ink)]">
                   {job.role}
                   <span className="text-[var(--color-muted)] font-normal">
