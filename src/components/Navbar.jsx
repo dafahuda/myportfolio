@@ -48,7 +48,7 @@ const Navbar = () => {
             <a
               key={l.href}
               href={l.href}
-              className="link-underline text-[var(--color-ink)]"
+              className="link-wipe text-[var(--color-ink)]"
             >
               {l.label}
             </a>
