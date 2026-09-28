@@ -21,19 +21,20 @@ const HeroSection = () => {
   }));
 
   return (
-    <section id="beranda" className="pt-28 md:pt-36 pb-14 md:pb-20">
-      <div className="container-page">
+    <section id="beranda" className="min-h-[100svh] flex flex-col">
+      <div className="container-page flex-1 flex items-center pt-24 md:pt-28 pb-8">
         <div className="md:max-w-[90%]">
           <span className="section-label" data-reveal data-reveal-delay="600">
             Front-end Developer · UI/UX Designer
           </span>
           <h1
-            className="mt-3 mb-8 font-extrabold"
+            className="mt-3 font-extrabold"
             aria-label="Merancang antarmuka yang tidak minta perhatian."
             style={{
-              fontSize: "clamp(3rem, 8vw, 6.5rem)",
+              fontSize: "clamp(2.5rem, min(8vw, 10.5vh), 6.5rem)",
               lineHeight: 1.0,
               letterSpacing: "-0.01em",
+              marginBottom: "clamp(1rem, 3vh, 2rem)",
             }}
           >
             <AnimatedWords text="Merancang antarmuka" className="mb-1" />
@@ -42,7 +43,7 @@ const HeroSection = () => {
             <br />
             <AnimatedWords text="perhatian." delay={480} accent="perhatian." />
           </h1>
-          <p className="lead mb-10 text-[18px] md:text-[19px] leading-[1.7]" data-reveal data-reveal-delay="850">
+          <p className="lead text-[18px] md:text-[19px] leading-[1.7]" style={{ marginBottom: "clamp(1.25rem, 3.5vh, 2.5rem)" }} data-reveal data-reveal-delay="850">
             Saya Dafa Huda Rifa&apos;i, sarjana Ilmu Komputer Universitas
             Pakuan. Fokus di front-end web, sistem informasi internal, dan
             pemanfaatan alat AI modern untuk mempercepat pengembangan.
@@ -64,7 +65,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="mt-16 md:mt-24 border-y border-[var(--color-line)] py-4 overflow-hidden text-[var(--color-muted)]">
+      <div className="border-y border-[var(--color-line)] py-4 overflow-hidden text-[var(--color-muted)]">
         <LogoLoop
           logos={logos}
           speed={30}
