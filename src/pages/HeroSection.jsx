@@ -24,7 +24,7 @@ const HeroSection = () => {
     <section id="beranda" className="min-h-[100svh] flex flex-col">
       <div className="container-page flex-1 flex items-center pt-24 md:pt-28 pb-8">
         <div className="md:max-w-[90%]">
-          <span className="section-label" data-reveal data-reveal-delay="600">
+          <span className="section-label hero-rise" style={{ animationDelay: "600ms" }}>
             Front-end Developer · UI/UX Designer
           </span>
           <h1
@@ -43,12 +43,12 @@ const HeroSection = () => {
             <br />
             <AnimatedWords text="perhatian." delay={480} accent="perhatian." />
           </h1>
-          <p className="lead text-[18px] md:text-[19px] leading-[1.7]" style={{ marginBottom: "clamp(1.25rem, 3.5vh, 2.5rem)" }} data-reveal data-reveal-delay="850">
+          <p className="lead text-[18px] md:text-[19px] leading-[1.7] hero-rise" style={{ marginBottom: "clamp(1.25rem, 3.5vh, 2.5rem)", animationDelay: "850ms" }}>
             Saya Dafa Huda Rifa&apos;i, sarjana Ilmu Komputer Universitas
             Pakuan. Fokus di front-end web, sistem informasi internal, dan
             pemanfaatan alat AI modern untuk mempercepat pengembangan.
           </p>
-          <div className="flex flex-wrap items-center gap-3" data-reveal data-reveal-delay="1100">
+          <div className="flex flex-wrap items-center gap-3 hero-rise" style={{ animationDelay: "1100ms" }}>
             <a
               href="/assets/cv/Cv_ATS_Dafa_Huda_Rifai.pdf"
               download

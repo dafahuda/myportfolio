@@ -322,6 +322,33 @@ html.dark {
   }
 }
 
+/* Elemen pendukung hero (label, paragraf, tombol): animasi naik+fade
+   otomatis saat mount, mekanisme sama dengan headline aw-rise, supaya
+   konsisten di tiap refresh tanpa bergantung IntersectionObserver yang
+   rapuh untuk elemen di atas fold. */
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-rise {
+  opacity: 0;
+  animation: hero-rise 0.65s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-rise {
+    opacity: 1;
+    animation: none;
+  }
+}
+
 .aw-word {
   display: inline-block;
   transform: translateY(110%);
