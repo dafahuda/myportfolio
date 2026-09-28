@@ -27,7 +27,7 @@ export default function AnimatedWords({ text, accent = "", className = "", delay
         return (
           <span
             key={`${w}-${i}`}
-            className="mr-[0.18em] inline-block overflow-hidden pb-[0.08em] align-bottom"
+            className="mr-[0.28em] inline-block overflow-hidden pb-[0.08em] align-bottom"
           >
             <span
               className={`aw-word inline-block ${isAccent ? "aw-accent" : ""}`}
