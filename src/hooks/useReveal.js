@@ -29,6 +29,7 @@ export function useReveal() {
 
     let staggerIndex = 0;
     let staggerTimer = null;
+    let rafId = null;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -54,11 +55,20 @@ export function useReveal() {
       { threshold: 0.12, rootMargin: "0px 0px -20px 0px" }
     );
 
-    targets.forEach((el) => observer.observe(el));
+    // Lukis dulu keadaan tersembunyi (opacity:0) selama dua frame sebelum
+    // observer dipasang. Tanpa ini, elemen di atas fold langsung dapat
+    // is-visible di frame yang sama saat mount, transisi dilewati, muncul
+    // pop tanpa animasi. Double-rAF menjamin frame tersembunyi ter-render.
+    rafId = requestAnimationFrame(() => {
+      rafId = requestAnimationFrame(() => {
+        targets.forEach((el) => observer.observe(el));
+      });
+    });
 
     return () => {
       observer.disconnect();
       if (staggerTimer) clearTimeout(staggerTimer);
+      if (rafId) cancelAnimationFrame(rafId);
     };
   }, []);
 }
