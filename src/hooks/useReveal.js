@@ -38,8 +38,9 @@ export function useReveal() {
 
           // Batch: elemen yang tampil hampir bersamaan diberi delay
           // bertingkat, lalu counter direset setelah jeda singkat.
-          // data-reveal-delay = offset dasar per elemen (mis. hero menunggu
-          // headline selesai), stagger tetap dibatasi 270ms di atasnya.
+          // data-reveal-delay = offset dasar opsional per elemen, stagger
+          // tetap dibatasi 270ms di atasnya. Hero TIDAK memakai hook ini;
+          // elemennya animasi otomatis via keyframe hero-rise/aw-rise.
           const base = Number(entry.target.dataset.revealDelay || 0);
           entry.target.style.transitionDelay = `${base + Math.min(staggerIndex, 3) * 90}ms`;
           entry.target.classList.add("is-visible");
