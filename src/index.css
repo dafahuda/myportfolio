@@ -182,34 +182,36 @@ html.dark {
     color: var(--color-accent);
   }
 
-  /* Link-wipe nav ala Remote Collective: blok terracotta slide dari bawah
-     mengisi link saat hover, teks berubah cream. Murni CSS. */
+  /* Link-wipe nav ala Remote Collective (collectiveminds.com.sg):
+     garis bawah tipis menyapu masuk dari kiri saat hover, lalu surut ke
+     kanan saat kursor pergi (arah konsisten). Teks memekat halus. */
   .link-wipe {
+    display: inline-block;
     position: relative;
-    isolation: isolate;
-    padding: 0.2em 0.45em;
-    margin: -0.2em -0.45em;
-    overflow: hidden;
-    color: var(--color-ink);
-    transition: color 0.25s ease;
+    color: var(--color-muted);
+    transition: color 0.3s ease;
   }
 
-  .link-wipe::before {
+  .link-wipe::after {
     content: "";
     position: absolute;
-    inset: 0;
-    z-index: -1;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
     background-color: var(--color-accent);
-    transform: translateY(100%);
-    transition: transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transform: scaleX(0);
+    transform-origin: 100% center;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .link-wipe:hover {
-    color: var(--color-bg);
+    color: var(--color-ink);
   }
 
-  .link-wipe:hover::before {
-    transform: translateY(0);
+  .link-wipe:hover::after {
+    transform: scaleX(1);
+    transform-origin: 0 center;
   }
 
   .tag {
