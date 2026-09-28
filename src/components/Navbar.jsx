@@ -43,12 +43,12 @@ const Navbar = () => {
           Dafa Huda Rifa&apos;i
         </a>
 
-        <div className="hidden md:flex items-center gap-7 text-sm">
+        <div className="hidden md:flex items-center gap-7">
           {NAV_LINKS.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="link-wipe text-[var(--color-ink)]"
+              className="link-wipe font-mono text-[11px] tracking-[0.16em] uppercase text-[var(--color-ink)]"
             >
               {l.label}
             </a>
