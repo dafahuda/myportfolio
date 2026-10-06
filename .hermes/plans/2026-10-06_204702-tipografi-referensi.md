@@ -19,7 +19,7 @@ Tambahkan text-transform: uppercase pada #beranda h1 dan h2.section-title saja. 
 Verifikasi: semua teks heading identik baseline, transform uppercase terbatas selector, no horizontal overflow atau kata terpotong; hero marquee bottom <= viewport pada laptop umum. Bila uppercase menyebabkan masalah pemenggalan, laporkan tanpa mengubah layout sepihak.
 
 ## Task 3: Line-height heading
-Status: belum dikerjakan; tunggu penilaian task 2.
+Status: selesai. Computed ratio H1/H2 desktop 0.82, mobile 0.90; build/eslint lulus; tanpa horizontal overflow pada 1280x720,1366x768,1440x900,390x844; hero pas viewport. Masker AnimatedWords tetap, verifikasi pixel glyph belum dilakukan. HTML/CSS/JS live identik build. Backup 20261006205947.
 Files: src/index.css; src/pages/HeroSection.jsx hanya bila inline lineHeight perlu dipindahkan ke CSS selector H1.
 Target desktop 0.82, mobile 0.90 untuk #beranda h1 dan h2.section-title saja. Jangan ubah ukuran heading, padding, margin, H3 atau animasi. Periksa masker AnimatedWords agar glyph tidak terpotong; apabila butuh penyesuaian di luar scope, minta persetujuan sebelum mengubahnya.
 Verifikasi: computed ratio sesuai, pemenggalan/glyph terbaca, tidak bertabrakan; laptop 1280x720/1366x768/1440x900 dan mobile 390px; light/dark/reduced-motion tetap bekerja. Backup, build, deploy, hash asset, commit terpisah.
