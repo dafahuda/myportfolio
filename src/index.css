@@ -15,7 +15,7 @@
 
   --font-display: "Big Shoulders Display", "Arial Narrow", sans-serif;
   --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", "Roboto Mono", Menlo, Consolas, monospace;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
 /* Mode gelap hangat — near-black cokelat, bukan gelap dingin.
