@@ -110,6 +110,11 @@ html.dark {
     display: inline-block;
   }
 
+  #beranda h1,
+  .section-title {
+    text-transform: uppercase;
+  }
+
   .section-title {
     font-size: clamp(2.75rem, 6.5vw, 5.25rem);
     line-height: 1;

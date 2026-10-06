@@ -13,7 +13,7 @@ Ubah --font-mono menjadi "JetBrains Mono", ui-monospace, monospace. Nav/section-
 Verifikasi: eslint, build; computed font nav/label; actual platform font via CDP; responsive overflow desktop/mobile; metadata/heading/body/style lainnya tetap; backup webroot sebelum manual deploy; asset live sama byte dengan build; commit identitas owner.
 
 ## Task 2: Uppercase heading saja
-Status: belum dikerjakan; tunggu penilaian task 1.
+Status: selesai. Uppercase melalui CSS saja. Build/eslint lulus; H3 tetap none; heading line-height/size tetap; tanpa overflow 1280x720,1366x768,1440x900,390x844; hero pas viewport. Live asset cocok dengan build. Backup 20261006205620.
 Files: src/index.css.
 Tambahkan text-transform: uppercase pada #beranda h1 dan h2.section-title saja. Jangan kapitalisasi string HTML/JSX. Jangan ubah H3, label yang sudah uppercase, ukuran atau line-height.
 Verifikasi: semua teks heading identik baseline, transform uppercase terbatas selector, no horizontal overflow atau kata terpotong; hero marquee bottom <= viewport pada laptop umum. Bila uppercase menyebabkan masalah pemenggalan, laporkan tanpa mengubah layout sepihak.
