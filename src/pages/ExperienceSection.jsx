@@ -7,7 +7,7 @@ const ExperienceSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16">
           <div className="md:col-span-5" data-reveal>
             <span className="section-label">Pengalaman</span>
-            <h2 className="section-title">Pengalaman Front-end &amp; UI/UX.</h2>
+            <h2 className="section-title">Jejak kerja.</h2>
             <p className="lead">
               Dua tempat yang membentuk cara saya mendekati produk digital.
             </p>

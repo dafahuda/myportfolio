@@ -51,7 +51,7 @@ export const listProyek = [
     year: "2025–2026",
     role: "Full-stack · Magang",
     description:
-      "Dashboard SDM internal Badan Pengembangan dan Pembinaan Bahasa: CRUD data pribadi, pendidikan, riwayat jabatan, kepangkatan, dan pelatihan pegawai. Dibangun dengan Google Apps Script, HTML, CSS, dan JavaScript di atas Google Sheets, lengkap dengan alur input Google Forms dan otomasi dokumen Autocrat.",
+      "Dashboard SDM internal Badan Bahasa untuk mengelola data pegawai, mencakup CRUD data pribadi, pendidikan, jabatan, pelatihan, hingga otomasi dokumen via Google Forms dan Autocrat.",
     tools: ["Google Apps Script", "HTML", "CSS", "JavaScript", "Google Sheets"],
     repo: "https://github.com/dafahuda/MY-SIMPEG-APP",
     link: "",
@@ -64,7 +64,7 @@ export const listProyek = [
     year: "2025",
     role: "Solo",
     description:
-      "Peta interaktif risiko longsor Kota Bogor. Skoring fuzzy logic dihitung di JavaScript untuk tiap parameter lereng, curah hujan, dan jenis tanah, lalu divisualisasikan sebagai peta berwarna dengan Leaflet.js dan grafik Chart.js.",
+      "Peta interaktif batas wilayah Kota Bogor dengan kalkulasi risiko tanah longsor berbasis Fuzzy Logic. Visualisasi data multi-parameter di peta Leaflet.",
     tools: ["JavaScript", "Leaflet.js", "Chart.js", "Fuzzy Logic"],
     repo: "https://github.com/dafahuda/bogor-landslide-risk",
     link: "https://dafahuda.github.io/bogor-landslide-risk",
@@ -77,7 +77,7 @@ export const listProyek = [
     year: "Sep 2026",
     role: "Solo",
     description:
-      "Situs portfolio ini, ditulis ulang dari nol dengan React 19, Vite, dan Tailwind CSS: palet editorial cream, tipografi Big Shoulders Display, animasi scroll terukur, serta SEO teknis berupa JSON-LD, Open Graph, dan sitemap.",
+      "Ditulis ulang dari nol dengan React 19, Vite, dan Tailwind, memadukan palet editorial cream, tipografi Big Shoulders Display, dan animasi scroll yang terukur.",
     tools: ["React", "Vite", "Tailwind CSS"],
     repo: "https://github.com/dafahuda/myportfolio",
     link: "https://portfolio.dhr.my.id",
@@ -90,7 +90,7 @@ export const listProyek = [
     year: "2024",
     role: "Solo · Skripsi",
     description:
-      "Skripsi: stasiun cuaca IoT real-time. Sensor Arduino membaca suhu, kelembapan, dan tekanan udara, datanya masuk ke dashboard web CodeIgniter 3 + Bootstrap dengan estimasi kondisi cuaca fuzzy logic via Chart.js.",
+      "Tugas akhir skripsi berupa sistem monitoring cuaca real-time yang membaca sensor mikrokontroler dan menerapkan estimasi kondisi cuaca.",
     tools: ["Arduino", "CodeIgniter 3", "Bootstrap", "Chart.js", "Fuzzy Logic"],
     repo: "",
     link: "",
@@ -103,7 +103,7 @@ export const listProyek = [
     year: "2023",
     role: "Tim · MSIB",
     description:
-      "Capstone MSIB Batch 3: platform edukasi keuangan. Sebagai Frontend Developer dalam tim, saya membangun antarmuka React + Tailwind CSS dan integrasi API ke backend Node.js, Express, dan MongoDB.",
+      "Capstone MSIB Batch 3, platform edukasi keuangan. Saya bagian tim frontend, membangun antarmuka dan integrasi API untuk konten interaktif dan feed informasi ekonomi.",
     tools: ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
     repo: "https://github.com/dafahuda/Fintrack",
     link: "https://fintrack-ten.vercel.app",
@@ -116,7 +116,7 @@ export const listProyek = [
     year: "2022",
     role: "Tim · MSIB",
     description:
-      "Capstone MSIB Batch 3: platform edukasi antar-kelompok. Peran saya UI Designer, menyusun wireframe dan prototipe interaktif di Figma sebelum diimplementasikan ke React dan Tailwind CSS.",
+      "Capstone MSIB Batch 3, platform edukasi antar-kelompok. Bertugas sebagai UI designer, menyusun wireframe dan prototipe interaktif.",
     tools: ["React", "Tailwind CSS"],
     repo: "https://github.com/Raihan32/Freedom-macro-ReactJS",
     link: "",
@@ -129,7 +129,7 @@ export const listProyek = [
     year: "2022",
     role: "Solo",
     description:
-      "Prototipe aplikasi kolaborasi tim: chat, pembagian tugas, dan penjadwalan. Dibangun dengan HTML, CSS, dan JavaScript murni; alur desainnya disusun di Figma.",
+      "Prototipe kolaborasi tim, mencakup fitur chat, pembagian tugas, dan penjadwalan. Dibuat dengan HTML, CSS, dan JavaScript; desain di Figma.",
     tools: ["HTML", "CSS", "JavaScript", "Figma"],
     repo: "",
     link: "",
@@ -148,7 +148,7 @@ export const experienceList = [
     role: "Data & Information Management",
     location: "Bogor",
     bullets: [
-      "Membangun SIMPEG, dashboard informasi pegawai lengkap dengan modul CRUD data pribadi, pendidikan, riwayat jabatan, kepangkatan, pelatihan, dan administrasi, menggunakan Google Apps Script, HTML, CSS, dan JavaScript.",
+      "Membangun dashboard informasi pegawai lengkap dengan modul CRUD data pribadi, pendidikan, riwayat jabatan, kepangkatan, pelatihan, dan administrasi.",
       "Menata dan membersihkan data pegawai dari berbagai format sumber menggunakan Google Sheets.",
       "Menyusun alur input data terstruktur lewat Google Forms dan Google Sheets.",
       "Mengotomasi pembuatan dokumen menggunakan Google Forms, Google Sheets, dan Autocrat.",
@@ -163,8 +163,8 @@ export const experienceList = [
     role: "MSIB Batch 3 · Web Development",
     location: "Batam",
     bullets: [
-      "Program Kampus Merdeka jalur Studi Independen di Nongsa Digital Park, Batam.",
-      "Mengikuti alur belajar bertahap: UI/UX Designer (Figma, design thinking) → Frontend Developer (React, Tailwind CSS) → Full Stack Engineer (Node.js, MongoDB).",
+      "Program Kampus Merdeka jalur Studi Independen di Nongsa Digital Park.",
+      "Mengikuti alur belajar bertahap: UI/UX Designer → Frontend Developer → Full Stack Engineer.",
       "Menyelesaikan capstone project Fintrack sebagai bagian dari tim pengembang.",
     ],
     stack: ["Figma", "React", "Node.js", "MongoDB", "Tailwind CSS"],
@@ -258,9 +258,9 @@ export const heroParagraph = {
 };
 
 export const aboutParagraph = {
-  text: "Saya Dafa Huda Rifa'i, lulusan S1 Ilmu Komputer Universitas Pakuan (2019-2025, IPK 3.60) yang berkarya sebagai front-end developer dan UI/UX designer. Saya membangun antarmuka dengan React, Next.js, dan Tailwind CSS, serta merancang alurnya di Figma lewat design thinking, wireframing, dan prototyping. Terbaru, saya membangun dashboard kepegawaian (SIMPEG) internal di Badan Pengembangan dan Pembinaan Bahasa. Latar belakang IoT dari skripsi stasiun cuaca membuat saya nyaman menghubungkan web dengan perangkat dan data nyata, dan sehari-hari saya memakai AI tools untuk mempercepat pekerjaan tanpa menyerahkan kualitas ke mesin. Saat ini saya terbuka untuk posisi Front-end Developer atau UI/UX Designer, remote maupun onsite di Jakarta dan Bogor.",
+  text: "Saya Dafa Huda Rifa'i, sarjana Ilmu Komputer Universitas Pakuan. Terbaru, saya membangun dan mengelola dashboard kepegawaian internal di Badan Pengembangan dan Pembinaan Bahasa. Sebelumnya, melalui MSIB Batch 3 di Infinite Learning, saya melewati alur UI/UX Designer → Frontend Developer → Full Stack Engineer, dan menyelesaikan capstone Fintrack sebagai bagian dari tim. Untuk tugas akhir skripsi, saya merancang stasiun pemantau cuaca mini berbasis IoT yang mengintegrasikan logika fuzzy.",
   // Kata yang diberi ornamen stabilo di mode gelap (lihat .mark-accent).
-  highlights: ["dashboard kepegawaian", "stasiun cuaca"],
+  highlights: ["dashboard kepegawaian", "stasiun pemantau cuaca mini"],
 };
 
 /* ============================================================

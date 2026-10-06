@@ -23,7 +23,7 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16">
           <div className="md:col-span-5" data-reveal>
             <span className="section-label">Tentang</span>
-            <h2 className="section-title">Tentang Dafa Huda Rifa&apos;i.</h2>
+            <h2 className="section-title">Kenalan singkat.</h2>
             <img
               src={Image.HeroImage}
               srcSet={`${Image.HeroImageSmall} 400w, ${Image.HeroImage} 800w`}
