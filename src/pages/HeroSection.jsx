@@ -22,21 +22,27 @@ const HeroSection = () => {
 
   return (
     <section id="beranda" className="min-h-[100svh] flex flex-col">
-      <div className="container-page flex-1 flex items-center pt-24 md:pt-28 pb-8">
+      <div className="container-page flex-1 flex items-center" style={{ paddingTop: "clamp(3.5rem, 10vh, 5rem)", paddingBottom: "2rem" }}>
         <div className="md:max-w-[90%]">
-          {/* H1 SEO: keyword profesi + lokasi; bergaya label kecil.
+          {/* H1 SEO: keyword profesi + lokasi.
               Tagline puitis di bawahnya adalah <p> display, bukan heading. */}
           <h1
-            className="section-label hero-rise"
-            style={{ animationDelay: "400ms", marginBottom: "0.75rem" }}
+            className="hero-rise"
+            style={{
+              animationDelay: "400ms",
+              marginBottom: "1rem",
+              fontSize: "clamp(2.75rem, min(6.5vw, 8vh), 5.25rem)",
+              lineHeight: "0.9",
+              letterSpacing: "-0.01em",
+            }}
           >
-            Front-end Developer &amp; UI/UX Designer di Bogor
+            Front-End Developer &amp; UI/UX Designer Bogor
           </h1>
           <p
             aria-hidden="false"
             className="mt-3 font-extrabold hero-rise"
             style={{
-              fontSize: "clamp(2.5rem, min(8vw, 10.5vh), 6.5rem)",
+              fontSize: "clamp(2.5rem, min(8vw, 8vh), 6.5rem)",
               lineHeight: 1.0,
               letterSpacing: "-0.01em",
               marginBottom: "clamp(1rem, 3vh, 2rem)",
