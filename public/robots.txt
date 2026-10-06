@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# Catatan: CV di /assets/cv/ sengaja dibiarkan terindeks agar mudah ditemukan
-# perekrut. Ubah menjadi "Disallow: /assets/cv/" bila ingin menyembunyikannya.
+# CV di /assets/cv/ sengaja terindeks agar ditemukan perekrut.
+# Jangan blokir /assets/ agar og:image dan gambar proyek tetap crawlable.
 
 Sitemap: https://portfolio.dhr.my.id/sitemap.xml

@@ -6,37 +6,48 @@
     <meta name="theme-color" content="#F2F1EC" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#1A1815" media="(prefers-color-scheme: dark)" />
 
-    <title>Dafa Huda Rifa'i — Front-end Developer & UI/UX Designer</title>
+    <title>Dafa Huda Rifa'i | Front-end Developer & UI/UX | Bogor</title>
     <meta
       name="description"
-      content="Portfolio Dafa Huda Rifa'i. Front-end developer dan UI/UX designer lulusan Ilmu Komputer Universitas Pakuan. Fokus di pengembangan web, IoT, dan AI."
+      content="Cari Front-end Developer atau UI/UX Designer dengan React? Kenali Dafa Huda Rifa'i, siap bekerja di Jakarta, Bogor, atau remote. Rekruter, unduh CV saya."
     />
     <link rel="canonical" href="https://portfolio.dhr.my.id/" />
     <meta name="author" content="Dafa Huda Rifa'i" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta
+      name="keywords"
+      content="Dafa Huda Rifa'i, Front-end Developer Bogor, UI UX Designer Jakarta, React Developer Indonesia, portfolio front-end developer"
+    />
+
+    <!-- Geo: basis Bogor, terbuka Jakarta & remote -->
+    <meta name="geo.region" content="ID-JB" />
+    <meta name="geo.placename" content="Bogor, Jawa Barat" />
+    <meta name="ICBM" content="-6.595, 106.816" />
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="profile" />
+    <meta property="profile:first_name" content="Dafa Huda" />
+    <meta property="profile:last_name" content="Rifa'i" />
     <meta property="og:locale" content="id_ID" />
     <meta property="og:url" content="https://portfolio.dhr.my.id/" />
-    <meta property="og:title" content="Dafa Huda Rifa'i — Front-end Developer & UI/UX Designer" />
+    <meta property="og:site_name" content="Dafa Huda Rifa'i" />
+    <meta property="og:title" content="Dafa Huda Rifa'i | Front-end Developer & UI/UX Designer" />
     <meta
       property="og:description"
-      content="Portfolio Dafa Huda Rifa'i. Front-end developer dan UI/UX designer lulusan Ilmu Komputer Universitas Pakuan."
+      content="Front-end Developer dan UI/UX Designer dengan React, siap bekerja di Jakarta, Bogor, atau remote. Lihat proyek, pengalaman, dan unduh CV."
     />
     <meta property="og:image" content="https://portfolio.dhr.my.id/assets/og-image.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Beranda portfolio Dafa Huda Rifa'i" />
-    <meta property="og:site_name" content="Dafa Huda Rifa'i" />
+    <meta property="og:image:alt" content="Dafa Huda Rifa'i, Front-end Developer & UI/UX Designer" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Dafa Huda Rifa'i — Front-end Developer & UI/UX Designer" />
+    <meta name="twitter:title" content="Dafa Huda Rifa'i | Front-end Developer & UI/UX Designer" />
     <meta
       name="twitter:description"
-      content="Portfolio Dafa Huda Rifa'i. Front-end developer dan UI/UX designer."
+      content="Front-end Developer dan UI/UX Designer dengan React. Jakarta, Bogor, atau remote. Proyek, pengalaman, dan CV di satu halaman."
     />
     <meta name="twitter:image" content="https://portfolio.dhr.my.id/assets/og-image.jpg" />
 
@@ -60,37 +71,209 @@
     <!-- Preload hero image untuk LCP -->
     <link rel="preload" as="image" href="/assets/hero-img.webp" fetchpriority="high" />
 
-    <!-- JSON-LD Person -->
+    <!-- JSON-LD: WebSite + ProfilePage + Person + ItemList proyek -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Dafa Huda Rifa'i",
-        "url": "https://portfolio.dhr.my.id/",
-        "jobTitle": "Front-end Developer & UI/UX Designer",
-        "image": "https://portfolio.dhr.my.id/assets/hero-img.webp",
-        "alumniOf": {
-          "@type": "CollegeOrUniversity",
-          "name": "Universitas Pakuan"
-        },
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Badan Pengembangan dan Pembinaan Bahasa",
-          "endDate": "2026-05"
-        },
-        "knowsAbout": [
-          "Front-end Development",
-          "UI/UX Design",
-          "React",
-          "Next.js",
-          "Tailwind CSS",
-          "Artificial Intelligence",
-          "Internet of Things"
-        ],
-        "sameAs": [
-          "https://github.com/dafahuda",
-          "https://www.linkedin.com/in/dafa-huda-rifa-i",
-          "https://www.instagram.com/dafa.h.r"
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://portfolio.dhr.my.id/#website",
+            "url": "https://portfolio.dhr.my.id/",
+            "name": "Portfolio Dafa Huda Rifa'i",
+            "inLanguage": "id-ID",
+            "publisher": { "@id": "https://portfolio.dhr.my.id/#person" }
+          },
+          {
+            "@type": "ProfilePage",
+            "@id": "https://portfolio.dhr.my.id/#profilepage",
+            "url": "https://portfolio.dhr.my.id/",
+            "inLanguage": "id-ID",
+            "dateModified": "2026-10-06",
+            "mainEntity": { "@id": "https://portfolio.dhr.my.id/#person" }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://portfolio.dhr.my.id/#person",
+            "name": "Dafa Huda Rifa'i",
+            "jobTitle": "Front-end Developer & UI/UX Designer",
+            "description": "Front-end Developer dan UI/UX Designer lulusan S1 Ilmu Komputer Universitas Pakuan (IPK 3.60). Terbuka untuk posisi Front-end Developer atau UI/UX Designer di Jakarta, Bogor, atau remote.",
+            "url": "https://portfolio.dhr.my.id/",
+            "image": "https://portfolio.dhr.my.id/assets/hero-img.webp",
+            "email": "mailto:dafahudarifai147@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Bogor",
+              "addressRegion": "Jawa Barat",
+              "addressCountry": "ID"
+            },
+            "alumniOf": {
+              "@type": "OrganizationRole",
+              "startDate": "2019",
+              "endDate": "2025",
+              "alumniOf": {
+                "@type": "CollegeOrUniversity",
+                "name": "Universitas Pakuan"
+              }
+            },
+            "worksFor": [
+              {
+                "@type": "OrganizationRole",
+                "startDate": "2025-11",
+                "endDate": "2026-05",
+                "roleName": "Data & Information Management",
+                "worksFor": {
+                  "@type": "Organization",
+                  "name": "Badan Pengembangan dan Pembinaan Bahasa"
+                }
+              },
+              {
+                "@type": "OrganizationRole",
+                "startDate": "2022-09",
+                "endDate": "2023-02",
+                "roleName": "Web Development (MSIB Batch 3, Kampus Merdeka)",
+                "worksFor": {
+                  "@type": "Organization",
+                  "name": "Infinite Learning Indonesia"
+                }
+              }
+            ],
+            "knowsAbout": [
+              "Front-end Development", "UI/UX Design", "React", "Next.js",
+              "Tailwind CSS", "JavaScript", "HTML", "CSS", "PHP", "Node.js",
+              "CodeIgniter", "Bootstrap", "MySQL", "Figma", "Canva", "GitHub",
+              "Google Apps Script", "Leaflet.js", "Chart.js",
+              "Design Thinking", "Wireframing", "Prototyping",
+              "Internet of Things", "Fuzzy Logic",
+              "Artificial Intelligence", "AI-Assisted Development"
+            ],
+            "hasCredential": [
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Junior Network Administrator Fundamental & Intermediate",
+                "credentialCategory": "certificate",
+                "recognizedBy": { "@type": "Organization", "name": "Digital Talent Scholarship" },
+                "dateIssued": "2025"
+              },
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Teknisi Drive Tester Fundamental & Intermediate",
+                "credentialCategory": "certificate",
+                "recognizedBy": { "@type": "Organization", "name": "Digital Talent Scholarship" },
+                "dateIssued": "2025"
+              },
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Artificial Intelligence Learning Hub Huawei",
+                "credentialCategory": "certificate",
+                "recognizedBy": { "@type": "Organization", "name": "Digital Talent Scholarship" },
+                "dateIssued": "2025-10"
+              },
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Microsoft Office Desktop Training",
+                "credentialCategory": "certificate",
+                "recognizedBy": { "@type": "Organization", "name": "Trust Training Partners" },
+                "dateIssued": "2019"
+              }
+            ],
+            "sameAs": [
+              "https://github.com/dafahuda",
+              "https://www.linkedin.com/in/dafa-huda-rifa-i",
+              "https://www.instagram.com/dafa.h.r"
+            ]
+          },
+          {
+            "@type": "ItemList",
+            "@id": "https://portfolio.dhr.my.id/#projects",
+            "name": "Proyek Dafa Huda Rifa'i",
+            "numberOfItems": 7,
+            "itemListElement": [
+              {
+                "@type": "ListItem", "position": 1,
+                "item": {
+                  "@type": "SoftwareSourceCode",
+                  "name": "SIMPEG Dashboard",
+                  "description": "Dashboard SDM internal Badan Pengembangan dan Pembinaan Bahasa: CRUD data pribadi, pendidikan, riwayat jabatan, kepangkatan, dan pelatihan pegawai.",
+                  "programmingLanguage": ["JavaScript", "HTML", "CSS"],
+                  "keywords": "Google Apps Script, Google Sheets",
+                  "codeRepository": "https://github.com/dafahuda/MY-SIMPEG-APP",
+                  "author": { "@id": "https://portfolio.dhr.my.id/#person" },
+                  "dateCreated": "2025"
+                }
+              },
+              {
+                "@type": "ListItem", "position": 2,
+                "item": {
+                  "@type": "SoftwareSourceCode",
+                  "name": "Bogor Landslide Risk",
+                  "description": "Peta interaktif risiko longsor Kota Bogor dengan fuzzy logic berbasis Leaflet.js dan Chart.js.",
+                  "programmingLanguage": "JavaScript",
+                  "keywords": "Leaflet.js, Chart.js, Fuzzy Logic",
+                  "codeRepository": "https://github.com/dafahuda/bogor-landslide-risk",
+                  "url": "https://dafahuda.github.io/bogor-landslide-risk",
+                  "author": { "@id": "https://portfolio.dhr.my.id/#person" },
+                  "dateCreated": "2025"
+                }
+              },
+              {
+                "@type": "ListItem", "position": 3,
+                "item": {
+                  "@type": "WebSite",
+                  "name": "Portfolio Redesign 2026",
+                  "description": "Situs portfolio ini, ditulis ulang dengan React 19, Vite, dan Tailwind CSS.",
+                  "url": "https://portfolio.dhr.my.id/",
+                  "author": { "@id": "https://portfolio.dhr.my.id/#person" },
+                  "dateCreated": "2026-09"
+                }
+              },
+              {
+                "@type": "ListItem", "position": 4,
+                "item": {
+                  "@type": "CreativeWork",
+                  "name": "Mini Weather Station",
+                  "description": "Skripsi: stasiun cuaca IoT real-time berbasis Arduino dengan dashboard web CodeIgniter dan estimasi kondisi cuaca fuzzy logic.",
+                  "keywords": "Arduino, CodeIgniter 3, Bootstrap, Chart.js, Fuzzy Logic, IoT",
+                  "author": { "@id": "https://portfolio.dhr.my.id/#person" },
+                  "dateCreated": "2024"
+                }
+              },
+              {
+                "@type": "ListItem", "position": 5,
+                "item": {
+                  "@type": "WebSite",
+                  "name": "Fintrack",
+                  "description": "Capstone MSIB: platform edukasi keuangan, peran Frontend Developer dalam tim.",
+                  "url": "https://fintrack-ten.vercel.app",
+                  "keywords": "MongoDB, Express, React, Node.js, Tailwind CSS",
+                  "author": { "@id": "https://portfolio.dhr.my.id/#person" },
+                  "dateCreated": "2023"
+                }
+              },
+              {
+                "@type": "ListItem", "position": 6,
+                "item": {
+                  "@type": "CreativeWork",
+                  "name": "Freedom",
+                  "description": "Capstone MSIB: platform edukasi, peran UI Designer.",
+                  "keywords": "React, Tailwind CSS, UI Design",
+                  "author": { "@id": "https://portfolio.dhr.my.id/#person" },
+                  "dateCreated": "2022"
+                }
+              },
+              {
+                "@type": "ListItem", "position": 7,
+                "item": {
+                  "@type": "CreativeWork",
+                  "name": "Gabungin",
+                  "description": "Prototipe kolaborasi tim.",
+                  "keywords": "HTML, CSS, JavaScript, Figma",
+                  "author": { "@id": "https://portfolio.dhr.my.id/#person" },
+                  "dateCreated": "2022"
+                }
+              }
+            ]
+          }
         ]
       }
     </script>
